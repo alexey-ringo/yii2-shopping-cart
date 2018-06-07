@@ -1,0 +1,145 @@
+[06-Jun-2018 21:27:52 UTC] PHP Fatal error:  Class 'EshopperAppAsset' not found in /home/ubuntu/workspace/advanced/frontend/views/layouts/main.php on line 13
+[06-Jun-2018 21:27:52 UTC] PHP Stack trace:
+[06-Jun-2018 21:27:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/advanced/frontend/web/index.php:0
+[06-Jun-2018 21:27:52 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/advanced/frontend/web/index.php:17
+[06-Jun-2018 21:27:52 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Application.php:386
+[06-Jun-2018 21:27:52 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Application.php:103
+[06-Jun-2018 21:27:52 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:528
+[06-Jun-2018 21:27:52 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:157
+[06-Jun-2018 21:27:52 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[06-Jun-2018 21:27:52 UTC] PHP   8. frontend\controllers\SiteController->actionIndex() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[06-Jun-2018 21:27:52 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/advanced/frontend/controllers/SiteController.php:75
+[06-Jun-2018 21:27:52 UTC] PHP  10. yii\base\Controller->renderContent() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:385
+[06-Jun-2018 21:27:52 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:399
+[06-Jun-2018 21:27:52 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:254
+[06-Jun-2018 21:27:52 UTC] PHP  13. require() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:336
+[06-Jun-2018 22:00:13 UTC] PHP Fatal error:  Class 'frontend\assets\yii\web\View' not found in /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/di/Container.php on line 375
+[06-Jun-2018 22:00:13 UTC] PHP Stack trace:
+[06-Jun-2018 22:00:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/advanced/frontend/web/index.php:0
+[06-Jun-2018 22:00:13 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/advanced/frontend/web/index.php:17
+[06-Jun-2018 22:00:13 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Application.php:386
+[06-Jun-2018 22:00:13 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Application.php:103
+[06-Jun-2018 22:00:13 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:528
+[06-Jun-2018 22:00:13 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:157
+[06-Jun-2018 22:00:13 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[06-Jun-2018 22:00:13 UTC] PHP   8. frontend\controllers\SiteController->actionIndex() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[06-Jun-2018 22:00:13 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/advanced/frontend/controllers/SiteController.php:75
+[06-Jun-2018 22:00:13 UTC] PHP  10. yii\base\Controller->renderContent() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:385
+[06-Jun-2018 22:00:13 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:399
+[06-Jun-2018 22:00:13 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:254
+[06-Jun-2018 22:00:13 UTC] PHP  13. require() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:336
+[06-Jun-2018 22:00:13 UTC] PHP  14. yii\web\AssetBundle::register() /home/ubuntu/workspace/advanced/frontend/views/layouts/main.php:15
+[06-Jun-2018 22:00:13 UTC] PHP  15. yii\web\View->registerAssetBundle() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/AssetBundle.php:125
+[06-Jun-2018 22:00:13 UTC] PHP  16. yii\web\AssetManager->getBundle() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/View.php:286
+[06-Jun-2018 22:00:13 UTC] PHP  17. yii\web\AssetManager->loadBundle() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/AssetManager.php:239
+[06-Jun-2018 22:00:13 UTC] PHP  18. yii\BaseYii::createObject() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/AssetManager.php:266
+[06-Jun-2018 22:00:13 UTC] PHP  19. yii\di\Container->get() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/BaseYii.php:349
+[06-Jun-2018 22:00:13 UTC] PHP  20. yii\di\Container->build() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/di/Container.php:156
+[06-Jun-2018 22:00:13 UTC] PHP  21. ReflectionClass->newInstanceArgs() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/di/Container.php:375
+[06-Jun-2018 22:06:32 UTC] PHP Fatal error:  Class 'frontend\assets\View' not found in /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/di/Container.php on line 375
+[06-Jun-2018 22:06:32 UTC] PHP Stack trace:
+[06-Jun-2018 22:06:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/advanced/frontend/web/index.php:0
+[06-Jun-2018 22:06:32 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/advanced/frontend/web/index.php:17
+[06-Jun-2018 22:06:32 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Application.php:386
+[06-Jun-2018 22:06:32 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Application.php:103
+[06-Jun-2018 22:06:32 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:528
+[06-Jun-2018 22:06:32 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:157
+[06-Jun-2018 22:06:32 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[06-Jun-2018 22:06:32 UTC] PHP   8. frontend\controllers\SiteController->actionIndex() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[06-Jun-2018 22:06:32 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/advanced/frontend/controllers/SiteController.php:75
+[06-Jun-2018 22:06:32 UTC] PHP  10. yii\base\Controller->renderContent() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:385
+[06-Jun-2018 22:06:32 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:399
+[06-Jun-2018 22:06:32 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:254
+[06-Jun-2018 22:06:32 UTC] PHP  13. require() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:336
+[06-Jun-2018 22:06:32 UTC] PHP  14. yii\web\AssetBundle::register() /home/ubuntu/workspace/advanced/frontend/views/layouts/main.php:15
+[06-Jun-2018 22:06:32 UTC] PHP  15. yii\web\View->registerAssetBundle() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/AssetBundle.php:125
+[06-Jun-2018 22:06:32 UTC] PHP  16. yii\web\AssetManager->getBundle() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/View.php:286
+[06-Jun-2018 22:06:32 UTC] PHP  17. yii\web\AssetManager->loadBundle() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/AssetManager.php:239
+[06-Jun-2018 22:06:32 UTC] PHP  18. yii\BaseYii::createObject() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/AssetManager.php:266
+[06-Jun-2018 22:06:32 UTC] PHP  19. yii\di\Container->get() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/BaseYii.php:349
+[06-Jun-2018 22:06:32 UTC] PHP  20. yii\di\Container->build() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/di/Container.php:156
+[06-Jun-2018 22:06:32 UTC] PHP  21. ReflectionClass->newInstanceArgs() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/di/Container.php:375
+[07-Jun-2018 11:22:44 UTC] PHP Fatal error:  Class 'ltEshopperAppAsset' not found in /home/ubuntu/workspace/advanced/frontend/views/layouts/main.php on line 15
+[07-Jun-2018 11:22:44 UTC] PHP Stack trace:
+[07-Jun-2018 11:22:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/advanced/frontend/web/index.php:0
+[07-Jun-2018 11:22:44 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/advanced/frontend/web/index.php:17
+[07-Jun-2018 11:22:44 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Application.php:386
+[07-Jun-2018 11:22:44 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Application.php:103
+[07-Jun-2018 11:22:44 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:528
+[07-Jun-2018 11:22:44 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:157
+[07-Jun-2018 11:22:44 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[07-Jun-2018 11:22:44 UTC] PHP   8. frontend\controllers\SiteController->actionIndex() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[07-Jun-2018 11:22:44 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/advanced/frontend/controllers/SiteController.php:75
+[07-Jun-2018 11:22:44 UTC] PHP  10. yii\base\Controller->renderContent() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:385
+[07-Jun-2018 11:22:44 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:399
+[07-Jun-2018 11:22:44 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:254
+[07-Jun-2018 11:22:44 UTC] PHP  13. require() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:336
+[07-Jun-2018 11:23:21 UTC] PHP Fatal error:  Class 'frontend\assets\yii\frontend\View' not found in /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/di/Container.php on line 375
+[07-Jun-2018 11:23:21 UTC] PHP Stack trace:
+[07-Jun-2018 11:23:21 UTC] PHP   1. {main}() /home/ubuntu/workspace/advanced/frontend/web/index.php:0
+[07-Jun-2018 11:23:21 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/advanced/frontend/web/index.php:17
+[07-Jun-2018 11:23:21 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Application.php:386
+[07-Jun-2018 11:23:21 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Application.php:103
+[07-Jun-2018 11:23:21 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:528
+[07-Jun-2018 11:23:21 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:157
+[07-Jun-2018 11:23:21 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[07-Jun-2018 11:23:21 UTC] PHP   8. frontend\controllers\SiteController->actionIndex() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[07-Jun-2018 11:23:21 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/advanced/frontend/controllers/SiteController.php:75
+[07-Jun-2018 11:23:21 UTC] PHP  10. yii\base\Controller->renderContent() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:385
+[07-Jun-2018 11:23:21 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:399
+[07-Jun-2018 11:23:21 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:254
+[07-Jun-2018 11:23:21 UTC] PHP  13. require() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:336
+[07-Jun-2018 11:23:21 UTC] PHP  14. yii\web\AssetBundle::register() /home/ubuntu/workspace/advanced/frontend/views/layouts/main.php:15
+[07-Jun-2018 11:23:21 UTC] PHP  15. yii\web\View->registerAssetBundle() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/AssetBundle.php:125
+[07-Jun-2018 11:23:21 UTC] PHP  16. yii\web\AssetManager->getBundle() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/View.php:286
+[07-Jun-2018 11:23:21 UTC] PHP  17. yii\web\AssetManager->loadBundle() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/AssetManager.php:239
+[07-Jun-2018 11:23:21 UTC] PHP  18. yii\BaseYii::createObject() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/AssetManager.php:266
+[07-Jun-2018 11:23:21 UTC] PHP  19. yii\di\Container->get() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/BaseYii.php:349
+[07-Jun-2018 11:23:21 UTC] PHP  20. yii\di\Container->build() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/di/Container.php:156
+[07-Jun-2018 11:23:21 UTC] PHP  21. ReflectionClass->newInstanceArgs() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/di/Container.php:375
+[07-Jun-2018 11:23:33 UTC] PHP Fatal error:  Class 'frontend\assets\yii\frontend\View' not found in /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/di/Container.php on line 375
+[07-Jun-2018 11:23:33 UTC] PHP Stack trace:
+[07-Jun-2018 11:23:33 UTC] PHP   1. {main}() /home/ubuntu/workspace/advanced/frontend/web/index.php:0
+[07-Jun-2018 11:23:33 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/advanced/frontend/web/index.php:17
+[07-Jun-2018 11:23:33 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Application.php:386
+[07-Jun-2018 11:23:33 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Application.php:103
+[07-Jun-2018 11:23:33 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:528
+[07-Jun-2018 11:23:33 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:157
+[07-Jun-2018 11:23:33 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[07-Jun-2018 11:23:33 UTC] PHP   8. frontend\controllers\SiteController->actionIndex() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[07-Jun-2018 11:23:33 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/advanced/frontend/controllers/SiteController.php:75
+[07-Jun-2018 11:23:33 UTC] PHP  10. yii\base\Controller->renderContent() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:385
+[07-Jun-2018 11:23:33 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:399
+[07-Jun-2018 11:23:33 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:254
+[07-Jun-2018 11:23:33 UTC] PHP  13. require() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:336
+[07-Jun-2018 11:23:33 UTC] PHP  14. yii\web\AssetBundle::register() /home/ubuntu/workspace/advanced/frontend/views/layouts/main.php:15
+[07-Jun-2018 11:23:33 UTC] PHP  15. yii\web\View->registerAssetBundle() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/AssetBundle.php:125
+[07-Jun-2018 11:23:33 UTC] PHP  16. yii\web\AssetManager->getBundle() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/View.php:286
+[07-Jun-2018 11:23:33 UTC] PHP  17. yii\web\AssetManager->loadBundle() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/AssetManager.php:239
+[07-Jun-2018 11:23:33 UTC] PHP  18. yii\BaseYii::createObject() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/AssetManager.php:266
+[07-Jun-2018 11:23:33 UTC] PHP  19. yii\di\Container->get() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/BaseYii.php:349
+[07-Jun-2018 11:23:33 UTC] PHP  20. yii\di\Container->build() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/di/Container.php:156
+[07-Jun-2018 11:23:33 UTC] PHP  21. ReflectionClass->newInstanceArgs() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/di/Container.php:375
+[07-Jun-2018 11:24:38 UTC] PHP Fatal error:  Class 'frontend\assets\yii\web\View' not found in /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/di/Container.php on line 375
+[07-Jun-2018 11:24:38 UTC] PHP Stack trace:
+[07-Jun-2018 11:24:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/advanced/frontend/web/index.php:0
+[07-Jun-2018 11:24:38 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/advanced/frontend/web/index.php:17
+[07-Jun-2018 11:24:38 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Application.php:386
+[07-Jun-2018 11:24:38 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Application.php:103
+[07-Jun-2018 11:24:38 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:528
+[07-Jun-2018 11:24:38 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:157
+[07-Jun-2018 11:24:38 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[07-Jun-2018 11:24:38 UTC] PHP   8. frontend\controllers\SiteController->actionIndex() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[07-Jun-2018 11:24:38 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/advanced/frontend/controllers/SiteController.php:75
+[07-Jun-2018 11:24:38 UTC] PHP  10. yii\base\Controller->renderContent() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:385
+[07-Jun-2018 11:24:38 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:399
+[07-Jun-2018 11:24:38 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:254
+[07-Jun-2018 11:24:38 UTC] PHP  13. require() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:336
+[07-Jun-2018 11:24:38 UTC] PHP  14. yii\web\AssetBundle::register() /home/ubuntu/workspace/advanced/frontend/views/layouts/main.php:15
+[07-Jun-2018 11:24:38 UTC] PHP  15. yii\web\View->registerAssetBundle() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/AssetBundle.php:125
+[07-Jun-2018 11:24:38 UTC] PHP  16. yii\web\AssetManager->getBundle() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/View.php:286
+[07-Jun-2018 11:24:38 UTC] PHP  17. yii\web\AssetManager->loadBundle() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/AssetManager.php:239
+[07-Jun-2018 11:24:38 UTC] PHP  18. yii\BaseYii::createObject() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/AssetManager.php:266
+[07-Jun-2018 11:24:38 UTC] PHP  19. yii\di\Container->get() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/BaseYii.php:349
+[07-Jun-2018 11:24:38 UTC] PHP  20. yii\di\Container->build() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/di/Container.php:156
+[07-Jun-2018 11:24:38 UTC] PHP  21. ReflectionClass->newInstanceArgs() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/di/Container.php:375
