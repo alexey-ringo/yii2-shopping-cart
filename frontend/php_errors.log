@@ -143,3 +143,33 @@
 [07-Jun-2018 11:24:38 UTC] PHP  19. yii\di\Container->get() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/BaseYii.php:349
 [07-Jun-2018 11:24:38 UTC] PHP  20. yii\di\Container->build() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/di/Container.php:156
 [07-Jun-2018 11:24:38 UTC] PHP  21. ReflectionClass->newInstanceArgs() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/di/Container.php:375
+[10-Jun-2018 21:43:27 UTC] PHP Fatal error:  Class 'MenuWidget' not found in /home/ubuntu/workspace/advanced/frontend/views/site/index.php on line 82
+[10-Jun-2018 21:43:27 UTC] PHP Stack trace:
+[10-Jun-2018 21:43:27 UTC] PHP   1. {main}() /home/ubuntu/workspace/advanced/frontend/web/index.php:0
+[10-Jun-2018 21:43:27 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/advanced/frontend/web/index.php:17
+[10-Jun-2018 21:43:27 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Application.php:386
+[10-Jun-2018 21:43:27 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Application.php:103
+[10-Jun-2018 21:43:27 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:528
+[10-Jun-2018 21:43:27 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:157
+[10-Jun-2018 21:43:27 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[10-Jun-2018 21:43:27 UTC] PHP   8. frontend\controllers\SiteController->actionIndex() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[10-Jun-2018 21:43:27 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/advanced/frontend/controllers/SiteController.php:75
+[10-Jun-2018 21:43:27 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:384
+[10-Jun-2018 21:43:27 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:156
+[10-Jun-2018 21:43:27 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:254
+[10-Jun-2018 21:43:27 UTC] PHP  13. require() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:336
+[10-Jun-2018 21:45:22 UTC] PHP Fatal error:  Class 'MenuWidget' not found in /home/ubuntu/workspace/advanced/frontend/views/site/index.php on line 82
+[10-Jun-2018 21:45:22 UTC] PHP Stack trace:
+[10-Jun-2018 21:45:22 UTC] PHP   1. {main}() /home/ubuntu/workspace/advanced/frontend/web/index.php:0
+[10-Jun-2018 21:45:22 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/advanced/frontend/web/index.php:17
+[10-Jun-2018 21:45:22 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Application.php:386
+[10-Jun-2018 21:45:22 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Application.php:103
+[10-Jun-2018 21:45:22 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:528
+[10-Jun-2018 21:45:22 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:157
+[10-Jun-2018 21:45:22 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[10-Jun-2018 21:45:22 UTC] PHP   8. frontend\controllers\SiteController->actionIndex() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[10-Jun-2018 21:45:22 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/advanced/frontend/controllers/SiteController.php:75
+[10-Jun-2018 21:45:22 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:384
+[10-Jun-2018 21:45:22 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:156
+[10-Jun-2018 21:45:22 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:254
+[10-Jun-2018 21:45:22 UTC] PHP  13. require() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:336
