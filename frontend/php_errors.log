@@ -173,3 +173,26 @@
 [10-Jun-2018 21:45:22 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:156
 [10-Jun-2018 21:45:22 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:254
 [10-Jun-2018 21:45:22 UTC] PHP  13. require() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:336
+[10-Jun-2018 23:20:31 UTC] PHP Warning:  require_once(/home/ubuntu/workspace/advanced/frontend/web/../functions.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/advanced/frontend/web/index.php on line 17
+[10-Jun-2018 23:20:31 UTC] PHP Stack trace:
+[10-Jun-2018 23:20:31 UTC] PHP   1. {main}() /home/ubuntu/workspace/advanced/frontend/web/index.php:0
+[10-Jun-2018 23:20:31 UTC] PHP Fatal error:  require_once(): Failed opening required '/home/ubuntu/workspace/advanced/frontend/web/../functions.php' (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/advanced/frontend/web/index.php on line 17
+[10-Jun-2018 23:20:31 UTC] PHP Stack trace:
+[10-Jun-2018 23:20:31 UTC] PHP   1. {main}() /home/ubuntu/workspace/advanced/frontend/web/index.php:0
+[10-Jun-2018 23:22:47 UTC] PHP Parse error:  syntax error, unexpected ''<pre>'' (T_CONSTANT_ENCAPSED_STRING) in /home/ubuntu/workspace/advanced/frontend/functions.php on line 4
+[10-Jun-2018 23:22:47 UTC] PHP Stack trace:
+[10-Jun-2018 23:22:47 UTC] PHP   1. {main}() /home/ubuntu/workspace/advanced/frontend/web/index.php:0
+[12-Jun-2018 07:30:44 UTC] PHP Parse error:  syntax error, unexpected '?>' in /home/ubuntu/workspace/advanced/frontend/views/site/index.php on line 9
+[12-Jun-2018 07:30:44 UTC] PHP Stack trace:
+[12-Jun-2018 07:30:44 UTC] PHP   1. {main}() /home/ubuntu/workspace/advanced/frontend/web/index.php:0
+[12-Jun-2018 07:30:44 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/advanced/frontend/web/index.php:18
+[12-Jun-2018 07:30:44 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Application.php:386
+[12-Jun-2018 07:30:44 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Application.php:103
+[12-Jun-2018 07:30:44 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:528
+[12-Jun-2018 07:30:44 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:157
+[12-Jun-2018 07:30:44 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[12-Jun-2018 07:30:44 UTC] PHP   8. frontend\controllers\SiteController->actionIndex() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[12-Jun-2018 07:30:44 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/advanced/frontend/controllers/SiteController.php:75
+[12-Jun-2018 07:30:44 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:384
+[12-Jun-2018 07:30:44 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:156
+[12-Jun-2018 07:30:44 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:254

@@ -26,6 +26,8 @@ class EshopperAppAsset extends AssetBundle
         'eshopper/js/jquery.scrollUp.min.js',
         'eshopper/js/price-range.js',
         'eshopper/js/jquery.prettyPhoto.js',
+        'eshopper/js/jquery.cookie.js',
+        'eshopper/js/jquery.accordion.js',
         'eshopper/js/main.js',
     ];
     public $depends = [
