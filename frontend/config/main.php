@@ -42,6 +42,9 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                //как должна выглядеть реальная ссылка => controller/action
+                //в данном примере после категории по маске только цифровые значения
+                'category/<id:\d+>' => 'category/view',
             ],
         ],
     ],

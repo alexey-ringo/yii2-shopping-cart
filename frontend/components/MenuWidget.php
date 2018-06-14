@@ -15,7 +15,7 @@ class MenuWidget extends Widget {
     //Здесь хранится дерево - результат работы функции, которая построит из обычного массива массив дерева (визуально видно вложенность категорий)
     public $tree;
     
-    //Хранится готовый html-аод в зависимости от типа шаблона, определенного в $tpl
+    //Хранится сгенеренный html-код в зависимости от типа шаблона, определенного в $tpl
     public $menuHtml;
     
     public function init() {
@@ -31,7 +31,7 @@ class MenuWidget extends Widget {
     }
     
     public function run() {
-        //indexBy() приводит в соответствие (переиндексирует) идентификаторы массива с переданным в функцию полем (ключевое поле = 'id') - 
+        //indexBy() перенумеровывает идентификаторы массива для соответвия (совпадения) с переданным в функцию полем (ключевое поле = 'id') 
         $this->data = Category::find()->indexBy('id')->asArray()->all();
         $this->tree = $this->getTree();
         $this->menuHtml = $this->getMenuHtml($this->tree);

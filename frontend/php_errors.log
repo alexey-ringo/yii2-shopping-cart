@@ -196,3 +196,22 @@
 [12-Jun-2018 07:30:44 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:384
 [12-Jun-2018 07:30:44 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:156
 [12-Jun-2018 07:30:44 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:254
+[14-Jun-2018 10:49:58 UTC] PHP Parse error:  syntax error, unexpected '[', expecting ']' in /home/ubuntu/workspace/advanced/frontend/components/menu_tpl/menu.php on line 4
+[14-Jun-2018 10:49:58 UTC] PHP Stack trace:
+[14-Jun-2018 10:49:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/advanced/frontend/web/index.php:0
+[14-Jun-2018 10:49:58 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/advanced/frontend/web/index.php:18
+[14-Jun-2018 10:49:58 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Application.php:386
+[14-Jun-2018 10:49:58 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Application.php:103
+[14-Jun-2018 10:49:58 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:528
+[14-Jun-2018 10:49:58 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:157
+[14-Jun-2018 10:49:58 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[14-Jun-2018 10:49:58 UTC] PHP   8. frontend\controllers\SiteController->actionIndex() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[14-Jun-2018 10:49:58 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/advanced/frontend/controllers/SiteController.php:75
+[14-Jun-2018 10:49:58 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:384
+[14-Jun-2018 10:49:58 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:156
+[14-Jun-2018 10:49:58 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:254
+[14-Jun-2018 10:49:58 UTC] PHP  13. require() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:336
+[14-Jun-2018 10:49:58 UTC] PHP  14. yii\base\Widget::widget() /home/ubuntu/workspace/advanced/frontend/views/site/index.php:82
+[14-Jun-2018 10:49:58 UTC] PHP  15. app\components\MenuWidget->run() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Widget.php:140
+[14-Jun-2018 10:49:58 UTC] PHP  16. app\components\MenuWidget->getMenuHtml() /home/ubuntu/workspace/advanced/frontend/components/MenuWidget.php:37
+[14-Jun-2018 10:49:58 UTC] PHP  17. app\components\MenuWidget->catToTemplate() /home/ubuntu/workspace/advanced/frontend/components/MenuWidget.php:66
