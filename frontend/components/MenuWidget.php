@@ -4,6 +4,7 @@ namespace app\components;
 
 use yii\base\Widget;
 use app\models\Category;
+use Yii;
 
 class MenuWidget extends Widget {
     //Переменная определяет вариант шаблона данного виджета
@@ -31,12 +32,22 @@ class MenuWidget extends Widget {
     }
     
     public function run() {
+        //Проверяем - есть ли в соответствующем разделе кэша (menu) - инф. о запросе списка категорий
+        $menu = Yii::$app->cache->get('menu');
+        //Если из этой секции кэша (menu) - что либо получено - то run() сразу возвращает это значение
+        if($menu) {
+            return $menu;
+        }
+        //Если в кэше пусто - то начинаем стандартным образом запрашибать у БД о категориях
+        //И формировать меню
+        
         //indexBy() перенумеровывает идентификаторы массива для соответвия (совпадения) с переданным в функцию полем (ключевое поле = 'id') 
         $this->data = Category::find()->indexBy('id')->asArray()->all();
         $this->tree = $this->getTree();
         $this->menuHtml = $this->getMenuHtml($this->tree);
-        //debug($this->tree);
-        //return $this->tpl;
+        //По окончании формирования меню записываем его в кэш
+        //(название конкретного кэша, что записываем, время действия кэша в сек)
+        Yii::$app->cache->set('menu', $this->menuHtml, 60);
         return $this->menuHtml;
     }
     
