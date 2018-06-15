@@ -1,9 +1,9 @@
 <?php
 
-namespace app\components;
+namespace frontend\components;
 
 use yii\base\Widget;
-use app\models\Category;
+use frontend\models\Category;
 use Yii;
 
 class MenuWidget extends Widget {

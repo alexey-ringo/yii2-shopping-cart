@@ -7,4 +7,5 @@ Yii::setAlias('@console', dirname(dirname(__DIR__)) . '/console');
 //Моя тестовая функция
 function debug($arr) {
     echo '<pre>' . print_r($arr, true) . '</pre>';
+    die;
 }

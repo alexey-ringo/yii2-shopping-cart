@@ -11,6 +11,8 @@ return [
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'language' => 'ru-RU',
+    //Роут по умолчанию
+    'defaultRoute' => 'category/index',
     'controllerNamespace' => 'frontend\controllers',
     'components' => [
         'request' => [

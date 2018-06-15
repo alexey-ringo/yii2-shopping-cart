@@ -215,3 +215,424 @@
 [14-Jun-2018 10:49:58 UTC] PHP  15. app\components\MenuWidget->run() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Widget.php:140
 [14-Jun-2018 10:49:58 UTC] PHP  16. app\components\MenuWidget->getMenuHtml() /home/ubuntu/workspace/advanced/frontend/components/MenuWidget.php:37
 [14-Jun-2018 10:49:58 UTC] PHP  17. app\components\MenuWidget->catToTemplate() /home/ubuntu/workspace/advanced/frontend/components/MenuWidget.php:66
+[14-Jun-2018 13:38:09 UTC] PHP Fatal error:  Class 'frontend\controllers\Controller' not found in /home/ubuntu/workspace/advanced/frontend/controllers/AppController.php on line 7
+[14-Jun-2018 13:38:09 UTC] PHP Stack trace:
+[14-Jun-2018 13:38:09 UTC] PHP   1. {main}() /home/ubuntu/workspace/advanced/frontend/web/index.php:0
+[14-Jun-2018 13:38:09 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/advanced/frontend/web/index.php:18
+[14-Jun-2018 13:38:09 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Application.php:386
+[14-Jun-2018 13:38:09 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Application.php:103
+[14-Jun-2018 13:38:09 UTC] PHP   5. yii\base\Module->createController() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:522
+[14-Jun-2018 13:38:09 UTC] PHP   6. yii\base\Module->createControllerByID() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:596
+[14-Jun-2018 13:38:09 UTC] PHP   7. class_exists() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:637
+[14-Jun-2018 13:38:09 UTC] PHP   8. spl_autoload_call() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:637
+[14-Jun-2018 13:38:09 UTC] PHP   9. yii\BaseYii::autoload() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:637
+[14-Jun-2018 13:38:09 UTC] PHP  10. include() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/BaseYii.php:293
+[14-Jun-2018 13:38:09 UTC] PHP  11. spl_autoload_call() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/BaseYii.php:10
+[14-Jun-2018 13:38:09 UTC] PHP  12. yii\BaseYii::autoload() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/BaseYii.php:10
+[14-Jun-2018 13:38:09 UTC] PHP  13. include() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/BaseYii.php:293
+[14-Jun-2018 13:43:42 UTC] PHP Fatal error:  Class 'frontend\controllers\Controller' not found in /home/ubuntu/workspace/advanced/frontend/controllers/AppController.php on line 7
+[14-Jun-2018 13:43:42 UTC] PHP Stack trace:
+[14-Jun-2018 13:43:42 UTC] PHP   1. {main}() /home/ubuntu/workspace/advanced/frontend/web/index.php:0
+[14-Jun-2018 13:43:42 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/advanced/frontend/web/index.php:18
+[14-Jun-2018 13:43:42 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Application.php:386
+[14-Jun-2018 13:43:42 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Application.php:103
+[14-Jun-2018 13:43:42 UTC] PHP   5. yii\base\Module->createController() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:522
+[14-Jun-2018 13:43:42 UTC] PHP   6. yii\base\Module->createControllerByID() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:596
+[14-Jun-2018 13:43:42 UTC] PHP   7. class_exists() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:637
+[14-Jun-2018 13:43:42 UTC] PHP   8. spl_autoload_call() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:637
+[14-Jun-2018 13:43:42 UTC] PHP   9. yii\BaseYii::autoload() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:637
+[14-Jun-2018 13:43:42 UTC] PHP  10. include() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/BaseYii.php:293
+[14-Jun-2018 13:43:42 UTC] PHP  11. spl_autoload_call() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/BaseYii.php:10
+[14-Jun-2018 13:43:42 UTC] PHP  12. yii\BaseYii::autoload() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/BaseYii.php:10
+[14-Jun-2018 13:43:42 UTC] PHP  13. include() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/BaseYii.php:293
+[14-Jun-2018 13:45:04 UTC] PHP Fatal error:  Class 'frontend\controllers\Controller' not found in /home/ubuntu/workspace/advanced/frontend/controllers/AppController.php on line 7
+[14-Jun-2018 13:45:04 UTC] PHP Stack trace:
+[14-Jun-2018 13:45:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/advanced/frontend/web/index.php:0
+[14-Jun-2018 13:45:04 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/advanced/frontend/web/index.php:18
+[14-Jun-2018 13:45:04 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Application.php:386
+[14-Jun-2018 13:45:04 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Application.php:103
+[14-Jun-2018 13:45:04 UTC] PHP   5. yii\base\Module->createController() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:522
+[14-Jun-2018 13:45:04 UTC] PHP   6. yii\base\Module->createControllerByID() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:596
+[14-Jun-2018 13:45:04 UTC] PHP   7. class_exists() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:637
+[14-Jun-2018 13:45:04 UTC] PHP   8. spl_autoload_call() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:637
+[14-Jun-2018 13:45:04 UTC] PHP   9. yii\BaseYii::autoload() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:637
+[14-Jun-2018 13:45:04 UTC] PHP  10. include() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/BaseYii.php:293
+[14-Jun-2018 13:45:04 UTC] PHP  11. spl_autoload_call() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/BaseYii.php:11
+[14-Jun-2018 13:45:04 UTC] PHP  12. yii\BaseYii::autoload() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/BaseYii.php:11
+[14-Jun-2018 13:45:04 UTC] PHP  13. include() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/BaseYii.php:293
+[14-Jun-2018 13:58:50 UTC] An Error occurred while handling another error:
+exception 'yii\web\HeadersAlreadySentException' with message 'Headers already sent in /home/ubuntu/workspace/advanced/common/config/bootstrap.php on line 9.' in /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/ErrorHandler.php(135): yii\web\Response->send()
+#2 /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+exception 'yii\web\HeadersAlreadySentException' with message 'Headers already sent in /home/ubuntu/workspace/advanced/common/config/bootstrap.php on line 9.' in /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Response->send()
+#2 /home/ubuntu/workspace/advanced/frontend/web/index.php(18): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HTTP_HOST' => 'yii2-ecommerce-alexringo.c9users.io',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br',
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7',
+    'HTTP_COOKIE' => '_csrf-frontend=e76c463650cf65b49e8bf5ee6c67adbd1b5e34bd746ebe8eb1b99c697bfdf261a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22nTFKZbEsTUw4G83YeKQzy5vjcedXsorA%22%3B%7D; dcjq-accordion=0%2C2; XDEBUG_SESSION=cloud9ide',
+    'HTTP_X_FORWARDED_PROTO' => 'https',
+    'HTTP_X_FORWARDED_PORT' => '443',
+    'HTTP_X_REGION' => 'eu',
+    'HTTP_X_FORWARDED_FOR' => '178.130.0.130',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'PATH' => '/home/ubuntu/.nvm/versions/node/v6.11.2/bin:/usr/local/rvm/gems/ruby-2.4.0/bin:/usr/local/rvm/gems/ruby-2.4.0@global/bin:/usr/local/rvm/rubies/ruby-2.4.0/bin:/mnt/shared/bin:/home/ubuntu/workspace/node_modules/.bin:/home/ubuntu/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/mnt/shared/sbin:/opt/gitl:/opt/go/bin:/mnt/shared/c9/app.nw/bin:/usr/local/rvm/bin',
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at yii2-ecommerce-alexringo.c9users.io Port 443</address>
+',
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)',
+    'SERVER_NAME' => 'yii2-ecommerce-alexringo.c9users.io',
+    'SERVER_ADDR' => '172.17.0.53',
+    'SERVER_PORT' => '443',
+    'REMOTE_ADDR' => '10.240.0.239',
+    'DOCUMENT_ROOT' => '/home/ubuntu/workspace/advanced/frontend/web',
+    'REQUEST_SCHEME' => 'https',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/ubuntu/workspace/advanced/frontend/web',
+    'SERVER_ADMIN' => '[no address given]',
+    'SCRIPT_FILENAME' => '/home/ubuntu/workspace/advanced/frontend/web/index.php',
+    'REMOTE_PORT' => '43896',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/',
+    'SCRIPT_NAME' => '/index.php',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1528984729.9519999027252197265625,
+    'REQUEST_TIME' => 1528984729,
+]
+[14-Jun-2018 14:01:12 UTC] An Error occurred while handling another error:
+exception 'yii\web\HeadersAlreadySentException' with message 'Headers already sent in /home/ubuntu/workspace/advanced/common/config/bootstrap.php on line 9.' in /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/ErrorHandler.php(135): yii\web\Response->send()
+#2 /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\base\UnknownClassException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\UnknownClassException))
+#4 {main}
+Previous exception:
+exception 'yii\base\UnknownClassException' with message 'Unable to find 'app\models\Category' in file: /home/ubuntu/workspace/advanced/frontend/models/Category.php. Namespace missing?' in /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/BaseYii.php:296
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\models\Cate...')
+#1 /home/ubuntu/workspace/advanced/frontend/components/MenuWidget.php(45): spl_autoload_call('app\models\Cate...')
+#2 /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Widget.php(140): app\components\MenuWidget->run()
+#3 /home/ubuntu/workspace/advanced/frontend/views/category/index.php(82): yii\base\Widget::widget(Array)
+#4 /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php(336): require('/home/ubuntu/wo...')
+#5 /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php(254): yii\base\View->renderPhpFile('/home/ubuntu/wo...', Array)
+#6 /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/home/ubuntu/wo...', Array, Object(frontend\controllers\CategoryController))
+#7 /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('index', Array, Object(frontend\controllers\CategoryController))
+#8 /home/ubuntu/workspace/advanced/frontend/controllers/CategoryController.php(16): yii\base\Controller->render('index')
+#9 [internal function]: frontend\controllers\CategoryController->actionIndex()
+#10 /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#11 /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#12 /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('index', Array)
+#13 /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#14 /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 /home/ubuntu/workspace/advanced/frontend/web/index.php(18): yii\base\Application->run()
+#16 {main}
+$_SERVER = [
+    'HTTP_HOST' => 'yii2-ecommerce-alexringo.c9users.io',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br',
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7',
+    'HTTP_COOKIE' => '_csrf-frontend=e76c463650cf65b49e8bf5ee6c67adbd1b5e34bd746ebe8eb1b99c697bfdf261a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22nTFKZbEsTUw4G83YeKQzy5vjcedXsorA%22%3B%7D; dcjq-accordion=0%2C2; XDEBUG_SESSION=cloud9ide',
+    'HTTP_X_FORWARDED_PROTO' => 'https',
+    'HTTP_X_FORWARDED_PORT' => '443',
+    'HTTP_X_REGION' => 'eu',
+    'HTTP_X_FORWARDED_FOR' => '178.130.0.130',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'PATH' => '/home/ubuntu/.nvm/versions/node/v6.11.2/bin:/usr/local/rvm/gems/ruby-2.4.0/bin:/usr/local/rvm/gems/ruby-2.4.0@global/bin:/usr/local/rvm/rubies/ruby-2.4.0/bin:/mnt/shared/bin:/home/ubuntu/workspace/node_modules/.bin:/home/ubuntu/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/mnt/shared/sbin:/opt/gitl:/opt/go/bin:/mnt/shared/c9/app.nw/bin:/usr/local/rvm/bin',
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at yii2-ecommerce-alexringo.c9users.io Port 443</address>
+',
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)',
+    'SERVER_NAME' => 'yii2-ecommerce-alexringo.c9users.io',
+    'SERVER_ADDR' => '172.17.0.53',
+    'SERVER_PORT' => '443',
+    'REMOTE_ADDR' => '10.240.0.103',
+    'DOCUMENT_ROOT' => '/home/ubuntu/workspace/advanced/frontend/web',
+    'REQUEST_SCHEME' => 'https',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/ubuntu/workspace/advanced/frontend/web',
+    'SERVER_ADMIN' => '[no address given]',
+    'SCRIPT_FILENAME' => '/home/ubuntu/workspace/advanced/frontend/web/index.php',
+    'REMOTE_PORT' => '43094',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/',
+    'SCRIPT_NAME' => '/index.php',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1528984871.8310000896453857421875,
+    'REQUEST_TIME' => 1528984871,
+]
+[14-Jun-2018 14:04:16 UTC] An Error occurred while handling another error:
+exception 'yii\web\HeadersAlreadySentException' with message 'Headers already sent in /home/ubuntu/workspace/advanced/common/config/bootstrap.php on line 9.' in /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/ErrorHandler.php(135): yii\web\Response->send()
+#2 /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\base\UnknownClassException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\UnknownClassException))
+#4 {main}
+Previous exception:
+exception 'yii\base\UnknownClassException' with message 'Unable to find 'app\models\Category' in file: /home/ubuntu/workspace/advanced/frontend/models/Category.php. Namespace missing?' in /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/BaseYii.php:296
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('app\models\Cate...')
+#1 /home/ubuntu/workspace/advanced/frontend/components/MenuWidget.php(45): spl_autoload_call('app\models\Cate...')
+#2 /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Widget.php(140): app\components\MenuWidget->run()
+#3 /home/ubuntu/workspace/advanced/frontend/views/category/index.php(82): yii\base\Widget::widget(Array)
+#4 /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php(336): require('/home/ubuntu/wo...')
+#5 /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php(254): yii\base\View->renderPhpFile('/home/ubuntu/wo...', Array)
+#6 /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/home/ubuntu/wo...', Array, Object(frontend\controllers\CategoryController))
+#7 /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('index', Array, Object(frontend\controllers\CategoryController))
+#8 /home/ubuntu/workspace/advanced/frontend/controllers/CategoryController.php(16): yii\base\Controller->render('index')
+#9 [internal function]: frontend\controllers\CategoryController->actionIndex()
+#10 /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#11 /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#12 /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('index', Array)
+#13 /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#14 /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#15 /home/ubuntu/workspace/advanced/frontend/web/index.php(18): yii\base\Application->run()
+#16 {main}
+$_SERVER = [
+    'HTTP_HOST' => 'yii2-ecommerce-alexringo.c9users.io',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br',
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7',
+    'HTTP_COOKIE' => '_csrf-frontend=e76c463650cf65b49e8bf5ee6c67adbd1b5e34bd746ebe8eb1b99c697bfdf261a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22nTFKZbEsTUw4G83YeKQzy5vjcedXsorA%22%3B%7D; dcjq-accordion=0%2C2',
+    'HTTP_X_FORWARDED_PROTO' => 'https',
+    'HTTP_X_FORWARDED_PORT' => '443',
+    'HTTP_X_REGION' => 'eu',
+    'HTTP_X_FORWARDED_FOR' => '178.130.0.130',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'PATH' => '/home/ubuntu/.nvm/versions/node/v6.11.2/bin:/usr/local/rvm/gems/ruby-2.4.0/bin:/usr/local/rvm/gems/ruby-2.4.0@global/bin:/usr/local/rvm/rubies/ruby-2.4.0/bin:/mnt/shared/bin:/home/ubuntu/workspace/node_modules/.bin:/home/ubuntu/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/mnt/shared/sbin:/opt/gitl:/opt/go/bin:/mnt/shared/c9/app.nw/bin:/usr/local/rvm/bin',
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at yii2-ecommerce-alexringo.c9users.io Port 443</address>
+',
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)',
+    'SERVER_NAME' => 'yii2-ecommerce-alexringo.c9users.io',
+    'SERVER_ADDR' => '172.17.0.53',
+    'SERVER_PORT' => '443',
+    'REMOTE_ADDR' => '10.240.0.187',
+    'DOCUMENT_ROOT' => '/home/ubuntu/workspace/advanced/frontend/web',
+    'REQUEST_SCHEME' => 'https',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/ubuntu/workspace/advanced/frontend/web',
+    'SERVER_ADMIN' => '[no address given]',
+    'SCRIPT_FILENAME' => '/home/ubuntu/workspace/advanced/frontend/web/index.php',
+    'REMOTE_PORT' => '36632',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/',
+    'SCRIPT_NAME' => '/index.php',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1528985055.874000072479248046875,
+    'REQUEST_TIME' => 1528985055,
+]
+[14-Jun-2018 14:05:23 UTC] An Error occurred while handling another error:
+exception 'yii\web\HeadersAlreadySentException' with message 'Headers already sent in /home/ubuntu/workspace/advanced/common/config/bootstrap.php on line 9.' in /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/ErrorHandler.php(135): yii\web\Response->send()
+#2 /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+exception 'yii\web\HeadersAlreadySentException' with message 'Headers already sent in /home/ubuntu/workspace/advanced/common/config/bootstrap.php on line 9.' in /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Response->send()
+#2 /home/ubuntu/workspace/advanced/frontend/web/index.php(18): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HTTP_HOST' => 'yii2-ecommerce-alexringo.c9users.io',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br',
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7',
+    'HTTP_COOKIE' => '_csrf-frontend=e76c463650cf65b49e8bf5ee6c67adbd1b5e34bd746ebe8eb1b99c697bfdf261a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22nTFKZbEsTUw4G83YeKQzy5vjcedXsorA%22%3B%7D; dcjq-accordion=0%2C2; XDEBUG_SESSION=cloud9ide',
+    'HTTP_X_FORWARDED_PROTO' => 'https',
+    'HTTP_X_FORWARDED_PORT' => '443',
+    'HTTP_X_REGION' => 'eu',
+    'HTTP_X_FORWARDED_FOR' => '178.130.0.130',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'PATH' => '/home/ubuntu/.nvm/versions/node/v6.11.2/bin:/usr/local/rvm/gems/ruby-2.4.0/bin:/usr/local/rvm/gems/ruby-2.4.0@global/bin:/usr/local/rvm/rubies/ruby-2.4.0/bin:/mnt/shared/bin:/home/ubuntu/workspace/node_modules/.bin:/home/ubuntu/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/mnt/shared/sbin:/opt/gitl:/opt/go/bin:/mnt/shared/c9/app.nw/bin:/usr/local/rvm/bin',
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at yii2-ecommerce-alexringo.c9users.io Port 443</address>
+',
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)',
+    'SERVER_NAME' => 'yii2-ecommerce-alexringo.c9users.io',
+    'SERVER_ADDR' => '172.17.0.53',
+    'SERVER_PORT' => '443',
+    'REMOTE_ADDR' => '10.240.0.88',
+    'DOCUMENT_ROOT' => '/home/ubuntu/workspace/advanced/frontend/web',
+    'REQUEST_SCHEME' => 'https',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/ubuntu/workspace/advanced/frontend/web',
+    'SERVER_ADMIN' => '[no address given]',
+    'SCRIPT_FILENAME' => '/home/ubuntu/workspace/advanced/frontend/web/index.php',
+    'REMOTE_PORT' => '36066',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/',
+    'SCRIPT_NAME' => '/index.php',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1528985122.7590000629425048828125,
+    'REQUEST_TIME' => 1528985122,
+]
+[14-Jun-2018 14:15:21 UTC] An Error occurred while handling another error:
+exception 'yii\web\HeadersAlreadySentException' with message 'Headers already sent in /home/ubuntu/workspace/advanced/common/config/bootstrap.php on line 9.' in /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/ErrorHandler.php(135): yii\web\Response->send()
+#2 /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\base\UnknownClassException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\base\UnknownClassException))
+#4 {main}
+Previous exception:
+exception 'yii\base\UnknownClassException' with message 'Unable to find 'frontend\components\MenuWidget' in file: /home/ubuntu/workspace/advanced/frontend/components/MenuWidget.php. Namespace missing?' in /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/BaseYii.php:296
+Stack trace:
+#0 [internal function]: yii\BaseYii::autoload('frontend\compon...')
+#1 /home/ubuntu/workspace/advanced/frontend/views/category/index.php(82): spl_autoload_call('frontend\compon...')
+#2 /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php(336): require('/home/ubuntu/wo...')
+#3 /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php(254): yii\base\View->renderPhpFile('/home/ubuntu/wo...', Array)
+#4 /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php(156): yii\base\View->renderFile('/home/ubuntu/wo...', Array, Object(frontend\controllers\CategoryController))
+#5 /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php(384): yii\base\View->render('index', Array, Object(frontend\controllers\CategoryController))
+#6 /home/ubuntu/workspace/advanced/frontend/controllers/CategoryController.php(18): yii\base\Controller->render('index', Array)
+#7 [internal function]: frontend\controllers\CategoryController->actionIndex()
+#8 /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php(57): call_user_func_array(Array, Array)
+#9 /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php(157): yii\base\InlineAction->runWithParams(Array)
+#10 /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php(528): yii\base\Controller->runAction('index', Array)
+#11 /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Application.php(103): yii\base\Module->runAction('', Array)
+#12 /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Application.php(386): yii\web\Application->handleRequest(Object(yii\web\Request))
+#13 /home/ubuntu/workspace/advanced/frontend/web/index.php(18): yii\base\Application->run()
+#14 {main}
+$_SERVER = [
+    'HTTP_HOST' => 'yii2-ecommerce-alexringo.c9users.io',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br',
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7',
+    'HTTP_COOKIE' => '_csrf-frontend=e76c463650cf65b49e8bf5ee6c67adbd1b5e34bd746ebe8eb1b99c697bfdf261a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22nTFKZbEsTUw4G83YeKQzy5vjcedXsorA%22%3B%7D; dcjq-accordion=0%2C2; XDEBUG_SESSION=cloud9ide',
+    'HTTP_X_FORWARDED_PROTO' => 'https',
+    'HTTP_X_FORWARDED_PORT' => '443',
+    'HTTP_X_REGION' => 'eu',
+    'HTTP_X_FORWARDED_FOR' => '178.130.0.130',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'PATH' => '/home/ubuntu/.nvm/versions/node/v6.11.2/bin:/usr/local/rvm/gems/ruby-2.4.0/bin:/usr/local/rvm/gems/ruby-2.4.0@global/bin:/usr/local/rvm/rubies/ruby-2.4.0/bin:/mnt/shared/bin:/home/ubuntu/workspace/node_modules/.bin:/home/ubuntu/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/mnt/shared/sbin:/opt/gitl:/opt/go/bin:/mnt/shared/c9/app.nw/bin:/usr/local/rvm/bin',
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at yii2-ecommerce-alexringo.c9users.io Port 443</address>
+',
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)',
+    'SERVER_NAME' => 'yii2-ecommerce-alexringo.c9users.io',
+    'SERVER_ADDR' => '172.17.0.53',
+    'SERVER_PORT' => '443',
+    'REMOTE_ADDR' => '10.240.0.227',
+    'DOCUMENT_ROOT' => '/home/ubuntu/workspace/advanced/frontend/web',
+    'REQUEST_SCHEME' => 'https',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/ubuntu/workspace/advanced/frontend/web',
+    'SERVER_ADMIN' => '[no address given]',
+    'SCRIPT_FILENAME' => '/home/ubuntu/workspace/advanced/frontend/web/index.php',
+    'REMOTE_PORT' => '38662',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/',
+    'SCRIPT_NAME' => '/index.php',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1528985721.256000041961669921875,
+    'REQUEST_TIME' => 1528985721,
+]
+[14-Jun-2018 14:16:32 UTC] An Error occurred while handling another error:
+exception 'yii\web\HeadersAlreadySentException' with message 'Headers already sent in /home/ubuntu/workspace/advanced/common/config/bootstrap.php on line 9.' in /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/ErrorHandler.php(135): yii\web\Response->send()
+#2 /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/ErrorHandler.php(111): yii\web\ErrorHandler->renderException(Object(yii\web\HeadersAlreadySentException))
+#3 [internal function]: yii\base\ErrorHandler->handleException(Object(yii\web\HeadersAlreadySentException))
+#4 {main}
+Previous exception:
+exception 'yii\web\HeadersAlreadySentException' with message 'Headers already sent in /home/ubuntu/workspace/advanced/common/config/bootstrap.php on line 9.' in /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Response.php:366
+Stack trace:
+#0 /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Response.php(339): yii\web\Response->sendHeaders()
+#1 /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Application.php(392): yii\web\Response->send()
+#2 /home/ubuntu/workspace/advanced/frontend/web/index.php(18): yii\base\Application->run()
+#3 {main}
+$_SERVER = [
+    'HTTP_HOST' => 'yii2-ecommerce-alexringo.c9users.io',
+    'HTTP_CACHE_CONTROL' => 'max-age=0',
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1',
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/67.0.3396.87 Safari/537.36',
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8',
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, br',
+    'HTTP_ACCEPT_LANGUAGE' => 'ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7',
+    'HTTP_COOKIE' => '_csrf-frontend=e76c463650cf65b49e8bf5ee6c67adbd1b5e34bd746ebe8eb1b99c697bfdf261a%3A2%3A%7Bi%3A0%3Bs%3A14%3A%22_csrf-frontend%22%3Bi%3A1%3Bs%3A32%3A%22nTFKZbEsTUw4G83YeKQzy5vjcedXsorA%22%3B%7D; dcjq-accordion=0%2C2; XDEBUG_SESSION=cloud9ide',
+    'HTTP_X_FORWARDED_PROTO' => 'https',
+    'HTTP_X_FORWARDED_PORT' => '443',
+    'HTTP_X_REGION' => 'eu',
+    'HTTP_X_FORWARDED_FOR' => '178.130.0.130',
+    'HTTP_CONNECTION' => 'keep-alive',
+    'PATH' => '/home/ubuntu/.nvm/versions/node/v6.11.2/bin:/usr/local/rvm/gems/ruby-2.4.0/bin:/usr/local/rvm/gems/ruby-2.4.0@global/bin:/usr/local/rvm/rubies/ruby-2.4.0/bin:/mnt/shared/bin:/home/ubuntu/workspace/node_modules/.bin:/home/ubuntu/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/mnt/shared/sbin:/opt/gitl:/opt/go/bin:/mnt/shared/c9/app.nw/bin:/usr/local/rvm/bin',
+    'SERVER_SIGNATURE' => '<address>Apache/2.4.7 (Ubuntu) Server at yii2-ecommerce-alexringo.c9users.io Port 443</address>
+',
+    'SERVER_SOFTWARE' => 'Apache/2.4.7 (Ubuntu)',
+    'SERVER_NAME' => 'yii2-ecommerce-alexringo.c9users.io',
+    'SERVER_ADDR' => '172.17.0.53',
+    'SERVER_PORT' => '443',
+    'REMOTE_ADDR' => '10.240.0.185',
+    'DOCUMENT_ROOT' => '/home/ubuntu/workspace/advanced/frontend/web',
+    'REQUEST_SCHEME' => 'https',
+    'CONTEXT_PREFIX' => '',
+    'CONTEXT_DOCUMENT_ROOT' => '/home/ubuntu/workspace/advanced/frontend/web',
+    'SERVER_ADMIN' => '[no address given]',
+    'SCRIPT_FILENAME' => '/home/ubuntu/workspace/advanced/frontend/web/index.php',
+    'REMOTE_PORT' => '44886',
+    'GATEWAY_INTERFACE' => 'CGI/1.1',
+    'SERVER_PROTOCOL' => 'HTTP/1.1',
+    'REQUEST_METHOD' => 'GET',
+    'QUERY_STRING' => '',
+    'REQUEST_URI' => '/',
+    'SCRIPT_NAME' => '/index.php',
+    'PHP_SELF' => '/index.php',
+    'REQUEST_TIME_FLOAT' => 1528985791.8269999027252197265625,
+    'REQUEST_TIME' => 1528985791,
+]
+[15-Jun-2018 04:19:03 UTC] PHP Fatal error:  Class 'Html1' not found in /home/ubuntu/workspace/advanced/frontend/views/category/index.php on line 126
+[15-Jun-2018 04:19:03 UTC] PHP Stack trace:
+[15-Jun-2018 04:19:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/advanced/frontend/web/index.php:0
+[15-Jun-2018 04:19:03 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/advanced/frontend/web/index.php:18
+[15-Jun-2018 04:19:03 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Application.php:386
+[15-Jun-2018 04:19:03 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Application.php:103
+[15-Jun-2018 04:19:03 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:528
+[15-Jun-2018 04:19:03 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:157
+[15-Jun-2018 04:19:03 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[15-Jun-2018 04:19:03 UTC] PHP   8. frontend\controllers\CategoryController->actionIndex() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[15-Jun-2018 04:19:03 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/advanced/frontend/controllers/CategoryController.php:18
+[15-Jun-2018 04:19:03 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:384
+[15-Jun-2018 04:19:03 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:156
+[15-Jun-2018 04:19:03 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:254
+[15-Jun-2018 04:19:03 UTC] PHP  13. require() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:336
