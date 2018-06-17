@@ -636,3 +636,79 @@ $_SERVER = [
 [15-Jun-2018 04:19:03 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:156
 [15-Jun-2018 04:19:03 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:254
 [15-Jun-2018 04:19:03 UTC] PHP  13. require() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:336
+[17-Jun-2018 06:30:04 UTC] PHP Parse error:  syntax error, unexpected 'funcrion' (T_STRING), expecting variable (T_VARIABLE) in /home/ubuntu/workspace/advanced/frontend/controllers/AppController.php on line 11
+[17-Jun-2018 06:30:04 UTC] PHP Stack trace:
+[17-Jun-2018 06:30:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/advanced/frontend/web/index.php:0
+[17-Jun-2018 06:30:04 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/advanced/frontend/web/index.php:18
+[17-Jun-2018 06:30:04 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Application.php:386
+[17-Jun-2018 06:30:04 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Application.php:103
+[17-Jun-2018 06:30:04 UTC] PHP   5. yii\base\Module->createController() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:522
+[17-Jun-2018 06:30:04 UTC] PHP   6. yii\base\Module->createControllerByID() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:596
+[17-Jun-2018 06:30:04 UTC] PHP   7. class_exists() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:637
+[17-Jun-2018 06:30:04 UTC] PHP   8. spl_autoload_call() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:637
+[17-Jun-2018 06:30:04 UTC] PHP   9. yii\BaseYii::autoload() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:637
+[17-Jun-2018 06:30:04 UTC] PHP  10. include() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/BaseYii.php:293
+[17-Jun-2018 06:30:04 UTC] PHP  11. spl_autoload_call() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/BaseYii.php:11
+[17-Jun-2018 06:30:04 UTC] PHP  12. yii\BaseYii::autoload() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/BaseYii.php:11
+[17-Jun-2018 06:30:10 UTC] PHP Parse error:  syntax error, unexpected 'funcrion' (T_STRING), expecting variable (T_VARIABLE) in /home/ubuntu/workspace/advanced/frontend/controllers/AppController.php on line 11
+[17-Jun-2018 06:30:10 UTC] PHP Stack trace:
+[17-Jun-2018 06:30:10 UTC] PHP   1. {main}() /home/ubuntu/workspace/advanced/frontend/web/index.php:0
+[17-Jun-2018 06:30:10 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/advanced/frontend/web/index.php:18
+[17-Jun-2018 06:30:10 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Application.php:386
+[17-Jun-2018 06:30:10 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Application.php:103
+[17-Jun-2018 06:30:10 UTC] PHP   5. yii\base\Module->createController() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:522
+[17-Jun-2018 06:30:10 UTC] PHP   6. yii\base\Module->createControllerByID() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:596
+[17-Jun-2018 06:30:10 UTC] PHP   7. class_exists() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:637
+[17-Jun-2018 06:30:10 UTC] PHP   8. spl_autoload_call() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:637
+[17-Jun-2018 06:30:10 UTC] PHP   9. yii\BaseYii::autoload() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:637
+[17-Jun-2018 06:30:10 UTC] PHP  10. include() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/BaseYii.php:293
+[17-Jun-2018 06:30:10 UTC] PHP  11. spl_autoload_call() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/BaseYii.php:11
+[17-Jun-2018 06:30:10 UTC] PHP  12. yii\BaseYii::autoload() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/BaseYii.php:11
+[17-Jun-2018 07:19:23 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR) in /home/ubuntu/workspace/advanced/frontend/controllers/CategoryController.php on line 25
+[17-Jun-2018 07:19:23 UTC] PHP Stack trace:
+[17-Jun-2018 07:19:23 UTC] PHP   1. {main}() /home/ubuntu/workspace/advanced/frontend/web/index.php:0
+[17-Jun-2018 07:19:23 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/advanced/frontend/web/index.php:18
+[17-Jun-2018 07:19:23 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Application.php:386
+[17-Jun-2018 07:19:23 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Application.php:103
+[17-Jun-2018 07:19:23 UTC] PHP   5. yii\base\Module->createController() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:522
+[17-Jun-2018 07:19:23 UTC] PHP   6. yii\base\Module->createControllerByID() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:596
+[17-Jun-2018 07:19:23 UTC] PHP   7. class_exists() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:637
+[17-Jun-2018 07:19:23 UTC] PHP   8. spl_autoload_call() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:637
+[17-Jun-2018 07:19:23 UTC] PHP   9. yii\BaseYii::autoload() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:637
+[17-Jun-2018 07:20:53 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR) in /home/ubuntu/workspace/advanced/frontend/controllers/CategoryController.php on line 26
+[17-Jun-2018 07:20:53 UTC] PHP Stack trace:
+[17-Jun-2018 07:20:53 UTC] PHP   1. {main}() /home/ubuntu/workspace/advanced/frontend/web/index.php:0
+[17-Jun-2018 07:20:53 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/advanced/frontend/web/index.php:18
+[17-Jun-2018 07:20:53 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Application.php:386
+[17-Jun-2018 07:20:53 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Application.php:103
+[17-Jun-2018 07:20:53 UTC] PHP   5. yii\base\Module->createController() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:522
+[17-Jun-2018 07:20:53 UTC] PHP   6. yii\base\Module->createControllerByID() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:596
+[17-Jun-2018 07:20:53 UTC] PHP   7. class_exists() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:637
+[17-Jun-2018 07:20:53 UTC] PHP   8. spl_autoload_call() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:637
+[17-Jun-2018 07:20:53 UTC] PHP   9. yii\BaseYii::autoload() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:637
+[17-Jun-2018 07:23:13 UTC] PHP Parse error:  syntax error, unexpected '->' (T_OBJECT_OPERATOR) in /home/ubuntu/workspace/advanced/frontend/controllers/CategoryController.php on line 26
+[17-Jun-2018 07:23:13 UTC] PHP Stack trace:
+[17-Jun-2018 07:23:13 UTC] PHP   1. {main}() /home/ubuntu/workspace/advanced/frontend/web/index.php:0
+[17-Jun-2018 07:23:13 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/advanced/frontend/web/index.php:18
+[17-Jun-2018 07:23:13 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Application.php:386
+[17-Jun-2018 07:23:13 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Application.php:103
+[17-Jun-2018 07:23:13 UTC] PHP   5. yii\base\Module->createController() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:522
+[17-Jun-2018 07:23:13 UTC] PHP   6. yii\base\Module->createControllerByID() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:596
+[17-Jun-2018 07:23:13 UTC] PHP   7. class_exists() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:637
+[17-Jun-2018 07:23:13 UTC] PHP   8. spl_autoload_call() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:637
+[17-Jun-2018 07:23:13 UTC] PHP   9. yii\BaseYii::autoload() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:637
+[17-Jun-2018 21:08:01 UTC] PHP Fatal error:  Class 'Url' not found in /home/ubuntu/workspace/advanced/frontend/views/layouts/main.php on line 71
+[17-Jun-2018 21:08:01 UTC] PHP Stack trace:
+[17-Jun-2018 21:08:01 UTC] PHP   1. {main}() /home/ubuntu/workspace/advanced/frontend/web/index.php:0
+[17-Jun-2018 21:08:01 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/advanced/frontend/web/index.php:18
+[17-Jun-2018 21:08:01 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Application.php:386
+[17-Jun-2018 21:08:01 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Application.php:103
+[17-Jun-2018 21:08:01 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:528
+[17-Jun-2018 21:08:01 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:157
+[17-Jun-2018 21:08:01 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[17-Jun-2018 21:08:01 UTC] PHP   8. frontend\controllers\CategoryController->actionIndex() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[17-Jun-2018 21:08:01 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/advanced/frontend/controllers/CategoryController.php:18
+[17-Jun-2018 21:08:01 UTC] PHP  10. yii\base\Controller->renderContent() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:385
+[17-Jun-2018 21:08:01 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:399
+[17-Jun-2018 21:08:01 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:254
+[17-Jun-2018 21:08:01 UTC] PHP  13. require() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:336

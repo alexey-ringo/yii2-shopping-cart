@@ -4,6 +4,7 @@
 /* @var $content string */
 
 use yii\helpers\Html;
+use yii\helpers\Url;
 use yii\bootstrap\Nav;
 use yii\bootstrap\NavBar;
 use yii\widgets\Breadcrumbs;
@@ -68,7 +69,7 @@ ltEshopperAppAsset::register($this);
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="logo pull-left">
-							<a href="index.html"><img src="eshopper/images/home/logo.png" alt="" /></a>
+							<a href="<?= Url::home() ?>"><?= Html::img('@web/eshopper/images/home/logo.png', ['alt' => 'E-SHOPPER']) ?></a>
 						</div>
 						<div class="btn-group pull-right">
 							<div class="btn-group">
