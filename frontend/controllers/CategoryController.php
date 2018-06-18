@@ -26,7 +26,8 @@ class CategoryController extends AppController {
         $query = Product::find()->where(['category_id' => $id]);
         //Создаем объект класса Pagination и передаем ему общее кол-во записей (в полученном запросе)
         //и кол-во записей, которые должны отображаться на одной стр. - pageSize
-        $pages = new Pagination(['totalCount' => $query->count(), 'pageSize' => 3]);
+        //forcePageParam и pageSizeParam - для красоты url (убрать показ get-параметров пагинации)
+        $pages = new Pagination(['totalCount' => $query->count(), 'pageSize' => 3, 'forcePageParam' => false, 'pageSizeParam' => false]);
         //Выполняем сам запрос и передаем в него два параметра: offset - с какой записи начинаит выборку и limit - сколько таких записей взять
         $products = $query->offset($pages->offset)->limit($pages->limit)->all();
         $currentCategory = Category::findOne($id);
