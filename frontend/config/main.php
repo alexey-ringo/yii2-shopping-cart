@@ -44,12 +44,13 @@ return [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
-                //как должна выглядеть реальная ссылка => controller/action
+                //'как должна выглядеть реальный URL в браузере' => 'controller/action'
                 //Конкретные правила всегда раньше, чем общие правила!
                 //более конкретное частное правило для отображения url при пагинации
                 'category/<id:\d+>/page/<page:\d+>' => 'category/view',
                 //это более общее правило - после категории по маске только цифровые значения
                 'category/<id:\d+>' => 'category/view',
+                'product/<id:\d+>' => 'product/view',
             ],
         ],
     ],

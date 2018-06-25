@@ -21,8 +21,10 @@ class CategoryController extends AppController {
     
     public function actionView($id) {
         $id = Yii::$app->request->get('id');
+        //Пример жадной загрузки:
         //$products = Product::find()->where(['category_id' => $id])->all();
         //Получаем объект запроса ActiveQuery, без выполнения самого запроса - нужно просто подсчитать кол-во записей
+        //Ленивая загрузка:
         $query = Product::find()->where(['category_id' => $id]);
         //Создаем объект класса Pagination и передаем ему общее кол-во записей (в полученном запросе)
         //и кол-во записей, которые должны отображаться на одной стр. - pageSize
