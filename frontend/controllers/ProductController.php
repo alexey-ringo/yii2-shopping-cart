@@ -23,8 +23,12 @@ class ProductController extends AppController {
         //Возможный вариант с жадной загрузкой:
         //$product = find($id)->with('category')->where('id' => $id)->limit(1)->one();
         
+        $hits = Product::find()->where(['hit' => 1])->limit(6)->all();
+        $this->setMeta('E-SHOPPER | ' . $product->name, $product->meta_keywords, $product->meta_description);
+        
         return $this->render('view', [
-            'product' => $product
+            'product' => $product,
+            'hits' => $hits,
             ]);
     }
     
