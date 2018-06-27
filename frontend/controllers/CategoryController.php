@@ -21,6 +21,10 @@ class CategoryController extends AppController {
     
     public function actionView($id) {
         $id = Yii::$app->request->get('id');
+        $currentCategory = Category::findOne($id);
+        if(empty($currentCategory)) {
+            throw new \yii\web\HttpException(404, 'Такой категории нет');
+        }
         //Пример жадной загрузки:
         //$products = Product::find()->where(['category_id' => $id])->all();
         //Получаем объект запроса ActiveQuery, без выполнения самого запроса - нужно просто подсчитать кол-во записей
@@ -32,7 +36,7 @@ class CategoryController extends AppController {
         $pages = new Pagination(['totalCount' => $query->count(), 'pageSize' => 3, 'forcePageParam' => false, 'pageSizeParam' => false]);
         //Выполняем сам запрос и передаем в него два параметра: offset - с какой записи начинаит выборку и limit - сколько таких записей взять
         $products = $query->offset($pages->offset)->limit($pages->limit)->all();
-        $currentCategory = Category::findOne($id);
+        
         $this->setMeta('E-SHOPPER | ' . $currentCategory->name, $currentCategory->meta_keywords, $currentCategory->meta_description);
         
         return $this->render('view', [
