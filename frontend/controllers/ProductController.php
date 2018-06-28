@@ -18,7 +18,8 @@ class ProductController extends AppController {
      * @throws NotFoundHttpException if the model cannot be found
      */
     public function actionView($id) {
-        $id = Yii::$app->request->get('id');
+        //Альтернативный способ получения id из массива get:
+        //$id = Yii::$app->request->get('id');
         $product = Product::findOne($id);
         if(empty($product)) {
             throw new \yii\web\HttpException(404, 'Такого товара нет');
