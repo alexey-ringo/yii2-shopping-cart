@@ -2,6 +2,7 @@
 
 /* @var $this yii\web\View */
 /* @var $product frontend\models\Product */
+/* @var $hits frontend\models\Product */
 
 use frontend\components\MenuWidget;
 use yii\helpers\Html;

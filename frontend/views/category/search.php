@@ -1,7 +1,7 @@
 <?php
 /* @var $this yii\web\View */
 /* @var $products frontend\models\Product */
-/* @var $currentCategory frontend\models\Category */
+/* @var $q yii\web\Request */
 /* @var $pages yii\data\Pagination */
 use frontend\components\MenuWidget;
 use yii\helpers\Html;
