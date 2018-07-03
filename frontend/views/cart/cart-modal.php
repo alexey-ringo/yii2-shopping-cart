@@ -1,8 +1,8 @@
 <?php
 /* @var $this yii\web\View */
-/* @var $products frontend\models\Product */
-/* @var $session frontend\models\Category */
-/* @var $pages yii\data\Pagination */
+/* @var $session yii\web\Session */
+
+use yii\helpers\Html;
 ?>
 
 <?php if(!empty($session['cart'])): ?>
@@ -20,7 +20,7 @@
             <tbody>
             <?php foreach($session['cart'] as $id => $item): ?>
                 <tr>
-                    <td><?= $item['img'] ?></td>
+                    <td><?= Html::img("@web/eshopper/images/products/{$item['img']}", ['alt' => $item['name'], 'height' => 50]) ?></td>
                     <td><?= $item['name'] ?></td>
                     <td><?= $item['qty'] ?></td>
                     <td><?= $item['price'] ?></td>
