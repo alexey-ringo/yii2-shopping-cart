@@ -6,6 +6,13 @@
  	speed: 300
  });
 
+//Show modal Cart
+function showCart(cart) {
+	$('#cart .modal-body').html(cart);
+	$('#cart').modal();
+}
+
+//AJAX method Add to Cart
  $('.add-to-cart').on('click', function(e) {
  	e.preventDefault();
  	var id = $(this).data('id');
@@ -17,14 +24,33 @@
  			if(!res) {
  				alert('Ошибка!');
  			}
- 			console.log(res);
- 			//showCart(res);
+ 			//console.log(res);
+ 			showCart(res);
  		},
  		error: function() {
  			alert('Error!');
  		}
  	});
  });
+ 
+ //AJAX method Clear Cart
+ $('#clear-cart').on('click', function() {
+ 	//e.preventDefault();
+  	$.ajax({
+ 		url: '/cart/clear',
+ 		type: 'GET',
+ 		success: function(res) {
+ 			if(!res) {
+ 				alert('Ошибка!');
+ 			}
+ 			showCart(res);
+ 		},
+ 		error: function() {
+ 			alert('Error!');
+ 		}
+ 	});
+ });
+
 
 	var RGBChange = function() {
 	  $('#RGB').css('background', 'rgb('+r.getValue()+','+g.getValue()+','+b.getValue()+')')

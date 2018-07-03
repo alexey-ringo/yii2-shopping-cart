@@ -11,6 +11,7 @@ use yii\widgets\Breadcrumbs;
 use frontend\assets\EshopperAppAsset;
 use frontend\assets\ltEshopperAppAsset;
 use common\widgets\Alert;
+use yii\bootstrap\Modal;
 
 EshopperAppAsset::register($this);
 ltEshopperAppAsset::register($this);
@@ -316,6 +317,18 @@ ltEshopperAppAsset::register($this);
 		</div>
 		
 	</footer><!--/Footer-->
+<?php
+Modal::begin([
+	'header' => '<h2>Корзина</h2>',
+	'id' => 'cart',
+	'size' => 'modal-lg',
+	'footer' => '<button type="button" class="btn btn-default" data-dismiss="modal">Продолжить покупки</button>
+        		<button type="button" class="btn btn-success">Оформить заказ</button>
+        		<button type="button" class="btn btn-danger" id="clear-cart">Очистить корзину</button>'
+
+]);
+Modal::end();
+?>
 
 <?php $this->endBody() ?>
 </body>
