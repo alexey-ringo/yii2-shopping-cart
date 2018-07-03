@@ -75,6 +75,24 @@ function showCart(cart) {
  });
 
 
+$('#get-cart').on('click', function() {
+ 	$.ajax({
+ 		url: '/cart/show',
+ 		type: 'GET',
+ 		success: function(res) {
+ 			if(!res) {
+ 				alert('Ошибка!');
+ 			}
+ 			showCart(res);
+ 		},
+ 		error: function() {
+ 			alert('Error!');
+ 		}
+ 	});
+ 	//Уберем переход по ссылке по умолчанию
+ 	return false;
+ });
+
 	var RGBChange = function() {
 	  $('#RGB').css('background', 'rgb('+r.getValue()+','+g.getValue()+','+b.getValue()+')')
 	};	

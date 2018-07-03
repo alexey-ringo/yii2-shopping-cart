@@ -10,7 +10,7 @@ use Yii;
  */
 class CartController extends AppController {
     
-    //Добавление товара в корзину
+    //Добавление товара в корзину (with show modal Cart)
     public function actionAdd() {
         //id добавляемого в карту товара
         $id = Yii::$app->request->get('id');
@@ -64,6 +64,18 @@ class CartController extends AppController {
         return $this->render('cart-modal',[
             'session' => $session,
             ]);
+    }
+    
+    //Show modal Cart
+    public function actionShow() {
+        $session = Yii::$app->session;
+        $session->open();
+        $this->layout = false;
+        
+        return $this->render('cart-modal',[
+            'session' => $session,
+            ]);
+        
     }
     
 }
