@@ -33,7 +33,30 @@ function showCart(cart) {
  	});
  });
  
- //AJAX method Clear Cart
+ //Clear selected product
+ //Делегирование событий для динамических элементов del-item
+ //путем навешивание данного события на родительский статический элемент
+ $('#cart .modal-body').on('click', '.del-item', function() {
+ 	var id = $(this).data('id');
+ 	//console.log(id);
+ 	$.ajax({
+ 		url: '/cart/del-item',
+ 		data: {id: id},
+ 		type: 'GET',
+ 		success: function(res) {
+ 			if(!res) {
+ 				alert('Ошибка!');
+ 			}
+ 			//console.log(res);
+ 			showCart(res);
+ 		},
+ 		error: function() {
+ 			alert('Error!');
+ 		}
+ 	});
+ });
+ 
+ //AJAX method Cart full clear
  $('#clear-cart').on('click', function() {
  	//e.preventDefault();
   	$.ajax({

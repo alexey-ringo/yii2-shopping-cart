@@ -35,4 +35,21 @@ class Cart extends ActiveRecord {
         $_SESSION['cart.sum'] = isset($_SESSION['cart.sum']) ? $_SESSION['cart.sum'] + $qty * $product->price : $qty * $product->price;
     }
     
+    public function recalc($id) {
+        //если товара с переданным на удаление id нет в текущей корзине:
+        if(!isset($_SESSION['cart'][$id])) {
+            return false;
+        }
+        //Вычисление дельты, на которую нужно будет 
+        //уменьшить итоговое кол-во и итоговую стоимость корзины
+        $qtyMinus = $_SESSION['cart'][$id]['qty'];
+        $sumMinus = $_SESSION['cart'][$id]['qty'] * $_SESSION['cart'][$id]['price'];
+        
+        //Уменьшение общего кол-ва и стоимости корзины на рассчитанное значение
+        $_SESSION['cart.qty'] -= $qtyMinus;
+        $_SESSION['cart.sum'] -= $sumMinus;
+        
+        //Собственно удаление элемента (товара)
+        unset($_SESSION['cart'][$id]);
+    }
 }

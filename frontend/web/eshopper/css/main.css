@@ -1178,8 +1178,11 @@ h2.title {
   margin-top: 10px;
 }
 
+.del-item {
+  cursor: pointer;
+}
 
-
+/* for clear-button in modal-window Cart */
 .view-product {
   position: relative;
 }
