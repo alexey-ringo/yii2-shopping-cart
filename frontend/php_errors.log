@@ -750,3 +750,17 @@ $_SERVER = [
 [28-Jun-2018 13:56:32 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:157
 [28-Jun-2018 13:56:32 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
 [28-Jun-2018 13:56:32 UTC] PHP   8. frontend\controllers\CartController->actionAdd() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[04-Jul-2018 21:20:16 UTC] PHP Warning:  The use statement with non-compound name 'Yii' has no effect in /home/ubuntu/workspace/advanced/frontend/views/product/view.php on line 10
+[04-Jul-2018 21:20:16 UTC] PHP Stack trace:
+[04-Jul-2018 21:20:16 UTC] PHP   1. {main}() /home/ubuntu/workspace/advanced/frontend/web/index.php:0
+[04-Jul-2018 21:20:16 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/advanced/frontend/web/index.php:18
+[04-Jul-2018 21:20:16 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Application.php:386
+[04-Jul-2018 21:20:16 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Application.php:103
+[04-Jul-2018 21:20:16 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:528
+[04-Jul-2018 21:20:16 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:157
+[04-Jul-2018 21:20:16 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[04-Jul-2018 21:20:16 UTC] PHP   8. frontend\controllers\ProductController->actionView() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[04-Jul-2018 21:20:16 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/advanced/frontend/controllers/ProductController.php:36
+[04-Jul-2018 21:20:16 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:384
+[04-Jul-2018 21:20:16 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:156
+[04-Jul-2018 21:20:16 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:254

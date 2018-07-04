@@ -7,7 +7,7 @@
 use frontend\components\MenuWidget;
 use yii\helpers\Html;
 use yii\helpers\Url;
-
+use Yii;
 ?>
 
 
@@ -104,11 +104,12 @@ use yii\helpers\Url;
 								<span>
 									<span>US $<?= $product->price ?></span>
 									<label>Quantity:</label>
-									<input type="text" value="3" />
-									<button type="button" class="btn btn-fefault cart">
+									<input type="text" id="qty" value="3" />
+									<input type="text" id="qty" value="<?= $_SESSION['cart'][$product->id]['qty'] ?>" />
+									<a href="<?= Url::to(['cart/add', 'id' => $product->id]) ?>" data-id="<?= $product->id ?>" class="btn btn-fefault add-to-cart cart">
 										<i class="fa fa-shopping-cart"></i>
 										Add to cart
-									</button>
+									</a>
 								</span>
 								<p><b>Availability:</b> In Stock</p>
 								<p><b>Condition:</b> New</p>
