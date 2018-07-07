@@ -1,0 +1,48 @@
+<?php
+
+namespace frontend\models;
+
+use yii\db\ActiveRecord;
+use Yii;
+
+/**
+ * This is the model class for table "order_items".
+ *
+ * @property int $id
+ * @property int $order_id
+ * @property int $product_id
+ * @property string $name
+ * @property string $price
+ * @property int $qty_item
+ * @property string $sum_item
+ */
+class OrderItems extends ActiveRecord
+{
+    /**
+     * {@inheritdoc}
+     */
+    public static function tableName()
+    {
+        return 'order_items';
+    }
+    
+    public function getOrder() {
+        //Один товар только к одному заказу
+        return $this->hasOne(Order::className(), ['id' => 'order_id']);
+    }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function rules()
+    {
+        return [
+            [['order_id', 'product_id', 'name', 'price', 'qty_item', 'sum_item'], 'required'],
+            [['order_id', 'product_id', 'qty_item'], 'integer'],
+            [['price', 'sum_item'], 'number'],
+            [['name'], 'string', 'max' => 255],
+        ];
+    }
+
+    
+}

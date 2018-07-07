@@ -3,6 +3,8 @@ namespace frontend\controllers;
 
 use frontend\models\Product;
 use frontend\models\Cart;
+use frontend\models\Order;
+use frontend\models\OrderItems;
 use Yii;
 
 /**
@@ -83,4 +85,32 @@ class CartController extends AppController {
         
     }
     
+    //Show html Cart - begin to order
+    public function actionView() {
+        $session = Yii::$app->session;
+        $session->open();
+        $this->setMeta('Корзина');
+        //Создаем объект заказа
+        $order = new Order();
+        if($order->load(Yii::$app->request->post())) {
+            $order->qty = $session['cart.qty'];
+            $order->qty = $session['cart.sum'];
+            if($order->save()) {
+                //сохраняем все товары в рамках данного заказа с указанием id-заказа
+                $order->saveOrderItems($session['cart'], $order->id);
+                Yii::$app->session->setFlash('success', 'Ваш заказ принят. Менеджер скоро свяжется с Вами');
+                $session->remove('cart');
+                $session->remove('cart.qty');
+                $session->remove('cart.sum');
+                return $this->refresh();
+            }
+            else {
+                Yii::$app->session->setFlash('success', 'Ошибка оформления заказа');
+            }
+        }
+        return $this->render('view',[
+            'session' => $session,
+            'order' => $order,
+            ]);
+    }
 }

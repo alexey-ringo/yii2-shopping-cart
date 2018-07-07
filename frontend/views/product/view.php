@@ -105,7 +105,7 @@ use Yii;
 									<span>US $<?= $product->price ?></span>
 									<label>Quantity:</label>
 									<input type="text" id="qty" value="3" />
-									<input type="text" id="qty" value="<?= $_SESSION['cart'][$product->id]['qty'] ?>" />
+									<input type="text" id="qty" value="<?= isset($_SESSION['cart'][$product->id]['qty']) ? $_SESSION['cart'][$product->id]['qty'] : 1 ?>" />
 									<a href="<?= Url::to(['cart/add', 'id' => $product->id]) ?>" data-id="<?= $product->id ?>" class="btn btn-fefault add-to-cart cart">
 										<i class="fa fa-shopping-cart"></i>
 										Add to cart
