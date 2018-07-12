@@ -103,8 +103,12 @@ ltEshopperAppAsset::register($this);
 								<li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
 								<li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
 								<li><a href="#" id="get-cart"><i class="fa fa-shopping-cart"></i> Cart(<span id="cart-count"></span>)</a></li>
+								<?php if(Yii::$app->user->isGuest): ?>
 								<li><a href="<?= Url::to(['user/signup']) ?>"><i class="fa fa-lock"></i> Register</a></li>
 								<li><a href="<?= Url::to(['user/login']) ?>"><i class="fa fa-lock"></i> Login</a></li>
+								<?php else: ?>
+								<li><a href="<?= Url::to(['user/logout']) ?>"><i class="fa fa-lock"></i> Logout <?= Yii::$app->user->identity->username ?></a></li>
+								<?php endif; ?>
 							</ul>
 						</div>
 					</div>
@@ -133,8 +137,12 @@ ltEshopperAppAsset::register($this);
 										<li><a href="product-details.html">Product Details</a></li> 
 										<li><a href="checkout.html">Checkout</a></li> 
 										<li><a href="cart.html">Cart</a></li> 
+										<?php if(Yii::$app->user->isGuest): ?>
 										<li><a href="<?= Url::to(['user/signup']) ?>">Register</a></li>
 										<li><a href="<?= Url::to(['user/login']) ?>">Login</a></li>
+										<?php else: ?>
+										<li><a href="<?= Url::to(['user/login']) ?>">Logout <?= Yii::$app->user->identity->username ?></a></li>
+										<?php endif; ?>
                                     </ul>
                                 </li> 
 								<li class="dropdown"><a href="#">Blog<i class="fa fa-angle-down"></i></a>
@@ -161,6 +169,11 @@ ltEshopperAppAsset::register($this);
 	</header><!--/header-->
 	
 	<?= Alert::widget() ?>
+	<?php
+	echo '<pre>';
+	var_dump(Yii::$app->user->isGuest);
+	echo '</pre>';
+	?>
 	<?= $content; ?>
 	
 	<footer id="footer"><!--Footer-->

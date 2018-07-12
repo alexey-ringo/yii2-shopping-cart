@@ -19,6 +19,14 @@ return [
             'csrfParam' => '_csrf-frontend',
             'baseUrl' => '',
         ],
+        /* компонент приложения (yii\web\User), ответственный за авторизацию и аутентификацию пользователей */
+        'user' => [
+            //Указали класс User (ActiveRecord!!), работающий с таблицей пользователей
+            //Данный класс обязательно должен иметь реализацию IdentityInterface
+            'identityClass' => 'frontend\models\User',
+            'enableAutoLogin' => true,
+            'identityCookie' => ['name' => '_identity-frontend', 'httpOnly' => true],
+        ],
         'session' => [
             // this is the name of the session cookie used for login on the frontend
             'name' => 'advanced-frontend',

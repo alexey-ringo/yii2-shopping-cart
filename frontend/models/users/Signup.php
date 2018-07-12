@@ -21,12 +21,13 @@ class Signup extends Model {
             //unique - валидатор на уникальность yii\validators\UniqueValidator
             //targetClass - класс, к которому нужно обратиться для проверки на уникальность записи
             //т.е. - в какой таблице в БД нужно проверять уникальность записи
-            [['username'], 'unique', 'targetClass' => User::className()],
+            //[['username'], 'unique', 'targetClass' => User::className()],
             
             ['email', 'trim'], //Обрезка пробелов по краям
             ['email', 'required'],
             ['email', 'email'],
             ['email', 'string', 'max' => 255],
+            //unique - валидатор на уникальность yii\validators\UniqueValidator
             //targetClass - класс, к которому нужно обратиться для проверки на уникальность записи в БД
             [['email'], 'unique', 'targetClass' => User::className()],
             
@@ -37,6 +38,8 @@ class Signup extends Model {
     }
     
     public function save() {
+        echo $this->username;
+        die;
         if($this->validate()) {
             $user = new User();
             //$this-email и $this-username - позьзоваьельские данные, загруженные из ActiveForm с помощью load()
