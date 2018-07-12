@@ -2,11 +2,28 @@
 namespace frontend\controllers;
 
 use yii\web\Controller;
+use yii\filters\VerbFilter;
 
 /**
  * Main controller
  */
 class AppController extends Controller {
+    
+    /**
+     * {@inheritdoc}
+     */
+    public function behaviors()
+    {
+        return [
+            'verbs' => [
+                'class' => VerbFilter::className(),
+                'actions' => [
+                    'logout' => ['post'],
+                ],
+            ],
+        ];
+    }
+
     
     protected function setMeta($title = null, $keywords = null, $description = null) {
         $this->view->title = $title;

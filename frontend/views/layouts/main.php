@@ -103,7 +103,8 @@ ltEshopperAppAsset::register($this);
 								<li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li>
 								<li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
 								<li><a href="#" id="get-cart"><i class="fa fa-shopping-cart"></i> Cart(<span id="cart-count"></span>)</a></li>
-								<li><a href="login.html"><i class="fa fa-lock"></i> Login</a></li>
+								<li><a href="<?= Url::to(['user/signup']) ?>"><i class="fa fa-lock"></i> Register</a></li>
+								<li><a href="<?= Url::to(['user/login']) ?>"><i class="fa fa-lock"></i> Login</a></li>
 							</ul>
 						</div>
 					</div>
@@ -132,7 +133,8 @@ ltEshopperAppAsset::register($this);
 										<li><a href="product-details.html">Product Details</a></li> 
 										<li><a href="checkout.html">Checkout</a></li> 
 										<li><a href="cart.html">Cart</a></li> 
-										<li><a href="login.html">Login</a></li> 
+										<li><a href="<?= Url::to(['user/signup']) ?>">Register</a></li>
+										<li><a href="<?= Url::to(['user/login']) ?>">Login</a></li>
                                     </ul>
                                 </li> 
 								<li class="dropdown"><a href="#">Blog<i class="fa fa-angle-down"></i></a>
@@ -158,6 +160,7 @@ ltEshopperAppAsset::register($this);
 		</div><!--/header-bottom-->
 	</header><!--/header-->
 	
+	<?= Alert::widget() ?>
 	<?= $content; ?>
 	
 	<footer id="footer"><!--Footer-->
