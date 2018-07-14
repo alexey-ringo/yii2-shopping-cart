@@ -57,6 +57,33 @@ return [
                 'search' => 'category/search',
             ],
         ],
+        /*
+        'assetManager' => [
+            // override bundles to use CDN :
+            'bundles' => [
+                'yii\bootstrap4\BootstrapAsset' => [
+                    'sourcePath' => null,
+                    'baseUrl' => 'https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1',
+                    'css' => [
+                        'css/bootstrap.min.css'
+                    ],
+                ],
+                'yii\bootstrap4\BootstrapPluginAsset' => [
+                    'sourcePath' => null,
+                    'baseUrl' => 'https://maxcdn.bootstrapcdn.com/bootstrap/4.1.1',
+                    'js' => [
+                        'js/bootstrap.min.js'
+                    ],
+                ],
+                'yii\bootstrap4\BootstrapThemeAsset' => [
+                    'sourcePath' => null,
+                    'baseUrl' => null,
+                    'css' => []
+                ],
+            ],
+        ],
+        */
+        
     ],
     'params' => $params,
 ];
