@@ -36,4 +36,28 @@ class ProductController extends AppController {
             ]);
     }
     
+    
+    public function actionViewModal($id) {
+         $product = Product::findOne($id);
+        //Модальному окну корзины не нужен html-шаблон
+        $this->layout = false;
+        return $this->render('view-modal', [
+            'product' => $product,
+            ]);
+    }
+    
+    
+    public function actionModal($id) {
+        //$result['product'] = $product = Product::find()->where(['id' => $id])->asArray()->one();
+        //$result['images'] = $product->images;
+        
+        $result['product'] = $product = Product::find()->where(['id' => $id])->one();
+        $result['images'] = $product->images;
+        
+        \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON; 
+        
+        return $result;
+           
+    }
+    
 }

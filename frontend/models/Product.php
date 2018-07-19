@@ -10,9 +10,9 @@ use Yii;
  * @property int $id
  * @property int $category_id
  * @property string $name
+ * @property int $code
  * @property string $content
  * @property string $price
- * @property string $img
  * @property string $meta_title
  * @property string $meta_keywords
  * @property string $meta_description
@@ -36,11 +36,11 @@ class Product extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['category_id', 'name'], 'required'],
-            [['category_id', 'hit', 'new', 'sale'], 'integer'],
+            [['category_id', 'name', 'code'], 'required'],
+            [['category_id', 'code', 'hit', 'new', 'sale'], 'integer'],
             [['content'], 'string'],
             [['price'], 'number'],
-            [['name', 'img', 'meta_title', 'meta_keywords', 'meta_description'], 'string', 'max' => 255],
+            [['name', 'meta_title', 'meta_keywords', 'meta_description'], 'string', 'max' => 255],
         ];
     }
 
@@ -55,7 +55,6 @@ class Product extends \yii\db\ActiveRecord
             'name' => 'Name',
             'content' => 'Content',
             'price' => 'Price',
-            'img' => 'Img',
             'meta_title' => 'Meta Title',
             'meta_keywords' => 'Meta Keywords',
             'meta_description' => 'Meta Description',
@@ -67,5 +66,9 @@ class Product extends \yii\db\ActiveRecord
     
     public function getCategory() {
         return $this->hasOne(Category::className(), ['id' => 'category_id']);
+    }
+    
+    public function getImages() {
+        return $this->hasOne(ImageProduct::className(), ['product_code' => 'code']);
     }
 }

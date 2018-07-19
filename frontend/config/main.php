@@ -84,6 +84,49 @@ return [
         ],
         */
         
+        /*
+        'assetManager' => [
+            // override bundles to use CDN :
+            'bundles' => [
+                'yii\web\JqueryAsset' => [
+                    'sourcePath' => null,
+                    'basePath' => '@webroot',
+                    'baseUrl' => '@web',
+                    'js' => [
+                        'vendor/jquery/jquery-3.2.1.min.js',
+                    ],
+                ],
+                
+                'yii\bootstrap4\BootstrapAsset' => [
+                    'sourcePath' => null,
+                    'basePath' => '@webroot',
+                    'baseUrl' => '@web',
+                    'css' => [
+                        'vendor/bootstrap/css/bootstrap.min.css',
+                    ],
+                ],
+                
+                
+                
+                'yii\bootstrap4\BootstrapPluginAsset' => [
+                    'sourcePath' => null,
+                    'basePath' => '@webroot',
+                    'baseUrl' => '@web',
+                    'js' => [
+                        'vendor/bootstrap/js/bootstrap.min.js',
+                    ],
+                ],
+                
+               
+            ],
+        ],
+        
+        */
+        
+       
+        
+        
+        
     ],
     'params' => $params,
 ];

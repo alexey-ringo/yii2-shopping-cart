@@ -15,14 +15,17 @@ class Btstrp4EssenceAsset extends AssetBundle
     public $baseUrl = '@web';
     public $css = [
     //    'estore/css/bootstrap.min.css',
-        'css/core-style.css',
         'css/classy-nav.min.css',
         'css/owl.carousel.css',
         'css/animate.css',
+        'css/coza-select2.css',
         'css/magnific-popup.css',
         'css/jquery-ui.min.css',
         'css/nice-select.css',
         'css/font-awesome.min.css',
+        'css/coza-util.css',
+        //'css/coza-main.css',
+        'css/core-style.css',
         
         
         
@@ -32,6 +35,7 @@ class Btstrp4EssenceAsset extends AssetBundle
     //    'estore/js/bootstrap.min.js',
     //    'js/popper.min.js',
         'js/plugins.js',
+        'js/coza-select2.js',
         'js/classy-nav.min.js',
         'js/jquery.cookie.js',
         'js/jquery.accordion.js',
