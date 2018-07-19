@@ -4,10 +4,26 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "f03ed55730ec4ee47be53cb153378409",
+    "content-hash": "8332633db67d62783a8010a8ba874ef0",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
+            "version": "v4.1.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/twbs/bootstrap.git",
+                "reference": "779ad9f174ea5ab7e755f6df0ec9e5912d67dd16"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/twbs/bootstrap/zipball/779ad9f174ea5ab7e755f6df0ec9e5912d67dd16",
+                "reference": "779ad9f174ea5ab7e755f6df0ec9e5912d67dd16",
+                "shasum": null
+            },
+            "type": "bower-asset"
+        },
+        {
+            "name": "bower-asset/bootstrap4",
             "version": "v4.1.1",
             "source": {
                 "type": "git",
@@ -209,11 +225,11 @@
             "time": "2018-02-23T01:58:20+00:00"
         },
         {
-            "name": "npm-asset/jquery",
-            "version": "2.2.4",
+            "name": "npm-asset/bootstrap",
+            "version": "4.1.1",
             "dist": {
                 "type": "tar",
-                "url": "https://registry.npmjs.org/jquery/-/jquery-2.2.4.tgz",
+                "url": "https://registry.npmjs.org/bootstrap/-/bootstrap-4.1.1.tgz",
                 "reference": null,
                 "shasum": null
             },
@@ -2957,7 +2973,6 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "yiisoft/yii2": 20,
         "yiisoft/yii2-bootstrap4": 20
     },
     "prefer-stable": true,
