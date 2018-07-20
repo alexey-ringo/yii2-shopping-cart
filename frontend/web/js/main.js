@@ -195,8 +195,28 @@
     /*==================================================================
     [ Cart ]*/
     $('.js-show-cart').on('click',function(){
-        $('.js-panel-cart').addClass('show-header-cart');
+        $.ajax({
+ 			url: '/cart/show',
+ 				type: 'GET',
+ 				success: function(res) {
+ 			        if(!res) {
+ 				        alert('Ошибка!');
+ 			        }
+ 			        showCart(res);
+ 		        },
+ 				error: function() {
+ 					alert('Error!');
+ 					}
+ 		});
+        
     });
+
+    //Show modal Cart
+    function showCart(cart) {
+        console.log(cart);
+	    $('.js-panel-cart .header-cart-content').html(cart);
+	    $('.js-panel-cart').addClass('show-header-cart');
+    }
 
     $('.js-hide-cart').on('click',function(){
         $('.js-panel-cart').removeClass('show-header-cart');

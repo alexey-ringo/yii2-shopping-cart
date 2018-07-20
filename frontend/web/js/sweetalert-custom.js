@@ -27,9 +27,10 @@ $('.js-addwish-b2, .js-addwish-detail').on('click', function(e){
 
 		$('.js-addcart-detail').each(function(){
 			var nameProduct = $(this).parent().parent().parent().parent().find('.js-name-detail').html();
-			var id = $(this).data('id');
+			
 				
 			$(this).on('click', function(){
+				var id = $(this).data('id');
 				$.ajax({
  					url: '/cart/add',
  					data: {id: id},
@@ -39,8 +40,11 @@ $('.js-addwish-b2, .js-addwish-detail').on('click', function(e){
  							alert('Ошибка!');
  						}
  						else {
- 							console.log(res);
- 							swal(nameProduct, "is added to cart !", "success");
+ 							$('.js-show-cart').data('notify', 1);
+ 							var notifyId = $('.js-show-cart').data('notify');
+ 							console.log(notifyId);
+ 							swal(nameProduct, "добавлено в корзину!", "success");
+ 							
  						}
  					},
  					error: function() {

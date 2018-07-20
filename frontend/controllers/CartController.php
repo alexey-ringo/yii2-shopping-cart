@@ -13,7 +13,7 @@ use Yii;
 class CartController extends AppController {
     
     //Добавление товара в корзину (with show modal Cart)
-    public function actionAdd() {
+    /*public function actionAdd() {
         //id добавляемого в карту товара
         $id = Yii::$app->request->get('id');
         //приводим пришедшее значение о кол-ве к числу
@@ -41,6 +41,35 @@ class CartController extends AppController {
         return $this->render('cart-modal',[
             'session' => $session,
             ]);
+    }
+    */
+    
+    public function actionAdd() {
+         //id добавляемого в карту товара
+        $id = Yii::$app->request->get('id');
+        //приводим пришедшее значение о кол-ве к числу
+        $qty = (int)Yii::$app->request->get('qty');
+        //если пришло false - устанавливаем 1, иначе реальное пришедшее значение qty
+        $qty = !$qty ? 1 : $qty;
+        $product = Product::findOne($id);
+        if(empty($product)) {
+            return false;
+        }
+        
+        $session = Yii::$app->session;
+        $session->open();
+        $cart = new Cart();
+        if ($cart->addToCart($product, $qty)) {
+        
+            //Если запрос пришел не AJAX-методом, 
+            //то возвращаем пользователя на страницу, с которой он пришел
+            if(!Yii::$app->request->isAjax) {
+                return $this->redirect(Yii::$app->request->referrer);
+            }
+            return true;
+        }
+        
+        return false;
     }
     
     //Полная очистка корзины
