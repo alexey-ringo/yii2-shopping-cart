@@ -108,7 +108,7 @@ class CartController extends AppController {
         $session->open();
         $this->layout = false;
         
-        return $this->render('cart-modal',[
+        return $this->render('view-modal',[
             'session' => $session,
             ]);
         

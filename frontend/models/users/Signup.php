@@ -38,8 +38,7 @@ class Signup extends Model {
     }
     
     public function save() {
-        echo $this->username;
-        die;
+  
         if($this->validate()) {
             $user = new User();
             //$this-email и $this-username - позьзоваьельские данные, загруженные из ActiveForm с помощью load()

@@ -47,17 +47,24 @@ Bootstrap4CozaAsset::register($this);
 						Help & FAQs
 					</a>
 
-					<a href="#" class="flex-c-m trans-04 p-lr-25">
-						My Account
+<?php if(Yii::$app->user->isGuest): ?>
+
+					<a href="<?= Url::to(['user/signup']) ?>" class="flex-c-m trans-04 p-lr-25">
+						Регистрация
 					</a>
 
-					<a href="#" class="flex-c-m trans-04 p-lr-25">
-						EN
+					<a href="<?= Url::to(['user/login']) ?>" class="flex-c-m trans-04 p-lr-25">
+						Вход
 					</a>
 
-					<a href="#" class="flex-c-m trans-04 p-lr-25">
-						USD
+<?php else: ?>
+
+					<a href="<?= Url::to(['user/logout']) ?>" class="flex-c-m trans-04 p-lr-25">
+						Выход <?= Yii::$app->user->identity->username ?>
 					</a>
+
+<?php endif; ?>
+
 				</div>
 			</div>
 		</div>
@@ -66,14 +73,21 @@ Bootstrap4CozaAsset::register($this);
 			<nav class="limiter-menu-desktop container">
 					
 				<!-- Logo desktop -->		
-				<a href="#" class="logo">
+				<a href="<?= Url::home() ?>" class="logo">
 					<img src="/img/icons/logo-01.png" alt="IMG-LOGO">
 				</a>
 
 				<!-- Menu desktop -->
 				<div class="menu-desktop">
 					<ul class="main-menu">
-<?= MenuWidget::widget(['tpl' => 'menu']) ?>						
+<?php 
+MenuWidget::begin([
+	'id' => 'main-menu', 
+	'tpl' => 'menu'
+	]);
+	
+MenuWidget::end();
+?>						
 					</ul>
 				</div>	
 
@@ -157,7 +171,16 @@ Bootstrap4CozaAsset::register($this);
 		</ul>
 
 		<ul class="main-menu-m">
-<?= MobMenuWidget::widget(['tpl' => 'mob_menu']) ?>
+			
+<?php 
+MenuWidget::begin([
+	'id' => 'main-menu-m', 
+	'tpl' => 'mob_menu'
+	]);
+	
+MenuWidget::end();
+?>						
+
 		</ul>
 	</div>
 
@@ -196,8 +219,19 @@ Bootstrap4CozaAsset::register($this);
 			
 			<div class="header-cart-content flex-w js-pscroll">
 				
-
+				
 			</div>
+			
+			<div class="header-cart-buttons flex-w w-full">
+				<a href="<?= Url::to(['cart/view']) ?>" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10">
+					Корзина
+				</a>
+
+				<a href="<?= Url::to(['cart/view']) ?>" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10">
+					Оформить заказ
+				</a>
+			</div>
+			
 		</div>
 	</div>
         
@@ -511,20 +545,6 @@ Bootstrap4CozaAsset::register($this);
 			</div>
 		</div>
 	</div>
-
-
-<?php
-
-Modal::begin([
-	'id' => 'modal-product-view',
-	'size' => 'modal-lg'
-
-]);
-Modal::end();
-
-?>
-
-
 
 <?php $this->endBody() ?>
 </body>
