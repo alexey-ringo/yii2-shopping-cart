@@ -122,7 +122,7 @@ MenuWidget::end();
 				<i class="zmdi zmdi-search"></i>
 			</div>
 
-			<div class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti js-show-cart" data-notify="3">
+			<div class="icon-header-item cl2 hov-cl1 trans-04 p-r-11 p-l-10 icon-header-noti js-show-cart" data-notify="<?= Yii::$app->session->get('cart.qty') ?>">
 				<i class="zmdi zmdi-shopping-cart"></i>
 			</div>
 
