@@ -158,9 +158,9 @@ use yii\widgets\ActiveForm;
 							</div>
 						</div>
 
-						<button class="flex-c-m stext-101 cl0 size-116 bg3 bor14 hov-btn3 p-lr-15 trans-04 pointer">
-							Proceed to Checkout
-						</button>
+						<a href="<?= Url::to(['order/create']) ?>" class="flex-c-m stext-101 cl0 size-116 bg3 bor14 hov-btn3 p-lr-15 trans-04 pointer">
+							Приступить к оформлению заказа
+						</a>
 					</div>
 				</div>
 				

@@ -14,6 +14,7 @@ class UserController extends Controller
         $model = new Login();
         if($model->load(Yii::$app->request->post()) && $model->login()) {
             $this->redirect(['category/index']);
+            //return $this->redirect(Yii::$app->request->referrer);
         }
     
         return $this->render('login', [
@@ -27,6 +28,7 @@ class UserController extends Controller
         if($model->load(Yii::$app->request->post()) && $model->save()) {
             Yii::$app->session->setFlash('success', 'Пользователь зарегистрирован!');
             $this->redirect(['category/index']);
+            //$this->redirect(Yii::$app->request->referrer);
         }
         return $this->render('signup', [
             'model' => $model,

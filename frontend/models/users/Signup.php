@@ -53,6 +53,8 @@ class Signup extends Model {
             $user->password_hash = Yii::$app->security->generatePasswordHash($this->password);
             
             if ($user->save()) {
+                
+                //Место успешной регистрации нового пользователя
                 return $user;
             }         
         }

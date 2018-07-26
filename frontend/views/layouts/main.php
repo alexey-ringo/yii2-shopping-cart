@@ -173,12 +173,12 @@ MenuWidget::end();
 		<ul class="main-menu-m">
 			
 <?php 
-MenuWidget::begin([
+MobMenuWidget::begin([
 	'id' => 'main-menu-m', 
 	'tpl' => 'mob_menu'
 	]);
 	
-MenuWidget::end();
+MobMenuWidget::end();
 ?>						
 
 		</ul>
@@ -227,7 +227,7 @@ MenuWidget::end();
 					Корзина
 				</a>
 
-				<a href="<?= Url::to(['cart/view']) ?>" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10">
+				<a href="<?= Url::to(['order/create']) ?>" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-b-10">
 					Оформить заказ
 				</a>
 			</div>

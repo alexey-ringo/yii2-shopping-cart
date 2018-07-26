@@ -34,7 +34,7 @@ class MobMenuWidget extends Widget {
     
     public function run() {
         //Проверяем - есть ли в соответствующем разделе кэша (menu) - инф. о запросе списка категорий
-        $menu = Yii::$app->cache->get('menu');
+        $menu = Yii::$app->cache->get('mob_menu');
         //Если из этой секции кэша (menu) - что либо получено - то run() сразу возвращает это значение
         if($menu) {
             return $menu;
@@ -49,7 +49,7 @@ class MobMenuWidget extends Widget {
         $this->menuHtml = $this->getMenuHtml($this->tree);
         //По окончании формирования меню записываем его в кэш
         //(название конкретного кэша, /что записываем, /время действия кэша в сек)
-        Yii::$app->cache->set('menu', $this->menuHtml, 60);
+        Yii::$app->cache->set('mob_menu', $this->menuHtml, 60);
         return $this->menuHtml;
     }
     
@@ -85,7 +85,7 @@ class MobMenuWidget extends Widget {
     protected function catToTemplate($category) {
         ob_start();
         //и помещает его в шаблон
-        include __DIR__ . '/mob_menu_tpl/' . $this->tpl;
+        include __DIR__ . '/menu_tpl/' . $this->tpl;
         //буферизация - для запрета вывода в браузер. Буферизируем вывод (ob_start), а затем возврящаем, не выводя на экран
         return ob_get_clean();
     }

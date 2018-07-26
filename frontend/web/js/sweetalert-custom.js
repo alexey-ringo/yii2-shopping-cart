@@ -40,9 +40,12 @@ $('.js-addwish-b2, .js-addwish-detail').on('click', function(e){
  							alert('Ошибка!');
  						}
  						else {
- 							$('.js-show-cart').data('notify', 1);
- 							var notifyId = $('.js-show-cart').data('notify');
- 							console.log(notifyId);
+ 							var prevNotifyId = $('.js-show-cart').data('notify');
+ 							var newNotifyId = prevNotifyId + 1;
+ 							//console.log(newNotifyId);
+ 							$('.js-show-cart').data('notify', newNotifyId).attr('data-notify', newNotifyId);
+ 							//var setNotifyId = $('.js-show-cart').data('notify');
+ 							//console.log(setNotifyId);
  							swal(nameProduct, "добавлено в корзину!", "success");
  							
  						}
