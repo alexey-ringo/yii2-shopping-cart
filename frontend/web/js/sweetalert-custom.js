@@ -41,7 +41,7 @@ $('.js-addwish-b2, .js-addwish-detail').on('click', function(e){
  						}
  						else {
  							var prevNotifyId = $('.js-show-cart').data('notify');
- 							var newNotifyId = prevNotifyId + 1;
+ 							var newNotifyId = +prevNotifyId + 1;
  							//console.log(newNotifyId);
  							$('.js-show-cart').data('notify', newNotifyId).attr('data-notify', newNotifyId);
  							//var setNotifyId = $('.js-show-cart').data('notify');

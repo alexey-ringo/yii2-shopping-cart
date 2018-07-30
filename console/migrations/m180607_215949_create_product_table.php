@@ -12,9 +12,9 @@ class m180607_215949_create_product_table extends Migration
      */
     public function safeUp()
     {
-        $this->createTable('product', [
+        $this->createTable('{{%product}}', [
             'id' => $this->primaryKey()->unsigned(),
-            'category_id' => $this->integer(10)->notNull()->unsigned(),
+            'category_id' => $this->integer()->notNull()->unsigned(),
             'code' => $this->integer(11)->notNull()->unique()->unsigned(),
             'name' => $this->string(255)->notNull(),
             //'slug' => $this->string(128)->notNull()->unique(),
@@ -27,11 +27,16 @@ class m180607_215949_create_product_table extends Migration
             'meta_description' => $this->string(255),
             'hit' => $this->tinyInteger(1)->notNull()->defaultValue(0),
             'new' => $this->tinyInteger(1)->notNull()->defaultValue(0),
-            'sale' => $this->tinyInteger(1)->notNull()->defaultValue(0),
+            'active' => $this->tinyInteger(1)->notNull()->defaultValue(0),
         ]);
         
-        $this->batchInsert('product',
-                    ['category_id', 'code', 'name', 'content', 'price', 'hit', 'new', 'sale'],
+        $this->createIndex('idx-product-category_id', '{{%product}}', 'category_id');
+        $this->createIndex('idx-product-code', '{{%product}}', 'code');
+        $this->createIndex('idx-product-active', '{{%product}}', 'active');
+        $this->addForeignKey('fk-product-category', '{{%product}}', 'category_id', '{{%category}}', 'id', 'CASCADE', 'RESTRICT');
+        
+        $this->batchInsert('{{%product}}',
+                    ['category_id', 'code', 'name', 'content', 'price', 'hit', 'new', 'active'],
                     [
                         [4, 1041000, 'Байкерская куртка из искусственной замши', 'Байкерская куртка из искусственной замши', 2099, '1', '1', '1'],
                         [4, 1041002, 'Джинсовая куртка', 'Джинсовая куртка', 1799, '0', '0', '1'],
@@ -101,7 +106,24 @@ class m180607_215949_create_product_table extends Migration
      */
     public function safeDown()
     {
-        $this->delete('product');
-        $this->dropTable('product');
+        
+        $this->dropForeignKey(
+            'fk-product-category',
+            '{{%product}}'
+        );
+        
+        
+        $this->dropIndex(
+            'idx-product-active',
+            '{{%product}}'
+        );
+        
+        $this->dropIndex(
+            'idx-product-category_id',
+            '{{%product}}'
+        );
+        
+        $this->delete('{{%product}}');
+        $this->dropTable('{{%product}}');
     }
 }

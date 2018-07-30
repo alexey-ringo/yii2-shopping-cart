@@ -12,9 +12,9 @@ class m180607_143448_create_category_table extends Migration
      */
     public function safeUp()
     {
-        $this->createTable('category', [
-            'id' => $this->primaryKey()->notNull()->unsigned(),
-            'parent_id' => $this->integer(10)->notNull()->defaultValue(0)->unsigned(),
+        $this->createTable('{{%category}}', [
+            'id' => $this->primaryKey()->unsigned(),
+            'parent_id' => $this->integer()/*->notNull()->defaultValue(0)*/->unsigned(),
             'name' => $this->string(255)->notNull(),
             //'slug' => $this->string(128)->notNull()->unique(),
             'description' => $this->text(),
@@ -26,8 +26,16 @@ class m180607_143448_create_category_table extends Migration
             
             
         ]);
+        //Creates secondary index for column `parent_id`
+        $this->createIndex('idx-category-parent_id', '{{%category}}', 'parent_id');
         
-        $this->batchInsert('category',
+        //('имя ключа', 'из какой табл', 'из какого поля', 'на какую табл', 'на какое поле', 'действия со связностями при удалении', '')
+        //Имя ключа - 'Таблица - имя связи'
+        //$this->addForeignKey('fk-category-parent', '{{%category}}', 'parent_id', '{{%category}}', 'id', 'SET NULL', 'RESTRICT');
+        
+        
+        
+        $this->batchInsert('{{%category}}',
                     ['parent_id', 'name'],
                     [
                         [0, 'Одежда'],
@@ -82,7 +90,21 @@ class m180607_143448_create_category_table extends Migration
      */
     public function safeDown()
     {
-        $this->delete('category');
-        $this->dropTable('category');
+        // drops foreign key for table `category`
+        /*
+        $this->dropForeignKey(
+            'fk-category-parent',
+            '{{%category}}'
+        );
+        */
+        
+        // drops secondary index for column `parent_id`
+        $this->dropIndex(
+            'idx-category-parent_id',
+            '{{%category}}'
+        );
+        
+        $this->delete('{{%category}}');
+        $this->dropTable('{{%category}}');
     }
 }

@@ -12,7 +12,7 @@ class m180718_090434_create_image_product_table extends Migration
      */
     public function safeUp()
     {
-        $this->createTable('image_product', [
+        $this->createTable('{{%image_product}}', [
             'id' => $this->primaryKey(),
             'product_code' => $this->integer(11)->notNull()->unique()->unsigned(),
             'img1' => $this->string(255)->defaultValue('no-image.png'),
@@ -22,6 +22,8 @@ class m180718_090434_create_image_product_table extends Migration
             'img5' => $this->string(255)->defaultValue('no-image.png'),
             'img6' => $this->string(255)->defaultValue('no-image.png'),
         ]);
+        
+        $this->addForeignKey('fk-image-product', '{{%image_product}}', 'product_code', '{{%product}}', 'code', 'CASCADE', 'RESTRICT');
         
         $this->batchInsert('image_product',
                     ['product_code', 'img1', 'img2', 'img3', 'img4', 'img5', 'img6'],

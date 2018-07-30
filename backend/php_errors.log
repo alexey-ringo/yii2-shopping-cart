@@ -1,0 +1,20 @@
+[29-Jul-2018 21:16:27 UTC] PHP Fatal error:  Class 'common\models\LoginForm' not found in /home/ubuntu/workspace/advanced/backend/controllers/SiteController.php on line 77
+[29-Jul-2018 21:16:27 UTC] PHP Stack trace:
+[29-Jul-2018 21:16:27 UTC] PHP   1. {main}() /home/ubuntu/workspace/advanced/backend/web/index.php:0
+[29-Jul-2018 21:16:27 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/advanced/backend/web/index.php:17
+[29-Jul-2018 21:16:27 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Application.php:386
+[29-Jul-2018 21:16:27 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Application.php:103
+[29-Jul-2018 21:16:27 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:528
+[29-Jul-2018 21:16:27 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:157
+[29-Jul-2018 21:16:27 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[29-Jul-2018 21:16:27 UTC] PHP   8. backend\controllers\SiteController->actionLogin() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[29-Jul-2018 21:56:24 UTC] PHP Fatal error:  Class 'common\models\LoginForm' not found in /home/ubuntu/workspace/advanced/backend/controllers/SiteController.php on line 77
+[29-Jul-2018 21:56:24 UTC] PHP Stack trace:
+[29-Jul-2018 21:56:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/advanced/backend/web/index.php:0
+[29-Jul-2018 21:56:24 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/advanced/backend/web/index.php:17
+[29-Jul-2018 21:56:24 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Application.php:386
+[29-Jul-2018 21:56:24 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Application.php:103
+[29-Jul-2018 21:56:24 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:528
+[29-Jul-2018 21:56:24 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:157
+[29-Jul-2018 21:56:24 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[29-Jul-2018 21:56:24 UTC] PHP   8. backend\controllers\SiteController->actionLogin() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57

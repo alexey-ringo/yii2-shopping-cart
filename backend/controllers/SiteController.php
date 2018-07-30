@@ -10,7 +10,7 @@ use common\models\LoginForm;
 /**
  * Site controller
  */
-class SiteController extends Controller
+class SiteController extends AppController
 {
     /**
      * {@inheritdoc}
@@ -68,6 +68,8 @@ class SiteController extends Controller
      *
      * @return string
      */
+     
+    /* 
     public function actionLogin()
     {
         if (!Yii::$app->user->isGuest) {
@@ -85,6 +87,7 @@ class SiteController extends Controller
             ]);
         }
     }
+    */
 
     /**
      * Logout action.
