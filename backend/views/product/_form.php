@@ -2,6 +2,7 @@
 
 use yii\helpers\Html;
 use yii\widgets\ActiveForm;
+use backend\models\Category;
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\Product */
@@ -12,7 +13,7 @@ use yii\widgets\ActiveForm;
 
     <?php $form = ActiveForm::begin(); ?>
 
-    <?= $form->field($model, 'category_id')->textInput() ?>
+    <?= $form->field($model, 'category_id')->dropDownList(Category::categoryList()) ?>
 
     <?= $form->field($model, 'code')->textInput() ?>
 

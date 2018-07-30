@@ -18,3 +18,22 @@
 [29-Jul-2018 21:56:24 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:157
 [29-Jul-2018 21:56:24 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
 [29-Jul-2018 21:56:24 UTC] PHP   8. backend\controllers\SiteController->actionLogin() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[30-Jul-2018 12:57:27 UTC] PHP Fatal error:  Class 'Category' not found in /home/ubuntu/workspace/advanced/backend/views/category/_form.php on line 17
+[30-Jul-2018 12:57:27 UTC] PHP Stack trace:
+[30-Jul-2018 12:57:27 UTC] PHP   1. {main}() /home/ubuntu/workspace/advanced/backend/web/index.php:0
+[30-Jul-2018 12:57:27 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/advanced/backend/web/index.php:17
+[30-Jul-2018 12:57:27 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Application.php:386
+[30-Jul-2018 12:57:27 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Application.php:103
+[30-Jul-2018 12:57:27 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:528
+[30-Jul-2018 12:57:27 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:157
+[30-Jul-2018 12:57:27 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[30-Jul-2018 12:57:27 UTC] PHP   8. backend\controllers\CategoryController->actionUpdate() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[30-Jul-2018 12:57:27 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/advanced/backend/controllers/CategoryController.php:95
+[30-Jul-2018 12:57:27 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:384
+[30-Jul-2018 12:57:27 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:156
+[30-Jul-2018 12:57:27 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:254
+[30-Jul-2018 12:57:27 UTC] PHP  13. require() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:336
+[30-Jul-2018 12:57:27 UTC] PHP  14. yii\base\View->render() /home/ubuntu/workspace/advanced/backend/views/category/update.php:19
+[30-Jul-2018 12:57:27 UTC] PHP  15. yii\base\View->renderFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:156
+[30-Jul-2018 12:57:27 UTC] PHP  16. yii\base\View->renderPhpFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:254
+[30-Jul-2018 12:57:27 UTC] PHP  17. require() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:336
