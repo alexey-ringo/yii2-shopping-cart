@@ -239,7 +239,7 @@ use yii\helpers\Html;
 					<div class="block2">
 						<div class="block2-pic hov-img0">
 							<a href="<?= Url::to(['product/view', 'id' => $hit->id]) ?>">
-								<?= Html::img("@web/custom_img/default/{$hit->images->img1}", ['alt' => $hit->name]); ?>
+								<?= Html::img("@web/custom_img/default/{$hit->imageProduct->img1}", ['alt' => $hit->name]); ?>
 							</a>
 
 							<a href="#" data-id="<?= $hit->id ?>" class="block2-btn flex-c-m stext-103 cl2 size-102 bg0 bor2 hov-btn1 p-lr-15 trans-04 js-show-modal1">

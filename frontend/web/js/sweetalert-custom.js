@@ -32,9 +32,11 @@ $('.js-addwish-b2, .js-addwish-detail').on('click', function(e){
 			$(this).on('click', function(){
 				var id = $(this).data('id');
 				$.ajax({
- 					url: '/cart/add',
+ 					//url: '/cart/add',
+ 					url: '/shop/add-in-cart',
  					data: {id: id},
  					type: 'GET',
+ 					//type: 'POST',
  					success: function(res) {
  						if(!res) {
  							alert('Ошибка!');

@@ -21,6 +21,7 @@ class ProductController extends AppController {
         //Альтернативный способ получения id из массива get:
         //$id = Yii::$app->request->get('id');
         $product = Product::findOne($id);
+        //$product = Product::find()->where(['id' => $id])->one();
         if(empty($product)) {
             throw new \yii\web\HttpException(404, 'Такого товара нет');
         }
@@ -29,9 +30,13 @@ class ProductController extends AppController {
         
         $hits = Product::find()->where(['hit' => 1])->limit(6)->all();
         $this->setMeta('E-SHOPPER | ' . $product->name, $product->meta_keywords, $product->meta_description);
+        $attrForProd = $product->AttributesForProduct;
+        
+        
         
         return $this->render('view', [
             'product' => $product,
+            'attrForProd' => $attrForProd, 
             'hits' => $hits,
             ]);
     }
@@ -52,7 +57,7 @@ class ProductController extends AppController {
         //$result['images'] = $product->images;
         
         $result['product'] = $product = Product::find()->where(['id' => $id])->one();
-        $result['images'] = $product->images;
+        $result['images'] = $product->imageProduct;
         
         \Yii::$app->response->format = \yii\web\Response::FORMAT_JSON; 
         

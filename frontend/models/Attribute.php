@@ -9,10 +9,11 @@ use Yii;
  *
  * @property int $id
  * @property string $name
+ * @property string $descr
  * @property string $type
+ * @property string $variants
  *
- * @property Value[] $values
- * @property Product[] $products
+ * @property AttributeValue[] $attributeValues
  */
 class Attribute extends \yii\db\ActiveRecord
 {
@@ -31,7 +32,9 @@ class Attribute extends \yii\db\ActiveRecord
     {
         return [
             [['name'], 'required'],
-            [['name', 'type'], 'string', 'max' => 255],
+            [['descr'], 'string'],
+            [['name', 'type', 'variants'], 'string', 'max' => 255],
+            [['name'], 'unique'],
         ];
     }
 
@@ -43,23 +46,17 @@ class Attribute extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'name' => 'Name',
+            'descr' => 'Descr',
             'type' => 'Type',
+            'variants' => 'Variants',
         ];
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getValues()
+    public function getAttributeValues()
     {
-        return $this->hasMany(Value::className(), ['attribute_id' => 'id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getProducts()
-    {
-        return $this->hasMany(Product::className(), ['id' => 'product_id'])->viaTable('{{%value}}', ['attribute_id' => 'id']);
+        return $this->hasMany(AttributeValue::className(), ['attribute_id' => 'id']);
     }
 }

@@ -57,6 +57,15 @@ return [
                 'search' => 'category/search',
             ],
         ],
+        //Компонент корзины
+        'cart' => [
+            'class' => 'frontend\components\Cart'
+        ],
+        
+        //Helper для конвертирования перевернутых массивов об отношениях Продуктов, Атрибутов, и их комбинаций
+        'arrayProdHelper' => [
+            'class' => 'frontend\components\helpers\ArrayProdHelper',
+        ],
         /*
         'assetManager' => [
             // override bundles to use CDN :

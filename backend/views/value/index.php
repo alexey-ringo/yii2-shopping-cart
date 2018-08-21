@@ -23,11 +23,33 @@ $this->params['breadcrumbs'][] = $this->title;
         'dataProvider' => $dataProvider,
         'filterModel' => $searchModel,
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
+            //['class' => 'yii\grid\SerialColumn'],
 
-            'product_id',
-            'attribute_id',
-            'value',
+            'id',
+            //'product_id',
+            //расширенный формат отображения поля product_id
+            [
+                'attribute' => 'product_id',
+                //Выпадающий список поиска продуктов по категории
+                //'filter' => Category::allCategoriesList(),
+                //Анонимная функция вызывается для каждой строки
+                'value' => function(backend\models\Value $value) {
+                    return $value->product ? $value->product->name : 'Товар отсутствует';
+                }
+            ],
+            //'attribute_id',
+            //расширенный формат отображения поля attribute_id
+            [
+                'attribute' => 'attribute_id',
+                //Выпадающий список поиска продуктов по категории
+                //'filter' => Category::allCategoriesList(),
+                //Анонимная функция вызывается для каждой строки
+                'value' => function(backend\models\Value $value) {
+                    return $value->productAttribute ? $value->productAttribute->name : 'Атрибуты отсутствуют';
+                }
+            ],
+            'value_str',
+            'value_int',
 
             ['class' => 'yii\grid\ActionColumn'],
         ],

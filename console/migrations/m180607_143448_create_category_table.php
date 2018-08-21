@@ -13,8 +13,8 @@ class m180607_143448_create_category_table extends Migration
     public function safeUp()
     {
         $this->createTable('{{%category}}', [
-            'id' => $this->primaryKey()->unsigned(),
-            'parent_id' => $this->integer()/*->notNull()->defaultValue(0)*/->unsigned(),
+            'id' => $this->primaryKey(11)->unsigned(),
+            'parent_id' => $this->integer(11)->notNull()->defaultValue(0)->unsigned(),
             'name' => $this->string(255)->notNull(),
             //'slug' => $this->string(128)->notNull()->unique(),
             'description' => $this->text(),
@@ -91,12 +91,12 @@ class m180607_143448_create_category_table extends Migration
     public function safeDown()
     {
         // drops foreign key for table `category`
-        /*
+        
         $this->dropForeignKey(
             'fk-category-parent',
             '{{%category}}'
         );
-        */
+        
         
         // drops secondary index for column `parent_id`
         $this->dropIndex(

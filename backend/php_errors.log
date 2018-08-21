@@ -37,3 +37,169 @@
 [30-Jul-2018 12:57:27 UTC] PHP  15. yii\base\View->renderFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:156
 [30-Jul-2018 12:57:27 UTC] PHP  16. yii\base\View->renderPhpFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:254
 [30-Jul-2018 12:57:27 UTC] PHP  17. require() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:336
+[31-Jul-2018 09:02:52 UTC] PHP Fatal error:  Class 'Category' not found in /home/ubuntu/workspace/advanced/backend/views/category/index.php on line 33
+[31-Jul-2018 09:02:52 UTC] PHP Stack trace:
+[31-Jul-2018 09:02:52 UTC] PHP   1. {main}() /home/ubuntu/workspace/advanced/backend/web/index.php:0
+[31-Jul-2018 09:02:52 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/advanced/backend/web/index.php:17
+[31-Jul-2018 09:02:52 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Application.php:386
+[31-Jul-2018 09:02:52 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Application.php:103
+[31-Jul-2018 09:02:52 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:528
+[31-Jul-2018 09:02:52 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:157
+[31-Jul-2018 09:02:52 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[31-Jul-2018 09:02:52 UTC] PHP   8. backend\controllers\CategoryController->actionIndex() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[31-Jul-2018 09:02:52 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/advanced/backend/controllers/CategoryController.php:44
+[31-Jul-2018 09:02:52 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:384
+[31-Jul-2018 09:02:52 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:156
+[31-Jul-2018 09:02:52 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:254
+[31-Jul-2018 09:02:52 UTC] PHP  13. require() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:336
+[31-Jul-2018 09:33:41 UTC] PHP Fatal error:  Class 'Category' not found in /home/ubuntu/workspace/advanced/backend/views/product/index.php on line 33
+[31-Jul-2018 09:33:41 UTC] PHP Stack trace:
+[31-Jul-2018 09:33:41 UTC] PHP   1. {main}() /home/ubuntu/workspace/advanced/backend/web/index.php:0
+[31-Jul-2018 09:33:41 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/advanced/backend/web/index.php:17
+[31-Jul-2018 09:33:41 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Application.php:386
+[31-Jul-2018 09:33:41 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Application.php:103
+[31-Jul-2018 09:33:41 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:528
+[31-Jul-2018 09:33:41 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:157
+[31-Jul-2018 09:33:41 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[31-Jul-2018 09:33:41 UTC] PHP   8. backend\controllers\ProductController->actionIndex() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[31-Jul-2018 09:33:41 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/advanced/backend/controllers/ProductController.php:44
+[31-Jul-2018 09:33:41 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:384
+[31-Jul-2018 09:33:41 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:156
+[31-Jul-2018 09:33:41 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:254
+[31-Jul-2018 09:33:41 UTC] PHP  13. require() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:336
+[31-Jul-2018 12:03:39 UTC] PHP Fatal error:  Class 'GridView' not found in /home/ubuntu/workspace/advanced/backend/views/product/view.php on line 47
+[31-Jul-2018 12:03:39 UTC] PHP Stack trace:
+[31-Jul-2018 12:03:39 UTC] PHP   1. {main}() /home/ubuntu/workspace/advanced/backend/web/index.php:0
+[31-Jul-2018 12:03:39 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/advanced/backend/web/index.php:17
+[31-Jul-2018 12:03:39 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Application.php:386
+[31-Jul-2018 12:03:39 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Application.php:103
+[31-Jul-2018 12:03:39 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:528
+[31-Jul-2018 12:03:39 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:157
+[31-Jul-2018 12:03:39 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[31-Jul-2018 12:03:39 UTC] PHP   8. backend\controllers\ProductController->actionView() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[31-Jul-2018 12:03:39 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/advanced/backend/controllers/ProductController.php:57
+[31-Jul-2018 12:03:39 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:384
+[31-Jul-2018 12:03:39 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:156
+[31-Jul-2018 12:03:39 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:254
+[31-Jul-2018 12:03:39 UTC] PHP  13. require() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:336
+[31-Jul-2018 12:04:18 UTC] PHP Fatal error:  Class 'yii\widgets\GridView' not found in /home/ubuntu/workspace/advanced/backend/views/product/view.php on line 48
+[31-Jul-2018 12:04:18 UTC] PHP Stack trace:
+[31-Jul-2018 12:04:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/advanced/backend/web/index.php:0
+[31-Jul-2018 12:04:18 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/advanced/backend/web/index.php:17
+[31-Jul-2018 12:04:18 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Application.php:386
+[31-Jul-2018 12:04:18 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Application.php:103
+[31-Jul-2018 12:04:18 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:528
+[31-Jul-2018 12:04:18 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:157
+[31-Jul-2018 12:04:18 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[31-Jul-2018 12:04:18 UTC] PHP   8. backend\controllers\ProductController->actionView() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[31-Jul-2018 12:04:18 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/advanced/backend/controllers/ProductController.php:57
+[31-Jul-2018 12:04:18 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:384
+[31-Jul-2018 12:04:18 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:156
+[31-Jul-2018 12:04:18 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:254
+[31-Jul-2018 12:04:18 UTC] PHP  13. require() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:336
+[31-Jul-2018 12:05:09 UTC] PHP Fatal error:  Class 'ActiveDataProvider' not found in /home/ubuntu/workspace/advanced/backend/views/product/view.php on line 50
+[31-Jul-2018 12:05:09 UTC] PHP Stack trace:
+[31-Jul-2018 12:05:09 UTC] PHP   1. {main}() /home/ubuntu/workspace/advanced/backend/web/index.php:0
+[31-Jul-2018 12:05:09 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/advanced/backend/web/index.php:17
+[31-Jul-2018 12:05:09 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Application.php:386
+[31-Jul-2018 12:05:09 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Application.php:103
+[31-Jul-2018 12:05:09 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:528
+[31-Jul-2018 12:05:09 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:157
+[31-Jul-2018 12:05:09 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[31-Jul-2018 12:05:09 UTC] PHP   8. backend\controllers\ProductController->actionView() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[31-Jul-2018 12:05:09 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/advanced/backend/controllers/ProductController.php:57
+[31-Jul-2018 12:05:09 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:384
+[31-Jul-2018 12:05:09 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:156
+[31-Jul-2018 12:05:09 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:254
+[31-Jul-2018 12:05:09 UTC] PHP  13. require() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:336
+[31-Jul-2018 13:29:26 UTC] PHP Fatal error:  Class 'Product' not found in /home/ubuntu/workspace/advanced/backend/views/value/_form.php on line 15
+[31-Jul-2018 13:29:26 UTC] PHP Stack trace:
+[31-Jul-2018 13:29:26 UTC] PHP   1. {main}() /home/ubuntu/workspace/advanced/backend/web/index.php:0
+[31-Jul-2018 13:29:26 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/advanced/backend/web/index.php:17
+[31-Jul-2018 13:29:26 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Application.php:386
+[31-Jul-2018 13:29:26 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Application.php:103
+[31-Jul-2018 13:29:26 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:528
+[31-Jul-2018 13:29:26 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:157
+[31-Jul-2018 13:29:26 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[31-Jul-2018 13:29:26 UTC] PHP   8. backend\controllers\ValueController->actionCreate() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[31-Jul-2018 13:29:26 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/advanced/backend/controllers/ValueController.php:76
+[31-Jul-2018 13:29:26 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:384
+[31-Jul-2018 13:29:26 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:156
+[31-Jul-2018 13:29:26 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:254
+[31-Jul-2018 13:29:26 UTC] PHP  13. require() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:336
+[31-Jul-2018 13:29:26 UTC] PHP  14. yii\base\View->render() /home/ubuntu/workspace/advanced/backend/views/value/create.php:19
+[31-Jul-2018 13:29:26 UTC] PHP  15. yii\base\View->renderFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:156
+[31-Jul-2018 13:29:26 UTC] PHP  16. yii\base\View->renderPhpFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:254
+[31-Jul-2018 13:29:26 UTC] PHP  17. require() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:336
+[31-Jul-2018 13:30:19 UTC] PHP Fatal error:  Call to undefined method backend\models\Product::attributesList() in /home/ubuntu/workspace/advanced/backend/views/value/_form.php on line 17
+[31-Jul-2018 13:30:19 UTC] PHP Stack trace:
+[31-Jul-2018 13:30:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/advanced/backend/web/index.php:0
+[31-Jul-2018 13:30:19 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/advanced/backend/web/index.php:17
+[31-Jul-2018 13:30:19 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Application.php:386
+[31-Jul-2018 13:30:19 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Application.php:103
+[31-Jul-2018 13:30:19 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:528
+[31-Jul-2018 13:30:19 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:157
+[31-Jul-2018 13:30:19 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[31-Jul-2018 13:30:19 UTC] PHP   8. backend\controllers\ValueController->actionCreate() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[31-Jul-2018 13:30:19 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/advanced/backend/controllers/ValueController.php:76
+[31-Jul-2018 13:30:19 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:384
+[31-Jul-2018 13:30:19 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:156
+[31-Jul-2018 13:30:19 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:254
+[31-Jul-2018 13:30:19 UTC] PHP  13. require() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:336
+[31-Jul-2018 13:30:19 UTC] PHP  14. yii\base\View->render() /home/ubuntu/workspace/advanced/backend/views/value/create.php:19
+[31-Jul-2018 13:30:19 UTC] PHP  15. yii\base\View->renderFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:156
+[31-Jul-2018 13:30:19 UTC] PHP  16. yii\base\View->renderPhpFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:254
+[31-Jul-2018 13:30:19 UTC] PHP  17. require() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:336
+[31-Jul-2018 13:31:04 UTC] PHP Fatal error:  Call to undefined method backend\models\Attribute::attributetList() in /home/ubuntu/workspace/advanced/backend/views/value/_form.php on line 19
+[31-Jul-2018 13:31:04 UTC] PHP Stack trace:
+[31-Jul-2018 13:31:04 UTC] PHP   1. {main}() /home/ubuntu/workspace/advanced/backend/web/index.php:0
+[31-Jul-2018 13:31:04 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/advanced/backend/web/index.php:17
+[31-Jul-2018 13:31:04 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Application.php:386
+[31-Jul-2018 13:31:04 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Application.php:103
+[31-Jul-2018 13:31:04 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:528
+[31-Jul-2018 13:31:04 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:157
+[31-Jul-2018 13:31:04 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[31-Jul-2018 13:31:04 UTC] PHP   8. backend\controllers\ValueController->actionCreate() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[31-Jul-2018 13:31:04 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/advanced/backend/controllers/ValueController.php:76
+[31-Jul-2018 13:31:04 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:384
+[31-Jul-2018 13:31:04 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:156
+[31-Jul-2018 13:31:04 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:254
+[31-Jul-2018 13:31:04 UTC] PHP  13. require() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:336
+[31-Jul-2018 13:31:04 UTC] PHP  14. yii\base\View->render() /home/ubuntu/workspace/advanced/backend/views/value/create.php:19
+[31-Jul-2018 13:31:04 UTC] PHP  15. yii\base\View->renderFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:156
+[31-Jul-2018 13:31:04 UTC] PHP  16. yii\base\View->renderPhpFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:254
+[31-Jul-2018 13:31:04 UTC] PHP  17. require() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:336
+[31-Jul-2018 13:31:37 UTC] PHP Fatal error:  Call to undefined method backend\models\Attribute::attributeList() in /home/ubuntu/workspace/advanced/backend/views/value/_form.php on line 19
+[31-Jul-2018 13:31:37 UTC] PHP Stack trace:
+[31-Jul-2018 13:31:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/advanced/backend/web/index.php:0
+[31-Jul-2018 13:31:37 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/advanced/backend/web/index.php:17
+[31-Jul-2018 13:31:37 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Application.php:386
+[31-Jul-2018 13:31:37 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Application.php:103
+[31-Jul-2018 13:31:37 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:528
+[31-Jul-2018 13:31:37 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:157
+[31-Jul-2018 13:31:37 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[31-Jul-2018 13:31:37 UTC] PHP   8. backend\controllers\ValueController->actionCreate() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[31-Jul-2018 13:31:37 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/advanced/backend/controllers/ValueController.php:76
+[31-Jul-2018 13:31:37 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:384
+[31-Jul-2018 13:31:37 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:156
+[31-Jul-2018 13:31:37 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:254
+[31-Jul-2018 13:31:37 UTC] PHP  13. require() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:336
+[31-Jul-2018 13:31:37 UTC] PHP  14. yii\base\View->render() /home/ubuntu/workspace/advanced/backend/views/value/create.php:19
+[31-Jul-2018 13:31:37 UTC] PHP  15. yii\base\View->renderFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:156
+[31-Jul-2018 13:31:37 UTC] PHP  16. yii\base\View->renderPhpFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:254
+[31-Jul-2018 13:31:37 UTC] PHP  17. require() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:336
+[03-Aug-2018 21:53:35 UTC] PHP Fatal error:  Class 'Category' not found in /home/ubuntu/workspace/advanced/backend/views/value/index.php on line 34
+[03-Aug-2018 21:53:35 UTC] PHP Stack trace:
+[03-Aug-2018 21:53:35 UTC] PHP   1. {main}() /home/ubuntu/workspace/advanced/backend/web/index.php:0
+[03-Aug-2018 21:53:35 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/advanced/backend/web/index.php:17
+[03-Aug-2018 21:53:35 UTC] PHP   3. yii\web\Application->handleRequest() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Application.php:386
+[03-Aug-2018 21:53:35 UTC] PHP   4. yii\base\Module->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Application.php:103
+[03-Aug-2018 21:53:35 UTC] PHP   5. yii\base\Controller->runAction() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:528
+[03-Aug-2018 21:53:35 UTC] PHP   6. yii\base\InlineAction->runWithParams() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:157
+[03-Aug-2018 21:53:35 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57}() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[03-Aug-2018 21:53:35 UTC] PHP   8. backend\controllers\ValueController->actionIndex() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[03-Aug-2018 21:53:35 UTC] PHP   9. yii\base\Controller->render() /home/ubuntu/workspace/advanced/backend/controllers/ValueController.php:44
+[03-Aug-2018 21:53:35 UTC] PHP  10. yii\base\View->render() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:384
+[03-Aug-2018 21:53:35 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:156
+[03-Aug-2018 21:53:35 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:254
+[03-Aug-2018 21:53:35 UTC] PHP  13. require() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:336

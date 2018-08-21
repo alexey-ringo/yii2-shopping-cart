@@ -3,6 +3,8 @@
 namespace frontend\models;
 
 use Yii;
+use yii\helpers\ArrayHelper;
+
 
 /**
  * This is the model class for table "{{%product}}".
@@ -11,6 +13,7 @@ use Yii;
  * @property int $category_id
  * @property int $code
  * @property string $name
+ * @property int $variable
  * @property string $content
  * @property string $price
  * @property string $meta_title
@@ -18,11 +21,13 @@ use Yii;
  * @property string $meta_description
  * @property int $hit
  * @property int $new
- * @property int $active
+ * @property int $status
  *
+ * @property ImageProduct[] $imageProducts
  * @property Category $category
- * @property Value[] $values
- * @property Attribute[] $attributes0
+ * @property ProductAttributeValue[] $productAttributeValues
+ * @property AttributeValue[] $attributeValues
+ * @property ProductVariable[] $productVariables
  */
 class Product extends \yii\db\ActiveRecord
 {
@@ -41,7 +46,7 @@ class Product extends \yii\db\ActiveRecord
     {
         return [
             [['category_id', 'code', 'name'], 'required'],
-            [['category_id', 'code', 'hit', 'new', 'active'], 'integer'],
+            [['category_id', 'code', 'variable', 'hit', 'new', 'status'], 'integer'],
             [['content'], 'string'],
             [['price'], 'number'],
             [['name', 'meta_title', 'meta_keywords', 'meta_description'], 'string', 'max' => 255],
@@ -60,6 +65,7 @@ class Product extends \yii\db\ActiveRecord
             'category_id' => 'Category ID',
             'code' => 'Code',
             'name' => 'Name',
+            'variable' => 'Variable',
             'content' => 'Content',
             'price' => 'Price',
             'meta_title' => 'Meta Title',
@@ -67,8 +73,16 @@ class Product extends \yii\db\ActiveRecord
             'meta_description' => 'Meta Description',
             'hit' => 'Hit',
             'new' => 'New',
-            'active' => 'Active',
+            'status' => 'Status',
         ];
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getImageProduct()
+    {
+        return $this->hasOne(ImageProduct::className(), ['product_id' => 'id']);
     }
 
     /**
@@ -78,26 +92,29 @@ class Product extends \yii\db\ActiveRecord
     {
         return $this->hasOne(Category::className(), ['id' => 'category_id']);
     }
-    
-    public function getImages() {
-        return $this->hasOne(ImageProduct::className(), ['product_code' => 'code']);
-    }
-    
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getValues()
+    public function getProductAttributeValues()
     {
-        return $this->hasMany(Value::className(), ['product_id' => 'id']);
+        return $this->hasMany(ProductAttributeValue::className(), ['product_id' => 'id']);
     }
 
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getProductAttributes()
+    public function getAttributeValues()
     {
-        return $this->hasMany(Attribute::className(), ['id' => 'attribute_id'])->viaTable('{{%value}}', ['product_id' => 'id']);
+        return $this->hasMany(AttributeValue::className(), ['id' => 'attribute_value_id'])->viaTable('{{%product_attribute_value}}', ['product_id' => 'id']);
+    }
+
+    /**
+     * @return \yii\db\ActiveQuery
+     */
+    public function getProductVariables()
+    {
+        return $this->hasMany(ProductVariable::className(), ['product_id' => 'id']);
     }
 
     /**
@@ -108,4 +125,23 @@ class Product extends \yii\db\ActiveRecord
     {
         return new \frontend\models\query\ProductQuery(get_called_class());
     }
+
+    /*
+    public function getAttributesForProduct($id) {
+        $attrForProd = Product::find()->with('attributeValues', 'productAttribute')->where('id' => $id)->one();
+        return $attrForProd;
+    }
+    */
+    public function getAttributeValuesForProduct() {
+        return Product::find()->with('attributeValues')->where(['id' => $this->id])->asArray()->one();
+       
+    }
+    
+    //Получение у Пробукта всех его атрибутов и их значений 
+    public function getAttributesForProduct() {
+        $attrValArray = Product::find()->with('attributeValues.attribute1')->where(['id' => $this->id])->asArray()->one();
+       
+        return Yii::$app->arrayProdHelper->getAttrValArray($attrValArray);
+    }
+    
 }

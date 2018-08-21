@@ -3,6 +3,7 @@
 /* @var $this yii\web\View */
 /* @var $product frontend\models\Product */
 /* @var $hits frontend\models\Product */
+/* @var $attrForProd frontend\models\Product */
 
 //use frontend\components\MenuWidget;
 use yii\helpers\Html;
@@ -21,9 +22,9 @@ use Yii;
 							<div class="wrap-slick3-arrows flex-sb-m flex-w"></div>
 
 							<div class="slick3 gallery-lb">
-								<div class="item-slick3" data-thumb="<?= '/custom_img/default/' . $product->images->img1 ?>">
+								<div class="item-slick3" data-thumb="<?= '/custom_img/default/' . $product->imageProduct->img1 ?>">
 									<div class="wrap-pic-w pos-relative">
-										<?= Html::img("@web/custom_img/default/{$product->images->img1}", ['alt' => $product->name]); ?>
+										<?= Html::img("@web/custom_img/default/{$product->imageProduct->img1}", ['alt' => $product->name]); ?>
 
 										<a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="images/product-detail-01.jpg">
 											<i class="fa fa-expand"></i>
@@ -31,9 +32,9 @@ use Yii;
 									</div>
 								</div>
 
-								<div class="item-slick3" data-thumb="<?= '/custom_img/default/' . $product->images->img2 ?>">
+								<div class="item-slick3" data-thumb="<?= '/custom_img/default/' . $product->imageProduct->img2 ?>">
 									<div class="wrap-pic-w pos-relative">
-										<?= Html::img("@web/custom_img/default/{$product->images->img2}", ['alt' => $product->name]); ?>
+										<?= Html::img("@web/custom_img/default/{$product->imageProduct->img2}", ['alt' => $product->name]); ?>
 
 										<a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="images/product-detail-02.jpg">
 											<i class="fa fa-expand"></i>
@@ -41,9 +42,9 @@ use Yii;
 									</div>
 								</div>
 
-								<div class="item-slick3" data-thumb="<?= '/custom_img/default/' . $product->images->img3 ?>">
+								<div class="item-slick3" data-thumb="<?= '/custom_img/default/' . $product->imageProduct->img3 ?>">
 									<div class="wrap-pic-w pos-relative">
-										<?= Html::img("@web/custom_img/default/{$product->images->img3}", ['alt' => $product->name]); ?>
+										<?= Html::img("@web/custom_img/default/{$product->imageProduct->img3}", ['alt' => $product->name]); ?>
 
 										<a class="flex-c-m size-108 how-pos1 bor0 fs-16 cl10 bg0 hov-btn3 trans-04" href="images/product-detail-03.jpg">
 											<i class="fa fa-expand"></i>
@@ -71,44 +72,33 @@ use Yii;
 						
 						<!--  -->
 						<div class="p-t-33">
+						<?php if(is_array($attrForProd)):  ?>	
+							<?php foreach($attrForProd as $attrName => $valArr):  ?>
+							
+							
+							
 							<div class="flex-w flex-r-m p-b-10">
 								<div class="size-203 flex-c-m respon6">
-									Size
+									<?= $attrName ?>
 								</div>
 
 								<div class="size-204 respon6-next">
 									<div class="rs1-select2 bor8 bg0">
 										<select class="js-select2" name="time">
 											<option>Choose an option</option>
-											<option>Size S</option>
-											<option>Size M</option>
-											<option>Size L</option>
-											<option>Size XL</option>
+											<?php foreach($valArr as $valKey => $valName):  ?>
+											<option><?= $valName ?></option>
+											<?php endforeach; ?>
 										</select>
 										<div class="dropDownSelect2"></div>
 									</div>
 								</div>
 							</div>
-
-							<div class="flex-w flex-r-m p-b-10">
-								<div class="size-203 flex-c-m respon6">
-									Color
-								</div>
-
-								<div class="size-204 respon6-next">
-									<div class="rs1-select2 bor8 bg0">
-										<select class="js-select2" name="time">
-											<option>Choose an option</option>
-											<option>Red</option>
-											<option>Blue</option>
-											<option>White</option>
-											<option>Grey</option>
-										</select>
-										<div class="dropDownSelect2"></div>
-									</div>
-								</div>
-							</div>
-
+							
+							
+							<?php endforeach; ?>
+						<?php endif; ?>
+							
 							<div class="flex-w flex-r-m p-b-10">
 								<div class="size-204 flex-w flex-m respon6-next">
 									<div class="wrap-num-product flex-w m-r-20 m-tb-10">
