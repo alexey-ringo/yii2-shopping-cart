@@ -112,7 +112,7 @@ class Product extends \yii\db\ActiveRecord
     /**
      * @return \yii\db\ActiveQuery
      */
-    public function getProductVariables()
+    public function getProductVariable()
     {
         return $this->hasMany(ProductVariable::className(), ['product_id' => 'id']);
     }
@@ -125,23 +125,34 @@ class Product extends \yii\db\ActiveRecord
     {
         return new \frontend\models\query\ProductQuery(get_called_class());
     }
-
+    
+   
     /*
     public function getAttributesForProduct($id) {
         $attrForProd = Product::find()->with('attributeValues', 'productAttribute')->where('id' => $id)->one();
         return $attrForProd;
     }
     */
+    //Не используется
+    /*
     public function getAttributeValuesForProduct() {
         return Product::find()->with('attributeValues')->where(['id' => $this->id])->asArray()->one();
        
     }
+    */
     
-    //Получение у Пробукта всех его атрибутов и их значений 
+    //Получение у Продукта всех его атрибутов и их значений
+    /*Костыльный метод - больше не используется
     public function getAttributesForProduct() {
         $attrValArray = Product::find()->with('attributeValues.attribute1')->where(['id' => $this->id])->asArray()->one();
        
         return Yii::$app->arrayProdHelper->getAttrValArray($attrValArray);
     }
+    */
+   
+    
+    
+    
+    
     
 }

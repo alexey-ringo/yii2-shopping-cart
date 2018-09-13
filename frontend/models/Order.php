@@ -86,6 +86,7 @@ class Order extends ActiveRecord
     
     //сохраняет все товары в рамках одного заказа в таблице order_items с указанием id-заказа
     //передаем корзину $session['cart'] и id-заказа $order->id
+    /*
     public function saveOrderItems($items, $order_id) {
         foreach($items as $id => $item) {
             //каждый объект OrderItems - новая строка в таблице order_items
@@ -100,4 +101,5 @@ class Order extends ActiveRecord
             
         }
     }
+    */
 }

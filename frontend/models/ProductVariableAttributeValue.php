@@ -7,6 +7,7 @@ use Yii;
 /**
  * This is the model class for table "{{%product_variable_attribute_value}}".
  *
+ * @property int $id
  * @property int $product_variable_id
  * @property int $attribute_value_id
  *

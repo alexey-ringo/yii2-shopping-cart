@@ -111,6 +111,7 @@ class m180805_211531_create_product_tables extends Migration
         
         //Create table 'product_variable_attribute_value'
         $this->createTable('{{%product_variable_attribute_value}}', [
+            'id' => $this->primaryKey(11)->unsigned(),
             'product_variable_id' => $this->integer(11)->notNull()->unsigned(),
             'attribute_value_id' => $this->integer(11)->notNull()->unsigned(),
         ]);

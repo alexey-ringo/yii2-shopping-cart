@@ -3,30 +3,31 @@ namespace frontend\controllers;
 
 //use frontend\Controller;
 use Yii;
-//use yii\filters\VerbFilter;
+use yii\helpers\ArrayHelper;
+use yii\filters\VerbFilter;
+use frontend\models\Product;
+use frontend\models\ProductVariable;
+
 
 class ShopController extends AppController
 {
-    /*
+    
     public function behaviors()
     {
         return array_merge(parent::behaviors(), [
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
-                    //'add-in-cart' => ['post'],
-                    //'set-count' => ['post'],
-                    //'delete-from-cart' => ['post'],
-                    'add-in-cart' => ['get'],
-                    'set-count' => ['get'],
-                    'delete-from-cart' => ['get'],
+                    'add-in-cart' => ['post'],
+                    'set-count' => ['post'],
+                    'delete-from-cart' => ['post'],
                 ],
             ],
         ]);
     }
-    */
+    
 
-    public function actionAddInCart()
+    public function actionAddInCartGet()
     {
         /*
         $postData = Yii::$app->request->post();
@@ -55,22 +56,141 @@ class ShopController extends AppController
         return false;
         
     }
-
+    
+    //Добавление в корзину простого (невариативного) товара
+    public function actionAddInCartSimple()
+    {
+        //Если запрос пришел не AJAX и не POST-методом, 
+        //то возвращаем пользователя на страницу, с которой он пришел
+        if(!Yii::$app->request->isPost && !Yii::$app->request->isAjax) {
+            return $this->redirect(Yii::$app->request->referrer);
+        }
+        
+        $postData = Yii::$app->request->post();
+        
+        /*
+        if(Yii::$app->cart->add($postData['product_id'], $postData['count'])) {
+            return true;
+        }
+        */
+        
+        $statusOrder = Yii::$app->cart->statusOrder;
+        
+        return json_encode([
+            'success' => Yii::$app->cart->add(intval($postData['product_id']), intval($postData['count'])),
+            'productsCount' => $statusOrder['productsCount']
+        ]);
+        
+    }
+    
+    public function actionAddInCartVariable() {
+        
+        //Если запрос пришел не AJAX и не POST-методом, 
+        //то возвращаем пользователя на страницу, с которой он пришел
+        if(!Yii::$app->request->isPost && !Yii::$app->request->isAjax) {
+            return $this->redirect(Yii::$app->request->referrer);
+        }
+        
+        $postData = Yii::$app->request->post();
+        $productId = intval($postData['product_id']);
+        $product = Product::findOne($productId);
+        if(empty($product)) {
+            return false;
+        }
+        $count = intval($postData['count']);
+        $count = !$count ? 1 : $count;
+        $jsonAttrValues = json_decode($postData['json_attr_value'], true) ?: [];
+        
+        /*
+        $resultAttrVal = array();
+        foreach($arrAttrValues as $key => $val) {
+                $resultKey = $val['currentAttr'];
+                $resultAttrVal[$resultKey] = $val['currentVal'];
+                }
+        */
+        
+        $attrValues = ArrayHelper::getColumn($jsonAttrValues, 'currentVal');
+        $attrValues = ArrayHelper::index($jsonAttrValues, 'currentAttr');
+        
+        $productVariable = ProductVariable::getProductVariableByAttrVal($productId, $attrValues);
+        $statusOrder = Yii::$app->cart->statusOrder;
+        
+        return json_encode([
+            'success' => Yii::$app->cart->add($productId, $count, $productVariable->id),
+            'productsCount' => $statusOrder['productsCount']
+        ]);
+        
+    }
+    
+    //Все изменения кол-ва товаров делаются в actionCart() - данный метод отдыхает
     public function actionSetCount()
     {
         $postData = Yii::$app->request->post();
+        $statusOrder = Yii::$app->cart->statusOrder;
         return json_encode([
             'success' => Yii::$app->cart->setCount($postData['product_id'], $postData['count']),
-            'cartStatus' => Yii::$app->cart->status
+            'cartStatus' => $statusOrder['productsCount']
         ]);
     }
-
+    
+    //Все удаление делается в actionCart() - данный метод отдыхает
     public function actionDeleteFromCart()
     {
         $postData = Yii::$app->request->post();
+        $statusOrder = Yii::$app->cart->statusOrder;
         return json_encode([
             'success' => Yii::$app->cart->delete($postData['product_id']),
-            'cartStatus' => Yii::$app->cart->status
+            'cartStatus' => $statusOrder['productsCount']
         ]);
     }
+    
+    //Show modal Cart
+    public function actionShowModalCart() {
+        $this->layout = false;
+        $order = Yii::$app->cart->order;
+        $productsInOrder = $order->orderItems;
+        
+        return $this->render('view-modal', [
+            'order' => $order,
+            'productsInOrder' => $productsInOrder,
+            ]);
+        
+    }
+    
+    //Show html Cart, setCount and Delete
+    public function actionCart() {
+        if($postData = Yii::$app->request->post()) {
+            
+            if(Yii::$app->request->isAjax) {
+                $order = Yii::$app->cart->order;
+                $productsInOrder = $order->orderItems;
+        
+                return $this->render('view', [
+                    'order' => $order,
+                    'productsInOrder' => $productsInOrder,
+                ]);
+            }
+            
+            if(Yii::$app->cart->delete($postData['product_id'], $postData['product_variable_id'])) {
+                $order = Yii::$app->cart->order;
+                $productsInOrder = $order->orderItems;
+        
+                return $this->render('view', [
+                    'order' => $order,
+                    'productsInOrder' => $productsInOrder,
+                ]);
+            }
+        
+        }
+        
+        $order = Yii::$app->cart->order;
+        $productsInOrder = $order->orderItems;
+        
+        return $this->render('view', [
+            'order' => $order,
+            'productsInOrder' => $productsInOrder,
+            ]);
+    }
+    
+    
 }

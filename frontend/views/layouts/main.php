@@ -32,7 +32,7 @@ Bootstrap4CozaAsset::register($this);
 <?php $this->beginBody() ?>
 
 <!-- Header -->
-<header>
+<header class="header-v4">
 	<!-- Header desktop -->
 	<div class="container-menu-desktop">
 		<!-- Topbar -->
@@ -69,7 +69,7 @@ Bootstrap4CozaAsset::register($this);
 			</div>
 		</div>
 
-		<div class="wrap-menu-desktop">
+		<div class="wrap-menu-desktop how-shadow1">
 			<nav class="limiter-menu-desktop container">
 					
 				<!-- Logo desktop -->		
@@ -96,8 +96,8 @@ MenuWidget::end();
 					<div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 js-show-modal-search">
 						<i class="zmdi zmdi-search"></i>
 					</div>
-
-					<div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart" data-notify="<?= Yii::$app->session->get('cart.qty') ?>">
+					<?php $count = Yii::$app->cart->getStatusOrder() ?>
+					<div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart" data-notify="<?= $count['productsCount'] ?>">
 						<i class="zmdi zmdi-shopping-cart"></i>
 					</div>
 
@@ -223,7 +223,7 @@ MobMenuWidget::end();
 			</div>
 			
 			<div class="header-cart-buttons flex-w w-full">
-				<a href="<?= Url::to(['cart/view']) ?>" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10">
+				<a href="<?= Url::to(['shop/cart']) ?>" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10">
 					Корзина
 				</a>
 
@@ -392,7 +392,7 @@ MobMenuWidget::end();
 </div>
 
 
-	<!-- Modal1 -->
+	<!-- Modal1 - Product Modal Rendered by AJAX from main.js -->
 	<div class="wrap-modal1 js-modal1 p-t-60 p-b-20">
 		<div class="overlay-modal1 js-hide-modal1"></div>
 

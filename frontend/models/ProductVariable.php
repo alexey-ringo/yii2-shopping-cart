@@ -83,4 +83,27 @@ class ProductVariable extends \yii\db\ActiveRecord
     {
         return new \frontend\models\query\ProductVariableQuery(get_called_class());
     }
+    
+    public static function getProductVariableByAttrVal($product_id, $attrValues) {
+        
+        
+        return self::find()->joinWith(['product' => function ($query) use($product_id) {
+                                $query->where(['product.id' => $product_id]);
+                                
+                            },
+                                        'productVariableAttributeValues' => function($query) use($attrValues) {
+                                            $query->joinWith(['attributeValue' => function($query) use($attrValues) {
+                                                    $query->where(['attribute_value.id' => $attrValues[1]['currentVal']]);
+                                                    
+                                                    $query->joinWith(['attribute1' => function($query) use($attrValues) {
+                                                        $query->where(['attribute.id' => $attrValues[1]['currentAttr']]);
+                                                        
+                                                    }]);
+                                                    
+                                                }]);
+            
+                                            }
+                                            ])->one();
+                                           
+    }
 }

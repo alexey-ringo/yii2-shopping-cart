@@ -193,7 +193,7 @@
 
 
     /*==================================================================
-    [ Cart ]*/
+    [ Execute method Show modal Cart - Old version ]
     $('.js-show-cart').on('click',function(){
         $.ajax({
  			url: '/cart/show',
@@ -210,10 +210,31 @@
  		});
         
     });
+    */
+    
+    /*==================================================================
+    [ Execute method Show modal Cart - receive html-data from ShopController@actionShowModalCart.php] */
+    $('.js-show-cart').on('click',function(){
+        $.ajax({
+ 			url: '/shop/show-modal-cart',
+ 				type: 'POST',
+ 				success: function(res) {
+ 			        if(!res) {
+ 				        alert('Ошибка!');
+ 			        }
+ 			        showCart(res);
+ 		        },
+ 				error: function() {
+ 					alert('Error!');
+ 					}
+ 		});
+        
+    });
+    
 
-    //Show modal Cart
+    //Rendering html-data content of modal Cart, received from ShopController.php
     function showCart(cart) {
-        console.log(cart);
+        //console.log(cart);
 	    $('.js-panel-cart .header-cart-content').html(cart);
 	    $('.js-panel-cart').addClass('show-header-cart');
     }
@@ -298,26 +319,26 @@
     });
     
     /*==================================================================
-    [ Show native modal product-view  ]*/
+    [ Show native modal product-view - layouts/main.php from ProductController@actionModal ]*/
     function showModalProduct(product) {
         //console.log(product);
         $('.mtext-105').text(product['product']['name']);
         $('.mtext-106').text(product['product']['price']);
-        $('.mtext-102').text(product['product']['content']);
+        $('.stext-102').text(product['product']['content']);
         $("#modal-product-img1").attr("src", "/custom_img/default/" + product['images']['img1']);
         $("#modal-product-img2").attr("src", "/custom_img/default/" + product['images']['img2']);
         $("#modal-product-img3").attr("src", "/custom_img/default/" + product['images']['img3']);
         $('.js-modal1').addClass('show-modal1');
     }
     
-    
-     $('.js-show-modal1').on('click',function(e){
+    //AJAX отображение модального окна продукта layouts/main.php from ProductController@actionModal
+    $('.js-show-modal1').on('click',function(e){
         e.preventDefault();
         var id = $(this).data('id');
         $.ajax({
  		    url: '/product/modal',
  		    data: {id: id},
- 		    type: 'GET',
+ 		    type: 'POST',
  		    success: function(res) {
  			    if(!res) {
  				    alert('Ошибка!');
@@ -329,6 +350,27 @@
  		    }
  	    });
      });
+    
+    
+    $('.js-show-modal1').on('click',function(e){
+        e.preventDefault();
+        var id = $(this).data('id');
+        $.ajax({
+ 		    url: '/shop/cart',
+ 		    data: {id: id},
+ 		    type: 'POST',
+ 		    success: function(res) {
+ 			    if(!res) {
+ 				    alert('Ошибка!');
+ 			    }
+     			showModalProduct(res);
+ 		    },
+ 		    error: function() {
+ 			    alert('Error!');
+ 		    }
+ 	    });
+     });
+    
     
     /*==================================================================
     [ Show yii2-widget modal product-view  ]*/

@@ -16,3 +16,8 @@ function debugDie($arr) {
     die;
 }
 
+function debugDie2($arr) {
+    echo '<pre>' . print_r($arr) . '</pre>';
+    die;
+}
+

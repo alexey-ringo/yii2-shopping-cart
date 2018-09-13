@@ -2,9 +2,10 @@
 
 namespace frontend\components\helpers;
 
+use yii\base\Component;
 use Yii;
 
-class ArrayProdHelper {
+class ArrayProdHelper extends Component {
     private $attrValKey;
     private $valStrKey;
     private $valIntKey;

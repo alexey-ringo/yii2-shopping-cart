@@ -3,14 +3,14 @@
 /* @var $this yii\web\View */
 /* @var $product frontend\models\Product */
 /* @var $hits frontend\models\Product */
-/* @var $attrForProd frontend\models\Product */
+/* @var $attributes frontend\models\Attribute */
 
 //use frontend\components\MenuWidget;
 use yii\helpers\Html;
 use yii\helpers\Url;
 use Yii;
 ?>
-
+<?php debug($test) ?>
 	<!-- Product Detail -->
 	<section class="sec-product-detail bg0 p-t-65 p-b-60">
 		<div class="container">
@@ -72,22 +72,25 @@ use Yii;
 						
 						<!--  -->
 						<div class="p-t-33">
-						<?php if(is_array($attrForProd)):  ?>	
-							<?php foreach($attrForProd as $attrName => $valArr):  ?>
+							
+						<?php if(!empty($attributes)):  ?>	
+							<?php foreach($attributes as $attribute):  ?>
+							<?php $i = 0; $i++; ?>
 							
 							
-							
-							<div class="flex-w flex-r-m p-b-10">
-								<div class="size-203 flex-c-m respon6">
-									<?= $attrName ?>
+							<div class="flex-w flex-r-m p-b-10 attr-val-block">
+								<div class="size-203 flex-c-m respon6 attr-block">
+									<span><?= $attribute['name'] ?></span>
 								</div>
 
 								<div class="size-204 respon6-next">
 									<div class="rs1-select2 bor8 bg0">
-										<select class="js-select2" name="time">
-											<option>Choose an option</option>
-											<?php foreach($valArr as $valKey => $valName):  ?>
-											<option><?= $valName ?></option>
+										
+										<select class="js-select2 attr-val-select" id="attr-val-[<?= $attribute['id'] ?>]" data-id="<?= $attribute['id'] ?>" name="time">
+											<option value="0">Выберите опцию товара</option>
+											<?php foreach($attribute['attributeValues'] as $attrValue):  ?>
+											
+											<option value="<?= $attrValue['id'] ?>"><?= $attrValue['value_str'] ?></option>
 											<?php endforeach; ?>
 										</select>
 										<div class="dropDownSelect2"></div>
@@ -106,16 +109,24 @@ use Yii;
 											<i class="fs-16 zmdi zmdi-minus"></i>
 										</div>
 
-										<input class="mtext-104 cl3 txt-center num-product" type="number" name="num-product" value="1">
+										<input class="mtext-104 cl3 txt-center num-product" type="number" id="count-product" name="num-product" value="1">
 
 										<div class="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m">
 											<i class="fs-16 zmdi zmdi-plus"></i>
 										</div>
 									</div>
-
-									<button data-id="<?= $product->id ?>" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-detail">
-										Add to cart
+									
+									
+									<?php if(empty($attributes)):  ?>
+									<button data-id="<?= $product->id ?>" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-simple">
+										Добавить в корзину
 									</button>
+									<?php else : ?>
+									<button data-id="<?= $product->id ?>" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04 js-addcart-variable">
+										Добавить в корзину вариативный
+									</button>
+									<?php endif; ?>
+									
 								</div>
 							</div>	
 						</div>

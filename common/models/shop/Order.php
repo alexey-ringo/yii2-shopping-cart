@@ -86,5 +86,24 @@ class Order extends ActiveRecord
     public function getOrderItems()
     {
         return $this->hasMany(OrderItems::className(), ['order_id' => 'id']);
+        
     }
+    
+    
+    
+    //Возвращает суммарное количество всех товаров в корзине (всех товаров данного заказа)
+    public function getProductsCount() {
+        return  $this->getOrderItems()->sum('count');
+    }
+    
+    //Возвращает общую стоимость корзины (общую стоимость всех товаров данного заказа)
+    public function getProductsAmount() {
+        $orderItems = $this->orderItems;
+        $sumItem;
+        foreach($orderItems as $orderItem) {
+            $sumItem += $orderItem->count * $orderItem->price;
+        }
+        return $sumItem;
+    }
+    
 }
