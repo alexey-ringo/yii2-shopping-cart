@@ -259,10 +259,98 @@
         var numProduct = Number($(this).next().val());
         if(numProduct > 0) $(this).next().val(numProduct - 1);
     });
-
+    
+    
     $('.btn-num-product-up').on('click', function(){
         var numProduct = Number($(this).prev().val());
         $(this).prev().val(numProduct + 1);
+    });
+    
+   //Изменение кол-ва едениц товара при редактировании корзины методом AJAX
+    $('.btn-num-product-down-incart').on('click', function(){
+        var numProduct = Number($(this).next().val());
+        var boxId = $(this);
+        if(numProduct > 1) {
+            
+            numProduct--;
+        }
+        
+        var id = $('#product_id').val();
+        var varId = $('#product_variable_id').val();
+        console.log(numProduct);
+        $.ajax({
+ 		    url: '/shop/cart',
+ 			data: {
+ 			    productId: id,
+ 			    count: numProduct,
+ 			    productVarId: varId,
+ 			},
+ 			type: 'POST',
+ 			success: function(res) {
+ 				if(!res) {
+ 					swal(nameProduct, "Ошибка добавления в корзину!", "error");
+ 				}
+ 						
+ 				var result = $.parseJSON(res);
+ 				if(!result.success) {
+ 					swal(nameProduct, "Ошибка добавления в корзину!", "error");
+ 				}
+ 				else {
+ 				    $(boxId).next().val(result.productCount);
+ 					console.log(result.productCount);
+ 					
+ 				}
+ 						
+ 					
+ 			},
+ 			error: function() {
+ 				alert('Error!');
+ 			}
+ 		});
+        
+    });
+
+    $('.btn-num-product-up-incart').on('click', function(){
+        var boxId = $(this);
+        var numProduct = Number($(boxId).prev().val());
+        //$(boxId).prev().val(numProduct + 1);
+        //var numProduct = Number($(boxId).prev().val());
+        
+        numProduct++;
+        var id = $(this).parent().parent().parent().find('#product_id').val();
+        var varId = $(this).parent().parent().parent().find('#product_variable_id').val();
+        
+        console.log(numProduct);
+        $.ajax({
+ 		    url: '/shop/cart',
+ 			data: {
+ 			    productId: id,
+ 			    count: numProduct,
+ 			    productVarId: varId,
+ 			},
+ 			type: 'POST',
+ 			success: function(res) {
+ 				if(!res) {
+ 					swal(nameProduct, "Ошибка добавления в корзину!", "error");
+ 				}
+ 						
+ 				var result = $.parseJSON(res);
+ 				if(!result.success) {
+ 					swal(nameProduct, "Ошибка добавления в корзину!", "error");
+ 				}
+ 				else {
+ 				    $(boxId).prev().val(result.productCount);
+ 					console.log(result.productCount);
+ 					
+ 				}
+ 						
+ 					
+ 			},
+ 			error: function() {
+ 				alert('Error!');
+ 			}
+ 		});
+        
     });
 
     /*==================================================================

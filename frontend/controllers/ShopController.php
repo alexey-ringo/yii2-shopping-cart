@@ -74,15 +74,14 @@ class ShopController extends AppController
         }
         */
         
-        $statusOrder = Yii::$app->cart->statusOrder;
-        
         return json_encode([
             'success' => Yii::$app->cart->add(intval($postData['product_id']), intval($postData['count'])),
-            'productsCount' => $statusOrder['productsCount']
+            'productsCount' => Yii::$app->cart->countStatus
         ]);
         
     }
     
+    //Добавление в корзину вариативного товара
     public function actionAddInCartVariable() {
         
         //Если запрос пришел не AJAX и не POST-методом, 
@@ -113,11 +112,10 @@ class ShopController extends AppController
         $attrValues = ArrayHelper::index($jsonAttrValues, 'currentAttr');
         
         $productVariable = ProductVariable::getProductVariableByAttrVal($productId, $attrValues);
-        $statusOrder = Yii::$app->cart->statusOrder;
         
         return json_encode([
             'success' => Yii::$app->cart->add($productId, $count, $productVariable->id),
-            'productsCount' => $statusOrder['productsCount']
+            'productsCount' => Yii::$app->cart->countStatus
         ]);
         
     }
@@ -161,16 +159,16 @@ class ShopController extends AppController
     public function actionCart() {
         if($postData = Yii::$app->request->post()) {
             
+            //Изменение кол-ва товаров
             if(Yii::$app->request->isAjax) {
-                $order = Yii::$app->cart->order;
-                $productsInOrder = $order->orderItems;
-        
-                return $this->render('view', [
-                    'order' => $order,
-                    'productsInOrder' => $productsInOrder,
+                
+                return json_encode([
+                    'success' => Yii::$app->cart->setCount(intval($postData['productId']), intval($postData['count']), intval($postData['productVarId'])),
+                    'productCount' => Yii::$app->cart->getSingleProductCountStatus(intval($postData['productId']), intval($postData['count']), intval($postData['productVarId']))
                 ]);
             }
             
+            //Удаление в заказе позиции с типом товара
             if(Yii::$app->cart->delete($postData['product_id'], $postData['product_variable_id'])) {
                 $order = Yii::$app->cart->order;
                 $productsInOrder = $order->orderItems;

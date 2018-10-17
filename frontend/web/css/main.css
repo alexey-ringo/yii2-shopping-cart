@@ -1790,7 +1790,9 @@ button.mfp-close {
 }
 
 .btn-num-product-up,
-.btn-num-product-down {
+.btn-num-product-down,
+.btn-num-product-up-incart,
+.btn-num-product-down-incart {
   width: 45px;
   height: 100%;
   cursor: pointer;

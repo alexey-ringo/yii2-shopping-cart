@@ -32,7 +32,7 @@ use yii\widgets\ActiveForm;
 				
 <?php if(!empty($productsInOrder)): ?>
 				
-				<div class="col-lg-10 col-xl-7 m-lr-auto m-b-50">
+				<div class="col-lg-12 col-xl-12 m-lr-auto m-b-50">
 					<div class="m-l-25 m-r--38 m-lr-0-xl">
 						
 
@@ -70,13 +70,13 @@ use yii\widgets\ActiveForm;
 									<td class="column-3">$ <?= $productInOrder->price ?></td>
 									<td class="column-4">
 										<div class="wrap-num-product flex-w m-l-auto m-r-0">
-											<div class="btn-num-product-down cl8 hov-btn3 trans-04 flex-c-m">
+											<div class="btn-num-product-down-incart cl8 hov-btn3 trans-04 flex-c-m">
 												<i class="fs-16 zmdi zmdi-minus"></i>
 											</div>
 
 											<input class="mtext-104 cl3 txt-center num-product" type="number" name="num-product1" value="<?= $productInOrder->countItem ?>">
 
-											<div class="btn-num-product-up cl8 hov-btn3 trans-04 flex-c-m">
+											<div class="btn-num-product-up-incart cl8 hov-btn3 trans-04 flex-c-m">
 												<i class="fs-16 zmdi zmdi-plus"></i>
 											</div>
 										</div>
@@ -85,13 +85,13 @@ use yii\widgets\ActiveForm;
 									<td class="column-6">
 										
 										<form method="post">
-											<input type="hidden" name="product_id" value="<?= $productInOrder->product_id ?>" />
-											<input type="hidden" name="product_variable_id" value="<?= $productInOrder->product_variable_id ?>" />
+											<input type="hidden" name="product_id" id="product_id" value="<?= $productInOrder->product_id ?>" />
+											<input type="hidden" name="product_variable_id" id="product_variable_id" value="<?= $productInOrder->product_variable_id ?>" />
     										
     										<input id="form-token" type="hidden" name="<?=Yii::$app->request->csrfParam?>"
         									value="<?=Yii::$app->request->csrfToken?>"/>
     
-    										<input type="submit" value="Удалить" />
+    										<input type="submit" class="btn btn-danger" value="Удалить" />
 										</form>
 										
 										
@@ -112,14 +112,43 @@ use yii\widgets\ActiveForm;
 									Apply coupon
 								</div>
 							</div>
-
+<!--
 							<div class="flex-c-m stext-101 cl2 size-119 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer m-tb-10">
 								Изменить корзину
 							</div>
+-->
 						</div>
+						
+						<div class="flex-w flex-sb-m bor15 p-t-18 p-b-15 p-lr-40 p-lr-15-sm">
+
+							<div class="flex-w flex-m m-r-20 m-tb-5">
+								<span class="mtext-110 cl2">
+									$<?= $order->productsAmount ?>
+								</span>
+							
+<!--
+								<input class="stext-104 cl2 plh4 size-117 bor13 p-lr-20 m-r-10 m-tb-5" type="text" name="coupon" placeholder="Coupon Code">
+									
+								<div class="flex-c-m stext-101 cl2 size-118 bg8 bor13 hov-btn3 p-lr-15 trans-04 pointer m-tb-5">
+									Apply coupon
+								</div>
+-->
+								
+							</div>
+
+							
+							<a href="<?= Url::to(['order/create']) ?>" class="flex-c-m stext-101 cl0 size-119 bg3 bor13 hov-btn3 p-lr-15 trans-04 pointer m-tb-10">
+								Приступить к оформлению заказа
+							</a>
+							
+
+						
+						</div>
+						
+						
 					</div>
 				</div>
-
+<!--
 				<div class="col-sm-10 col-lg-7 col-xl-5 m-lr-auto m-b-50">
 					<div class="bor10 p-lr-40 p-t-30 p-b-40 m-l-63 m-r-40 m-lr-0-xl p-lr-15-sm">
 						<h4 class="mtext-109 cl2 p-b-30">
@@ -203,7 +232,7 @@ use yii\widgets\ActiveForm;
 						</a>
 					</div>
 				</div>
-				
+-->				
 <?php else: ?>
 
     <h3>Корзина пуста</h3>

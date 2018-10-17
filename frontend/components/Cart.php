@@ -86,7 +86,7 @@ class Cart extends Component
        
     }
 
-    public function setCount($productId, $count)
+    public function setCount($productId, $count, $productVariableId = 0)
     {
         $link = OrderItems::findOne(['product_id' => $productId, 'product_variable_id' => $productVariableId, 'order_id' => $this->getOrderId()]);
         if (!$link) {
@@ -96,12 +96,12 @@ class Cart extends Component
         return $link->save();
     }
     
-    //Мой метод статуса корзины
+    //Мой метод получения комплексного статуса корзины (не используется)
     public function getStatusOrder()
     {
         
         if ($this->isEmpty()) {
-            //Здесь надо бы что то вернуть поинформативней, чевм просто false
+            //Здесь надо бы что то вернуть поинформативней, чем просто false
             return false;
         }
         
@@ -113,22 +113,46 @@ class Cart extends Component
         
     }
     
-    //Исходный код метода, возвращяющего статус корзины - не используется
-    public function getStatusCart()
-    {
-        
-        if ($this->isEmpty()) {
-            return Yii::t('app', 'В корзине пусто');
+    //Получение кол-ва товаров в корзине по одной позиции товара
+    public function getSingleProductCountStatus($productId, $count, $productVariableId = 0) {
+        $link = OrderItems::findOne(['product_id' => $productId, 'product_variable_id' => $productVariableId, 'order_id' => $this->getOrderId()]);
+        if (!$link) {
+            return false;
         }
         
-        
-        return Yii::t('app', 'В корзине {productsCount, number} {productsCount, plural, one{товар} few{товара} many{товаров} other{товара}} на сумму {amount} руб.', [
-            'productsCount' => $this->order->productsCount,
-            'amount' => $this->order->amount
-        ]);
-        
+        return $link->countItem;
     }
-
+    
+    //Получение суммы в корзине по одному товару
+    public function getSingleProductAmountStatus() {
+        if ($this->isEmpty()) {
+            //Здесь надо бы что то вернуть поинформативней, чем просто false
+            return false;
+        }
+        
+        return $this->order->productsAmount;
+    }
+    
+    //Получение общего кол-ва товаров в корзине
+    public function getCountStatus() {
+        if ($this->isEmpty()) {
+            //Здесь надо бы что то вернуть поинформативней, чем просто false
+            return false;
+        }
+        
+        return $this->order->productsCount;
+    }
+    
+    //Получение суммы всех товаров в корзине
+    public function getAmountStatus() {
+        if ($this->isEmpty()) {
+            //Здесь надо бы что то вернуть поинформативней, чем просто false
+            return false;
+        }
+        
+        return $this->order->productsAmount;
+    }
+    
     public function isEmpty()
     {
         
