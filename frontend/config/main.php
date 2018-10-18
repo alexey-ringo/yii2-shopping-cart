@@ -31,6 +31,8 @@ return [
             // this is the name of the session cookie used for login on the frontend
             'name' => 'advanced-frontend',
             'class' => 'yii\web\DbSession',
+            //'class' => 'frontend\components\FrontDbSession',
+           //'timeout' => '31536000',
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
@@ -59,8 +61,8 @@ return [
             ],
         ],
         //Компонент корзины
-        'cart' => [
-            'class' => 'frontend\components\Cart'
+        'ecart' => [
+            'class' => 'frontend\components\Ecart'
         ],
         
         //Helper для конвертирования перевернутых массивов об отношениях Продуктов, Атрибутов, и их комбинаций

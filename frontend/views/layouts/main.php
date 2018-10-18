@@ -8,13 +8,13 @@ use yii\helpers\Url;
 use yii\bootstrap4\Nav;
 use yii\bootstrap4\NavBar;
 //use yii\widgets\Breadcrumbs;
-use frontend\assets\Bootstrap4CozaAsset;
+use frontend\assets\Bootstrap4EcommerceAsset;
 use yii\bootstrap4\Alert;
 use yii\bootstrap4\Modal;
 use frontend\components\MenuWidget;
 use frontend\components\MobMenuWidget;
 
-Bootstrap4CozaAsset::register($this);
+Bootstrap4EcommerceAsset::register($this);
 
 ?>
 <?php $this->beginPage() ?>
@@ -96,8 +96,7 @@ MenuWidget::end();
 					<div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 js-show-modal-search">
 						<i class="zmdi zmdi-search"></i>
 					</div>
-					<?php $count = Yii::$app->cart->getStatusOrder() ?>
-					<div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart" data-notify="<?= $count['productsCount'] ?>">
+					<div class="icon-header-item cl2 hov-cl1 trans-04 p-l-22 p-r-11 icon-header-noti js-show-cart" data-notify="<?= Yii::$app->ecart->countStatus ?>">
 						<i class="zmdi zmdi-shopping-cart"></i>
 					</div>
 
@@ -223,7 +222,7 @@ MobMenuWidget::end();
 			</div>
 			
 			<div class="header-cart-buttons flex-w w-full">
-				<a href="<?= Url::to(['shop/cart']) ?>" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10">
+				<a href="<?= Url::to(['cart/cart']) ?>" class="flex-c-m stext-101 cl0 size-107 bg3 bor2 hov-btn3 p-lr-15 trans-04 m-r-8 m-b-10">
 					Корзина
 				</a>
 

@@ -192,52 +192,12 @@
 
 
 
-    /*==================================================================
-    [ Execute method Show modal Cart - Old version ]
-    $('.js-show-cart').on('click',function(){
-        $.ajax({
- 			url: '/cart/show',
- 				type: 'GET',
- 				success: function(res) {
- 			        if(!res) {
- 				        alert('Ошибка!');
- 			        }
- 			        showCart(res);
- 		        },
- 				error: function() {
- 					alert('Error!');
- 					}
- 		});
-        
-    });
-    */
     
-    /*==================================================================
-    [ Execute method Show modal Cart - receive html-data from ShopController@actionShowModalCart.php] */
-    $('.js-show-cart').on('click',function(){
-        $.ajax({
- 			url: '/shop/show-modal-cart',
- 				type: 'POST',
- 				success: function(res) {
- 			        if(!res) {
- 				        alert('Ошибка!');
- 			        }
- 			        showCart(res);
- 		        },
- 				error: function() {
- 					alert('Error!');
- 					}
- 		});
-        
-    });
+    
+    
     
 
-    //Rendering html-data content of modal Cart, received from ShopController.php
-    function showCart(cart) {
-        //console.log(cart);
-	    $('.js-panel-cart .header-cart-content').html(cart);
-	    $('.js-panel-cart').addClass('show-header-cart');
-    }
+   
 
     $('.js-hide-cart').on('click',function(){
         $('.js-panel-cart').removeClass('show-header-cart');
@@ -266,92 +226,7 @@
         $(this).prev().val(numProduct + 1);
     });
     
-   //Изменение кол-ва едениц товара при редактировании корзины методом AJAX
-    $('.btn-num-product-down-incart').on('click', function(){
-        var numProduct = Number($(this).next().val());
-        var boxId = $(this);
-        if(numProduct > 1) {
-            
-            numProduct--;
-        }
-        
-        var id = $('#product_id').val();
-        var varId = $('#product_variable_id').val();
-        console.log(numProduct);
-        $.ajax({
- 		    url: '/shop/cart',
- 			data: {
- 			    productId: id,
- 			    count: numProduct,
- 			    productVarId: varId,
- 			},
- 			type: 'POST',
- 			success: function(res) {
- 				if(!res) {
- 					swal(nameProduct, "Ошибка добавления в корзину!", "error");
- 				}
- 						
- 				var result = $.parseJSON(res);
- 				if(!result.success) {
- 					swal(nameProduct, "Ошибка добавления в корзину!", "error");
- 				}
- 				else {
- 				    $(boxId).next().val(result.productCount);
- 					console.log(result.productCount);
- 					
- 				}
- 						
- 					
- 			},
- 			error: function() {
- 				alert('Error!');
- 			}
- 		});
-        
-    });
-
-    $('.btn-num-product-up-incart').on('click', function(){
-        var boxId = $(this);
-        var numProduct = Number($(boxId).prev().val());
-        //$(boxId).prev().val(numProduct + 1);
-        //var numProduct = Number($(boxId).prev().val());
-        
-        numProduct++;
-        var id = $(this).parent().parent().parent().find('#product_id').val();
-        var varId = $(this).parent().parent().parent().find('#product_variable_id').val();
-        
-        console.log(numProduct);
-        $.ajax({
- 		    url: '/shop/cart',
- 			data: {
- 			    productId: id,
- 			    count: numProduct,
- 			    productVarId: varId,
- 			},
- 			type: 'POST',
- 			success: function(res) {
- 				if(!res) {
- 					swal(nameProduct, "Ошибка добавления в корзину!", "error");
- 				}
- 						
- 				var result = $.parseJSON(res);
- 				if(!result.success) {
- 					swal(nameProduct, "Ошибка добавления в корзину!", "error");
- 				}
- 				else {
- 				    $(boxId).prev().val(result.productCount);
- 					console.log(result.productCount);
- 					
- 				}
- 						
- 					
- 			},
- 			error: function() {
- 				alert('Error!');
- 			}
- 		});
-        
-    });
+   
 
     /*==================================================================
     [ Rating ]*/
@@ -419,82 +294,10 @@
         $('.js-modal1').addClass('show-modal1');
     }
     
-    //AJAX отображение модального окна продукта layouts/main.php from ProductController@actionModal
-    $('.js-show-modal1').on('click',function(e){
-        e.preventDefault();
-        var id = $(this).data('id');
-        $.ajax({
- 		    url: '/product/modal',
- 		    data: {id: id},
- 		    type: 'POST',
- 		    success: function(res) {
- 			    if(!res) {
- 				    alert('Ошибка!');
- 			    }
-     			showModalProduct(res);
- 		    },
- 		    error: function() {
- 			    alert('Error!');
- 		    }
- 	    });
-     });
     
     
-    $('.js-show-modal1').on('click',function(e){
-        e.preventDefault();
-        var id = $(this).data('id');
-        $.ajax({
- 		    url: '/shop/cart',
- 		    data: {id: id},
- 		    type: 'POST',
- 		    success: function(res) {
- 			    if(!res) {
- 				    alert('Ошибка!');
- 			    }
-     			showModalProduct(res);
- 		    },
- 		    error: function() {
- 			    alert('Error!');
- 		    }
- 	    });
-     });
     
     
-    /*==================================================================
-    [ Show yii2-widget modal product-view  ]*/
-    
-    //Show modal Product
-    /*
-    function showProduct(product) {
-	    $('#modal-product-view .modal-body').html(product);
-	    $('#modal-product-view').modal();
-	    
-    }
-    */
-    
-    //AJAX show modal product-view
-    /*
-    $('.js-show-product-modal').on('click', function(e) {
-        e.preventDefault();
-        var id = $(this).data('id');
- 	    $.ajax({
- 		    url: '/product/view-modal',
- 		    data: {id: id},
- 		    type: 'GET',
- 		    success: function(res) {
- 			    if(!res) {
- 				    alert('Ошибка!');
- 			    }
-     			
- 			    showProduct(res);
- 		    },
- 		    error: function() {
- 			    alert('Error!');
- 		    }
- 	    });
- 	
-    });
-    */
 
 
 })(jQuery);
