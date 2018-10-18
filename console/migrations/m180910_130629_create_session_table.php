@@ -15,7 +15,8 @@ class m180910_130629_create_session_table extends Migration
         $this->createTable('{{%session}}', [
             'id' => $this->char(64),
             'expire' => $this->integer(11),
-            'data' => $this->binary(429496729)
+            'data' => $this->binary(429496729),
+            'user_id' => $this->integer(11)
             
         ]);
         

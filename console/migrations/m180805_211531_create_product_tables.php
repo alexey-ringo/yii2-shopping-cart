@@ -469,7 +469,7 @@ class m180805_211531_create_product_tables extends Migration
         //Drop indexes and table 'image_product'
         $this->dropForeignKey(
             'fk-image_product-product',
-            '{{%product}}'
+            '{{%image_product}}'
         );
         
         $this->dropIndex(
