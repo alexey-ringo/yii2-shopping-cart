@@ -22,7 +22,7 @@ use yii\helpers\Html;
 							</a>
 
 							<span class="header-cart-item-info">
-								<?= $productInOrder->countItem ?> x $<?= $productInOrder->price ?>
+								<?= $productInOrder->countItem ?> x <?= $productInOrder->price ?> Руб.
 							</span>
 						</div>
 					</li>
@@ -36,7 +36,7 @@ use yii\helpers\Html;
 					</div>
 					
 					<div class="header-cart-total w-full p-tb-40">
-						Сумма заказа: $<?=$order->productsAmount ?>
+						Сумма заказа: <?=$order->productsAmount ?> Руб.
 					</div>
 
 					

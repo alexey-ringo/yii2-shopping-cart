@@ -67,7 +67,7 @@ use yii\widgets\ActiveForm;
 											<?php endif; ?>
                         				</a>
 									</td>
-									<td class="column-3">$ <?= $productInOrder->price ?></td>
+									<td class="column-3"><?= $productInOrder->price ?> Руб.</td>
 									<td class="column-4">
 										<div class="wrap-num-product flex-w m-l-auto m-r-0">
 											<div class="btn-num-product-down-incart cl8 hov-btn3 trans-04 flex-c-m">
@@ -81,7 +81,7 @@ use yii\widgets\ActiveForm;
 											</div>
 										</div>
 									</td>
-									<td class="column-5">$ <?= $productInOrder->amountItem ?></td>
+									<td class="column-5"><?= $productInOrder->amountItem ?> Руб.</td>
 									<td class="column-6">
 										
 										<form method="post">
@@ -123,7 +123,7 @@ use yii\widgets\ActiveForm;
 
 							<div class="flex-w flex-m m-r-20 m-tb-5">
 								<span class="mtext-110 cl2">
-									$<?= $order->productsAmount ?>
+									<?= $order->productsAmount ?> Руб.
 								</span>
 							
 <!--

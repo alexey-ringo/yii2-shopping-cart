@@ -234,18 +234,7 @@ class ProductController extends AppController {
             ]);
     }
     
-    /*
-    //От старой версии Куштуя - сейчас не используется
-    public function actionViewModal($id) {
-        $product = Product::findOne($id);
-        
-        //Модальному окну корзины не нужен html-шаблон
-        $this->layout = false;
-        return $this->render('view-modal', [
-            'product' => $product,
-            ]);
-    }
-    */
+   
     
     public function actionModal() {
         //$result['product'] = $product = Product::find()->where(['id' => $id])->asArray()->one();

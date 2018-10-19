@@ -99,7 +99,7 @@ class Order extends ActiveRecord
     //Возвращает общую стоимость корзины (общую стоимость всех товаров данного заказа)
     public function getProductsAmount() {
         $orderItems = $this->orderItems;
-        $sumItem;
+        $sumItem = 0;
         foreach($orderItems as $orderItem) {
             $sumItem += $orderItem->count * $orderItem->price;
         }

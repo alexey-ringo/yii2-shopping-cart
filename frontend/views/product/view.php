@@ -10,7 +10,7 @@ use yii\helpers\Html;
 use yii\helpers\Url;
 use Yii;
 ?>
-<?php debug($test) ?>
+<?php /* debug($test) */ ?>
 	<!-- Product Detail -->
 	<section class="sec-product-detail bg0 p-t-65 p-b-60">
 		<div class="container">
@@ -63,7 +63,7 @@ use Yii;
 						</h4>
 
 						<span class="mtext-106 cl2">
-							$<?= $product->price ?>
+							<?= $product->price ?> Руб.
 						</span>
 
 						<p class="stext-102 cl3 p-t-23">

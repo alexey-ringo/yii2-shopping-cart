@@ -246,7 +246,22 @@
 	
 	
 	
-	//AJAX отображение модального окна продукта layouts/main.php from ProductController@actionModal
+	
+    /*==================================================================
+    [ Show native modal product-view - layouts/main.php from ProductController@actionModal ]*/
+    function showModalProduct(product) {
+        //console.log(product);
+        $('.mtext-105').text(product['product']['name']);
+        $('.mtext-106').text(product['product']['price']);
+        $('.stext-102').text(product['product']['content']);
+        $("#modal-product-img1").attr("src", "/custom_img/default/" + product['images']['img1']);
+        $("#modal-product-img2").attr("src", "/custom_img/default/" + product['images']['img2']);
+        $("#modal-product-img3").attr("src", "/custom_img/default/" + product['images']['img3']);
+        $('.js-modal1').addClass('show-modal1');
+    }
+    
+    
+    //AJAX отображение модального окна продукта layouts/main.php from ProductController@actionModal
     $('.js-show-modal1').on('click',function(e){
         e.preventDefault();
         var id = $(this).data('id');
@@ -267,25 +282,4 @@
      });
     
     
-    $('.js-show-modal1').on('click',function(e){
-        e.preventDefault();
-        var id = $(this).data('id');
-        $.ajax({
- 		    url: '/cart/cart',
- 		    data: {id: id},
- 		    type: 'POST',
- 		    success: function(res) {
- 			    if(!res) {
- 				    alert('Ошибка!');
- 			    }
-     			showModalProduct(res);
- 		    },
- 		    error: function() {
- 			    alert('Error!');
- 		    }
- 	    });
-     });
-	
-
-
 })(jQuery);

@@ -68,12 +68,6 @@ class CartController extends AppController
         
         $postData = Yii::$app->request->post();
         
-        /*
-        if(Yii::$app->ecart->add($postData['product_id'], $postData['count'])) {
-            return true;
-        }
-        */
-        
         return json_encode([
             'success' => Yii::$app->ecart->add(intval($postData['product_id']), intval($postData['count'])),
             'productsCount' => Yii::$app->ecart->countStatus
@@ -100,13 +94,6 @@ class CartController extends AppController
         $count = !$count ? 1 : $count;
         $jsonAttrValues = json_decode($postData['json_attr_value'], true) ?: [];
         
-        /*
-        $resultAttrVal = array();
-        foreach($arrAttrValues as $key => $val) {
-                $resultKey = $val['currentAttr'];
-                $resultAttrVal[$resultKey] = $val['currentVal'];
-                }
-        */
         
         $attrValues = ArrayHelper::getColumn($jsonAttrValues, 'currentVal');
         $attrValues = ArrayHelper::index($jsonAttrValues, 'currentAttr');

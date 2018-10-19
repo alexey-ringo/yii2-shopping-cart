@@ -281,23 +281,5 @@
         $('.js-modal1').removeClass('show-modal1');
     });
     
-    /*==================================================================
-    [ Show native modal product-view - layouts/main.php from ProductController@actionModal ]*/
-    function showModalProduct(product) {
-        //console.log(product);
-        $('.mtext-105').text(product['product']['name']);
-        $('.mtext-106').text(product['product']['price']);
-        $('.stext-102').text(product['product']['content']);
-        $("#modal-product-img1").attr("src", "/custom_img/default/" + product['images']['img1']);
-        $("#modal-product-img2").attr("src", "/custom_img/default/" + product['images']['img2']);
-        $("#modal-product-img3").attr("src", "/custom_img/default/" + product['images']['img3']);
-        $('.js-modal1').addClass('show-modal1');
-    }
     
-    
-    
-    
-    
-
-
 })(jQuery);
