@@ -112,7 +112,7 @@ MenuWidget::end();
 	<div class="wrap-header-mobile">
 		<!-- Logo moblie -->		
 		<div class="logo-mobile">
-			<a href="index.html"><img src="/img/icons/logo-01.png" alt="IMG-LOGO"></a>
+			<a href="<?= Url::home() ?>"><img src="/img/icons/logo-01.png" alt="IMG-LOGO"></a>
 		</div>
 
 		<!-- Icon header -->
