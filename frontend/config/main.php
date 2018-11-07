@@ -14,6 +14,12 @@ return [
     //Роут по умолчанию
     'defaultRoute' => 'category/index',
     'controllerNamespace' => 'frontend\controllers',
+    //Добавил модуль пользователей фронтенда
+    'modules' => [
+        'user' => [
+            'class' => 'frontend\modules\user\Module',
+        ],
+    ],
     'components' => [
         'request' => [
             'csrfParam' => '_csrf-frontend',

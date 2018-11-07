@@ -49,17 +49,17 @@ Bootstrap4EcommerceAsset::register($this);
 
 <?php if(Yii::$app->user->isGuest): ?>
 
-					<a href="<?= Url::to(['user/signup']) ?>" class="flex-c-m trans-04 p-lr-25">
+					<a href="<?= Url::to(['/user/default/signup']) ?>" class="flex-c-m trans-04 p-lr-25">
 						Регистрация
 					</a>
 
-					<a href="<?= Url::to(['user/login']) ?>" class="flex-c-m trans-04 p-lr-25">
+					<a href="<?= Url::to(['/user/default/login']) ?>" class="flex-c-m trans-04 p-lr-25">
 						Вход
 					</a>
 
 <?php else: ?>
 
-					<a href="<?= Url::to(['user/logout']) ?>" class="flex-c-m trans-04 p-lr-25">
+					<a href="<?= Url::to(['/user/default/logout']) ?>" class="flex-c-m trans-04 p-lr-25">
 						Выход <?= Yii::$app->user->identity->username ?>
 					</a>
 
