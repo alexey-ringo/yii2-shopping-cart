@@ -2,10 +2,10 @@
 namespace frontend\controllers;
 
 
-use frontend\models\Category;
-use frontend\models\Product;
-use frontend\models\ProductVariable;
-use frontend\models\Attribute;
+use common\models\shop\Category;
+use common\models\shop\Product;
+use common\models\shop\ProductVariable;
+use common\models\shop\Attribute;
 use Yii;
 
 //Лаба

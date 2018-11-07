@@ -203,3 +203,111 @@
 [03-Aug-2018 21:53:35 UTC] PHP  11. yii\base\View->renderFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:156
 [03-Aug-2018 21:53:35 UTC] PHP  12. yii\base\View->renderPhpFile() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:254
 [03-Aug-2018 21:53:35 UTC] PHP  13. require() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:336
+[29-Oct-2018 11:32:10 UTC] PHP Fatal error:  Class 'backend\models\search\ValueSearch' not found in /home/ubuntu/workspace/advanced/backend/controllers/ValueController.php on line 38
+[29-Oct-2018 11:32:10 UTC] PHP Stack trace:
+[29-Oct-2018 11:32:10 UTC] PHP   1. {main}() /home/ubuntu/workspace/advanced/backend/web/index.php:0
+[29-Oct-2018 11:32:10 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/advanced/backend/web/index.php:17
+[29-Oct-2018 11:32:10 UTC] PHP   3. yii\web\Application->handleRequest($request = *uninitialized*) /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Application.php:386
+[29-Oct-2018 11:32:10 UTC] PHP   4. yii\base\Module->runAction($route = *uninitialized*, $params = *uninitialized*) /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Application.php:103
+[29-Oct-2018 11:32:10 UTC] PHP   5. yii\base\Controller->runAction($id = *uninitialized*, $params = *uninitialized*) /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:528
+[29-Oct-2018 11:32:10 UTC] PHP   6. yii\base\InlineAction->runWithParams($params = *uninitialized*) /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:157
+[29-Oct-2018 11:32:10 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57}(*uninitialized*, *uninitialized*) /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[29-Oct-2018 11:32:10 UTC] PHP   8. backend\controllers\ValueController->actionIndex() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[29-Oct-2018 13:21:42 UTC] PHP Fatal error:  Class 'backend\models\search\CategorySearch' not found in /home/ubuntu/workspace/advanced/backend/controllers/CategoryController.php on line 38
+[29-Oct-2018 13:21:42 UTC] PHP Stack trace:
+[29-Oct-2018 13:21:42 UTC] PHP   1. {main}() /home/ubuntu/workspace/advanced/backend/web/index.php:0
+[29-Oct-2018 13:21:42 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/advanced/backend/web/index.php:17
+[29-Oct-2018 13:21:42 UTC] PHP   3. yii\web\Application->handleRequest($request = *uninitialized*) /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Application.php:386
+[29-Oct-2018 13:21:42 UTC] PHP   4. yii\base\Module->runAction($route = *uninitialized*, $params = *uninitialized*) /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Application.php:103
+[29-Oct-2018 13:21:42 UTC] PHP   5. yii\base\Controller->runAction($id = *uninitialized*, $params = *uninitialized*) /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:528
+[29-Oct-2018 13:21:42 UTC] PHP   6. yii\base\InlineAction->runWithParams($params = *uninitialized*) /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:157
+[29-Oct-2018 13:21:42 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57}(*uninitialized*, *uninitialized*) /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[29-Oct-2018 13:21:42 UTC] PHP   8. backend\controllers\CategoryController->actionIndex() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[29-Oct-2018 13:26:39 UTC] PHP Fatal error:  Class 'backend\models\search\CategorySearch' not found in /home/ubuntu/workspace/advanced/backend/controllers/CategoryController.php on line 38
+[29-Oct-2018 13:26:39 UTC] PHP Stack trace:
+[29-Oct-2018 13:26:39 UTC] PHP   1. {main}() /home/ubuntu/workspace/advanced/backend/web/index.php:0
+[29-Oct-2018 13:26:39 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/advanced/backend/web/index.php:17
+[29-Oct-2018 13:26:39 UTC] PHP   3. yii\web\Application->handleRequest($request = *uninitialized*) /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Application.php:386
+[29-Oct-2018 13:26:39 UTC] PHP   4. yii\base\Module->runAction($route = *uninitialized*, $params = *uninitialized*) /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Application.php:103
+[29-Oct-2018 13:26:39 UTC] PHP   5. yii\base\Controller->runAction($id = *uninitialized*, $params = *uninitialized*) /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:528
+[29-Oct-2018 13:26:39 UTC] PHP   6. yii\base\InlineAction->runWithParams($params = *uninitialized*) /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:157
+[29-Oct-2018 13:26:39 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57}(*uninitialized*, *uninitialized*) /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[29-Oct-2018 13:26:39 UTC] PHP   8. backend\controllers\CategoryController->actionIndex() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[29-Oct-2018 13:31:08 UTC] PHP Fatal error:  Class 'backend\models\Category' not found in /home/ubuntu/workspace/advanced/backend/views/category/index.php on line 35
+[29-Oct-2018 13:31:08 UTC] PHP Stack trace:
+[29-Oct-2018 13:31:08 UTC] PHP   1. {main}() /home/ubuntu/workspace/advanced/backend/web/index.php:0
+[29-Oct-2018 13:31:08 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/advanced/backend/web/index.php:17
+[29-Oct-2018 13:31:08 UTC] PHP   3. yii\web\Application->handleRequest($request = *uninitialized*) /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Application.php:386
+[29-Oct-2018 13:31:08 UTC] PHP   4. yii\base\Module->runAction($route = *uninitialized*, $params = *uninitialized*) /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Application.php:103
+[29-Oct-2018 13:31:08 UTC] PHP   5. yii\base\Controller->runAction($id = *uninitialized*, $params = *uninitialized*) /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:528
+[29-Oct-2018 13:31:08 UTC] PHP   6. yii\base\InlineAction->runWithParams($params = *uninitialized*) /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:157
+[29-Oct-2018 13:31:08 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57}(*uninitialized*, *uninitialized*) /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[29-Oct-2018 13:31:08 UTC] PHP   8. backend\controllers\CategoryController->actionIndex() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[29-Oct-2018 13:31:08 UTC] PHP   9. yii\base\Controller->render($view = *uninitialized*, $params = *uninitialized*) /home/ubuntu/workspace/advanced/backend/controllers/CategoryController.php:44
+[29-Oct-2018 13:31:08 UTC] PHP  10. yii\base\View->render($view = *uninitialized*, $params = *uninitialized*, $context = *uninitialized*) /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:384
+[29-Oct-2018 13:31:08 UTC] PHP  11. yii\base\View->renderFile($viewFile = *uninitialized*, $params = *uninitialized*, $context = *uninitialized*) /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:156
+[29-Oct-2018 13:31:08 UTC] PHP  12. yii\base\View->renderPhpFile($_file_ = *uninitialized*, $_params_ = *uninitialized*) /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:254
+[29-Oct-2018 13:31:08 UTC] PHP  13. require() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:336
+[29-Oct-2018 13:51:25 UTC] PHP Fatal error:  Call to undefined method common\models\shop\Category::allCategoriesList() in /home/ubuntu/workspace/advanced/backend/views/category/index.php on line 35
+[29-Oct-2018 13:51:25 UTC] PHP Stack trace:
+[29-Oct-2018 13:51:25 UTC] PHP   1. {main}() /home/ubuntu/workspace/advanced/backend/web/index.php:0
+[29-Oct-2018 13:51:25 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/advanced/backend/web/index.php:17
+[29-Oct-2018 13:51:25 UTC] PHP   3. yii\web\Application->handleRequest($request = *uninitialized*) /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Application.php:386
+[29-Oct-2018 13:51:25 UTC] PHP   4. yii\base\Module->runAction($route = *uninitialized*, $params = *uninitialized*) /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Application.php:103
+[29-Oct-2018 13:51:25 UTC] PHP   5. yii\base\Controller->runAction($id = *uninitialized*, $params = *uninitialized*) /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:528
+[29-Oct-2018 13:51:25 UTC] PHP   6. yii\base\InlineAction->runWithParams($params = *uninitialized*) /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:157
+[29-Oct-2018 13:51:25 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57}(*uninitialized*, *uninitialized*) /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[29-Oct-2018 13:51:25 UTC] PHP   8. backend\controllers\CategoryController->actionIndex() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[29-Oct-2018 13:51:25 UTC] PHP   9. yii\base\Controller->render($view = *uninitialized*, $params = *uninitialized*) /home/ubuntu/workspace/advanced/backend/controllers/CategoryController.php:44
+[29-Oct-2018 13:51:25 UTC] PHP  10. yii\base\View->render($view = *uninitialized*, $params = *uninitialized*, $context = *uninitialized*) /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:384
+[29-Oct-2018 13:51:25 UTC] PHP  11. yii\base\View->renderFile($viewFile = *uninitialized*, $params = *uninitialized*, $context = *uninitialized*) /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:156
+[29-Oct-2018 13:51:25 UTC] PHP  12. yii\base\View->renderPhpFile($_file_ = *uninitialized*, $_params_ = *uninitialized*) /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:254
+[29-Oct-2018 13:51:25 UTC] PHP  13. require() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:336
+[29-Oct-2018 14:05:40 UTC] PHP Fatal error:  Class 'backend\models\Category' not found in /home/ubuntu/workspace/advanced/backend/views/category/_form.php on line 16
+[29-Oct-2018 14:05:40 UTC] PHP Stack trace:
+[29-Oct-2018 14:05:40 UTC] PHP   1. {main}() /home/ubuntu/workspace/advanced/backend/web/index.php:0
+[29-Oct-2018 14:05:40 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/advanced/backend/web/index.php:17
+[29-Oct-2018 14:05:40 UTC] PHP   3. yii\web\Application->handleRequest($request = *uninitialized*) /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Application.php:386
+[29-Oct-2018 14:05:40 UTC] PHP   4. yii\base\Module->runAction($route = *uninitialized*, $params = *uninitialized*) /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Application.php:103
+[29-Oct-2018 14:05:40 UTC] PHP   5. yii\base\Controller->runAction($id = *uninitialized*, $params = *uninitialized*) /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:528
+[29-Oct-2018 14:05:40 UTC] PHP   6. yii\base\InlineAction->runWithParams($params = *uninitialized*) /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:157
+[29-Oct-2018 14:05:40 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57}(*uninitialized*, *uninitialized*) /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[29-Oct-2018 14:05:40 UTC] PHP   8. backend\controllers\CategoryController->actionCreate() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[29-Oct-2018 14:05:40 UTC] PHP   9. yii\base\Controller->render($view = *uninitialized*, $params = *uninitialized*) /home/ubuntu/workspace/advanced/backend/controllers/CategoryController.php:75
+[29-Oct-2018 14:05:40 UTC] PHP  10. yii\base\View->render($view = *uninitialized*, $params = *uninitialized*, $context = *uninitialized*) /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:384
+[29-Oct-2018 14:05:40 UTC] PHP  11. yii\base\View->renderFile($viewFile = *uninitialized*, $params = *uninitialized*, $context = *uninitialized*) /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:156
+[29-Oct-2018 14:05:40 UTC] PHP  12. yii\base\View->renderPhpFile($_file_ = *uninitialized*, $_params_ = *uninitialized*) /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:254
+[29-Oct-2018 14:05:40 UTC] PHP  13. require() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:336
+[29-Oct-2018 14:05:40 UTC] PHP  14. yii\base\View->render($view = *uninitialized*, $params = *uninitialized*, $context = *uninitialized*) /home/ubuntu/workspace/advanced/backend/views/category/create.php:19
+[29-Oct-2018 14:05:40 UTC] PHP  15. yii\base\View->renderFile($viewFile = *uninitialized*, $params = *uninitialized*, $context = *uninitialized*) /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:156
+[29-Oct-2018 14:05:40 UTC] PHP  16. yii\base\View->renderPhpFile($_file_ = *uninitialized*, $_params_ = *uninitialized*) /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:254
+[29-Oct-2018 14:05:40 UTC] PHP  17. require() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:336
+[29-Oct-2018 22:30:19 UTC] PHP Fatal error:  Class 'common\models\shop\search\ProductSearch' not found in /home/ubuntu/workspace/advanced/backend/controllers/ProductController.php on line 38
+[29-Oct-2018 22:30:19 UTC] PHP Stack trace:
+[29-Oct-2018 22:30:19 UTC] PHP   1. {main}() /home/ubuntu/workspace/advanced/backend/web/index.php:0
+[29-Oct-2018 22:30:19 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/advanced/backend/web/index.php:17
+[29-Oct-2018 22:30:19 UTC] PHP   3. yii\web\Application->handleRequest($request = *uninitialized*) /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Application.php:386
+[29-Oct-2018 22:30:19 UTC] PHP   4. yii\base\Module->runAction($route = *uninitialized*, $params = *uninitialized*) /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Application.php:103
+[29-Oct-2018 22:30:19 UTC] PHP   5. yii\base\Controller->runAction($id = *uninitialized*, $params = *uninitialized*) /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:528
+[29-Oct-2018 22:30:19 UTC] PHP   6. yii\base\InlineAction->runWithParams($params = *uninitialized*) /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:157
+[29-Oct-2018 22:30:19 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57}(*uninitialized*, *uninitialized*) /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[29-Oct-2018 22:30:19 UTC] PHP   8. backend\controllers\ProductController->actionIndex() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[29-Oct-2018 22:32:57 UTC] PHP Fatal error:  Class 'backend\models\Category' not found in /home/ubuntu/workspace/advanced/backend/views/product/_form.php on line 16
+[29-Oct-2018 22:32:57 UTC] PHP Stack trace:
+[29-Oct-2018 22:32:57 UTC] PHP   1. {main}() /home/ubuntu/workspace/advanced/backend/web/index.php:0
+[29-Oct-2018 22:32:57 UTC] PHP   2. yii\base\Application->run() /home/ubuntu/workspace/advanced/backend/web/index.php:17
+[29-Oct-2018 22:32:57 UTC] PHP   3. yii\web\Application->handleRequest($request = *uninitialized*) /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Application.php:386
+[29-Oct-2018 22:32:57 UTC] PHP   4. yii\base\Module->runAction($route = *uninitialized*, $params = *uninitialized*) /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/web/Application.php:103
+[29-Oct-2018 22:32:57 UTC] PHP   5. yii\base\Controller->runAction($id = *uninitialized*, $params = *uninitialized*) /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Module.php:528
+[29-Oct-2018 22:32:57 UTC] PHP   6. yii\base\InlineAction->runWithParams($params = *uninitialized*) /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:157
+[29-Oct-2018 22:32:57 UTC] PHP   7. call_user_func_array:{/home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57}(*uninitialized*, *uninitialized*) /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[29-Oct-2018 22:32:57 UTC] PHP   8. backend\controllers\ProductController->actionUpdate($id = *uninitialized*) /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/InlineAction.php:57
+[29-Oct-2018 22:32:57 UTC] PHP   9. yii\base\Controller->render($view = *uninitialized*, $params = *uninitialized*) /home/ubuntu/workspace/advanced/backend/controllers/ProductController.php:95
+[29-Oct-2018 22:32:57 UTC] PHP  10. yii\base\View->render($view = *uninitialized*, $params = *uninitialized*, $context = *uninitialized*) /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/Controller.php:384
+[29-Oct-2018 22:32:57 UTC] PHP  11. yii\base\View->renderFile($viewFile = *uninitialized*, $params = *uninitialized*, $context = *uninitialized*) /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:156
+[29-Oct-2018 22:32:57 UTC] PHP  12. yii\base\View->renderPhpFile($_file_ = *uninitialized*, $_params_ = *uninitialized*) /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:254
+[29-Oct-2018 22:32:57 UTC] PHP  13. require() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:336
+[29-Oct-2018 22:32:57 UTC] PHP  14. yii\base\View->render($view = *uninitialized*, $params = *uninitialized*, $context = *uninitialized*) /home/ubuntu/workspace/advanced/backend/views/product/update.php:19
+[29-Oct-2018 22:32:57 UTC] PHP  15. yii\base\View->renderFile($viewFile = *uninitialized*, $params = *uninitialized*, $context = *uninitialized*) /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:156
+[29-Oct-2018 22:32:57 UTC] PHP  16. yii\base\View->renderPhpFile($_file_ = *uninitialized*, $_params_ = *uninitialized*) /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:254
+[29-Oct-2018 22:32:57 UTC] PHP  17. require() /home/ubuntu/workspace/advanced/vendor/yiisoft/yii2/base/View.php:336

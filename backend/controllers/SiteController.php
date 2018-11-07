@@ -15,6 +15,7 @@ class SiteController extends AppController
     /**
      * {@inheritdoc}
      */
+     /*
     public function behaviors()
     {
         return [
@@ -40,7 +41,7 @@ class SiteController extends AppController
             ],
         ];
     }
-
+*/
     /**
      * {@inheritdoc}
      */
@@ -61,6 +62,16 @@ class SiteController extends AppController
     public function actionIndex()
     {
         return $this->render('index');
+    }
+    
+    /**
+     * Displays homepage.
+     *
+     * @return string
+     */
+    public function actionIndex2()
+    {
+        return $this->render('index2');
     }
 
     /**

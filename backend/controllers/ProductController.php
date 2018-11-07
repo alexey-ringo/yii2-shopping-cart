@@ -2,126 +2,87 @@
 
 namespace backend\controllers;
 
-use Yii;
-use backend\models\Product;
-use backend\models\search\ProductSearch;
-use yii\web\Controller;
-use yii\web\NotFoundHttpException;
-use yii\filters\VerbFilter;
+use backend\controllers\AppController;
+//use Yii;
+use common\models\shop\Category;
+use common\models\shop\Product;
+use common\models\shop\ProductVariable;
+use common\models\shop\ProductVariableAttributeValue;
+use common\models\shop\ProductAttributeValue;
+use common\models\shop\AttributeValue;
+use common\models\shop\Attribute;
+use common\models\shop\ImageProduct;
 
-/**
- * ProductController implements the CRUD actions for Product model.
- */
-class ProductController extends Controller
+//use frontend\controllers\behaviors\AccessBehavior;
+
+class ProductController extends AppController
 {
-    /**
-     * {@inheritdoc}
-     */
-    public function behaviors()
-    {
-        return [
-            'verbs' => [
-                'class' => VerbFilter::className(),
-                'actions' => [
-                    'delete' => ['POST'],
-                ],
-            ],
-        ];
-    }
-
-    /**
-     * Lists all Product models.
-     * @return mixed
-     */
-    public function actionIndex()
-    {
-        $searchModel = new ProductSearch();
-        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-
-        return $this->render('index', [
-            'searchModel' => $searchModel,
-            'dataProvider' => $dataProvider,
-        ]);
-    }
-
-    /**
-     * Displays a single Product model.
-     * @param integer $id
-     * @return mixed
-     * @throws NotFoundHttpException if the model cannot be found
-     */
-    public function actionView($id)
-    {
-        return $this->render('view', [
-            'model' => $this->findModel($id),
-        ]);
-    }
-
-    /**
-     * Creates a new Product model.
-     * If creation is successful, the browser will be redirected to the 'view' page.
-     * @return mixed
-     */
+    //Внедряем (подключаем) Поведение в даннвый Контроллер(Компонент)
+    //Теперь вызов всех методов классов поведения возможен в этом контроллере через $this->
+    //Возвращает массив элементов, соответствующих поведениям
+    //public function behaviors() {
+        
+   //     return [
+            //Указываем полное имя класса при помощи метода className()
+            //AccessBehavior::className(),
+    //        ];
+        
+    //}
+    
+    
     public function actionCreate()
     {
-        $model = new Product();
-
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+        /*
+        $model = new Author();
+        //Загрузка данных в модель
+        //Условие if выполнится только если load() и save() вернут true
+        //load() выполнится только в случае получания массива $_POST
+        //save() выполнится только после выполнения validation(), автоматически выполняемого перед save()
+        if($model->load(Yii::$app->request->post()) && $model->save()) {
+            Yii::$app->session->setFlash('success', 'Новый автор успешно добавлен');
+            return $this->redirect(['author/index']);
         }
-
         return $this->render('create', [
-            'model' => $model,
-        ]);
+            'model' => $model, 
+            ]);
+            */
     }
 
-    /**
-     * Updates an existing Product model.
-     * If update is successful, the browser will be redirected to the 'view' page.
-     * @param integer $id
-     * @return mixed
-     * @throws NotFoundHttpException if the model cannot be found
-     */
-    public function actionUpdate($id)
-    {
-        $model = $this->findModel($id);
+    public function actionDelete($id) {
+        /*
+        $model = Author::findOne($id);
+        $model->delete();
+        Yii::$app->session->setFlash('success', 'Новый автор успешно удален');
+        return $this->redirect(['author/index']);
+        */
+    }
 
-        if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+    public function actionIndex($category) {
+        
+        $products = Product::find()->where(['category_id' => $category])->all();
+        $currentCategory = Category::findOne($category);
+        return $this->render('index', [
+            'products' => $products,
+            'currentCategory' => $currentCategory,
+            ]);
+    }
+    
+    //В GET передаем в action id-записи, которую нужно редактировать
+    public function actionUpdate($id) {
+        /*
+        //findOne() - сокращенный вариант find()->one() Возврящает объект класса ActiveQuery
+        //одновременно уже и с собранной для модификации запроса инф и уже выполненным запросом
+        $model = Author::findOne($id);
+        
+        if($model->load(Yii::$app->request->post()) && $model->save()) {
+            Yii::$app->session->setFlash('success', 'Новый автор успешно отредактирован');
+            return $this->redirect(['author/index']);
         }
-
+        
         return $this->render('update', [
             'model' => $model,
         ]);
+        */
     }
 
-    /**
-     * Deletes an existing Product model.
-     * If deletion is successful, the browser will be redirected to the 'index' page.
-     * @param integer $id
-     * @return mixed
-     * @throws NotFoundHttpException if the model cannot be found
-     */
-    public function actionDelete($id)
-    {
-        $this->findModel($id)->delete();
-
-        return $this->redirect(['index']);
-    }
-
-    /**
-     * Finds the Product model based on its primary key value.
-     * If the model is not found, a 404 HTTP exception will be thrown.
-     * @param integer $id
-     * @return Product the loaded model
-     * @throws NotFoundHttpException if the model cannot be found
-     */
-    protected function findModel($id)
-    {
-        if (($model = Product::findOne($id)) !== null) {
-            return $model;
-        }
-
-        throw new NotFoundHttpException('The requested page does not exist.');
-    }
 }

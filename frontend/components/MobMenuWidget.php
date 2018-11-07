@@ -4,7 +4,7 @@ namespace frontend\components;
 
 //use yii\base\Widget;
 use yii\bootstrap4\Widget;
-use frontend\models\Category;
+use common\models\shop\Category;
 use Yii;
 
 class MobMenuWidget extends Widget {

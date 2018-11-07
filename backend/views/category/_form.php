@@ -1,8 +1,9 @@
 <?php
 
 use yii\helpers\Html;
+//use yii\helpers\ArrayHelper;
 use yii\widgets\ActiveForm;
-use backend\models\Category;
+use common\models\shop\Category;
 
 /* @var $this yii\web\View */
 /* @var $model backend\models\Category */
@@ -12,6 +13,8 @@ use backend\models\Category;
 <div class="category-form">
 
     <?php $form = ActiveForm::begin(); ?>
+    
+    <?php //echo $form->field($model, 'parent_id')->dropDownList(ArrayHelper::map(Category::find()->asArray->all(), 'id', 'name'), ['promt' => '']) ?>
 
     <?= $form->field($model, 'parent_id')->dropDownList(Category::parentCategoriesList(), ['promt' => '']) ?>
 

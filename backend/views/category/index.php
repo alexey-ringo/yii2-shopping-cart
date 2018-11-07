@@ -2,7 +2,7 @@
 
 use yii\helpers\Html;
 use yii\grid\GridView;
-use backend\models\Category;
+use common\models\shop\Category;
 
 /* @var $this yii\web\View */
 /* @var $searchModel backend\models\search\CategorySearch */
@@ -34,7 +34,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 //Выпадающий список поиска категорий по родительской категории
                 'filter' => Category::allCategoriesList(),
                 //Анонимная функция вызывается для каждой строки
-                'value' => function(backend\models\Category $category) {
+                'value' => function(common\models\shop\Category $category) {
                     return $category->parent ? $category->parent->name : 'Корневая';
                 }
             ],

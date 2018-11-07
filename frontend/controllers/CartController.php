@@ -5,8 +5,8 @@ namespace frontend\controllers;
 use Yii;
 use yii\helpers\ArrayHelper;
 use yii\filters\VerbFilter;
-use frontend\models\Product;
-use frontend\models\ProductVariable;
+use common\models\shop\Product;
+use common\models\shop\ProductVariable;
 
 
 class CartController extends AppController

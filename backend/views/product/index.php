@@ -1,55 +1,36 @@
 <?php
-
-use yii\helpers\Html;
-use yii\grid\GridView;
-use backend\models\Category;
-
 /* @var $this yii\web\View */
-/* @var $searchModel backend\models\search\ProductSearch */
-/* @var $dataProvider yii\data\ActiveDataProvider */
-
-$this->title = 'Products';
-$this->params['breadcrumbs'][] = $this->title;
+/* @var $authorsList frontend\models\Author */
+use yii\helpers\Url;
 ?>
-<div class="product-index">
+<h1>Товары</h1>
+<br>
+<br>
+<h2><?= $currentCategory->name ?></h2>
 
-    <h1><?= Html::encode($this->title) ?></h1>
-    <?php // echo $this->render('_search', ['model' => $searchModel]); ?>
+<a href="<?php echo Url::to(['product/create']); ?>" class="btn btn-primary">Добавить новый товар</a>
 
-    <p>
-        <?= Html::a('Create Product', ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
+<br><br>
 
-    <?= GridView::widget([
-        'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
-        'columns' => [
-            //['class' => 'yii\grid\SerialColumn'],
-
-            'id',
-            //'category_id',
-            //расширенный формат отображения полей виджета
-            [
-                'attribute' => 'category_id',
-                //Выпадающий список поиска продуктов по категории
-                'filter' => Category::allCategoriesList(),
-                //Анонимная функция вызывается для каждой строки
-                'value' => function(backend\models\Product $product) {
-                    return $product->category ? $product->category->name : 'Корневая';
-                }
-            ],
-            'code',
-            'name',
-            'content:ntext',
-            //'price',
-            //'meta_title',
-            //'meta_keywords',
-            //'meta_description',
-            //'hit',
-            //'new',
-            //'status',
-
-            ['class' => 'yii\grid\ActionColumn'],
-        ],
-    ]); ?>
-</div>
+<table class="table table-condensed">
+    <tr>
+        <th>code</th>
+        <th>name</th>
+        <th>variable</th>
+        <th>price</th>
+        <th>status</th>
+        <th>Изменить данные</th>
+        <th>Удалить</th>
+    </tr>
+<?php foreach($products as $product): ?>
+    <tr>
+        <td><?php echo $product->code; ?></td>
+        <td><?php echo $product->name; ?></td>
+        <td><?php echo $product->variable; ?></td>
+        <td><?php echo $product->price; ?></td>
+        <td><?php echo $product->status; ?></td>
+        <td><a href="<?php echo Url::to(['product/update', 'id' => $product->id]); ?>">Редактировать</a></td>
+        <td><a href="<?php echo Url::to(['product/delete', 'id' => $product->id]); ?>">Удалить</a></td>
+    </tr>
+<?php endforeach; ?>
+</table>

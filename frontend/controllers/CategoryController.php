@@ -2,8 +2,8 @@
 namespace frontend\controllers;
 
 
-use frontend\models\Category;
-use frontend\models\Product;
+use common\models\shop\Category;
+use common\models\shop\Product;
 use Yii;
 use yii\data\Pagination;
 /**
